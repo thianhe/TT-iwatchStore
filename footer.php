@@ -10,12 +10,11 @@
                 <hr>
                 <p class="text-justify"">We are a student team from National Taipei University of Technology(NTUT),
                     building this e-commerce website is just for education purpose.
-                    「TT iWatch Store」is developed by PHP as front-end developing and mySQL as database system.We are also
+                    「TT iWatch Store」is developed by PHP as front-end developing and mySQL as database system. We are also
                     using encryption algorithm to proctect wesbsite's information.</p>
 
             </div>
-            <!-- Grid column -->
-            <hr class="clearfix w-100 d-md-none pb-3">
+
             <!-- Grid column -->
             <div class="col-md-6 mb-md-0 mb-3">
                 <!-- Content -->

@@ -6,15 +6,15 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
-            <div class="carousel-inner">
+            <div id="home_watch_carousel"class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="./image/home_watch1.jpg" alt="First slide">
+                    <img class="d-block w-100" src="./image/index/home_watch1.jpg" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="./image/home_watch2.png" alt="Second slide">
+                    <img class="d-block w-100" src="./image/index/home_watch2.png" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="./image/home_watch3.jpg" alt="Third slide">
+                    <img class="d-block w-100" src="./image/index/home_watch3.jpg" alt="Third slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -30,19 +30,19 @@
 
         <div class="card-deck">
             <div class="card">
-                <img class="card-img-top" src="image/table1.jpeg" alt="Card image cap">
+                <img class="card-img-top" src="image/index/table1.jpeg" alt="Card image cap">
                 <div class="card-img-overlay align-items-center d-flex justify-content-center">
                     <h1>Best Sellers</h4>
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="image/table2.jpg" alt="Card image cap">
+                <img class="card-img-top" src="image/index/table2.jpg" alt="Card image cap">
                 <div class="card-img-overlay align-items-center d-flex justify-content-center">
                     <h1>New Releases</h4>
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="image/table3.jpg" alt="Card image cap">
+                <img class="card-img-top" src="image/index/table3.jpg" alt="Card image cap">
                 <div class="card-img-overlay align-items-center d-flex justify-content-center">
                     <h1>Top Rated</h4>
                 </div>
@@ -52,73 +52,73 @@
 
         <h1 class="text-center">Featured Brands</h1>
         <div class="row">
-            <div class="featurebox col-lg-3 col-md-5 col-sm-10 center">
+            <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
                 <a href="#">
                     <div class="featurebox-img">
-                        <img src="image/apple.png" class="rounded-circle" /></div>
+                        <img src="image/brand/apple.png" class="rounded-circle" /></div>
                     <div class="featurebox-text text-center ">
                         <h5>Apple</h5>
                     </div>
                 </a>
             </div>
-            <div class="featurebox col-lg-3 col-md-5 col-sm-10 center">
+            <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
                 <a href="#">
                     <div class="featurebox-img">
-                        <img src="image/samsung.jpeg" class="rounded-circle" /></div>
+                        <img src="image/brand/samsung.jpeg" class="rounded-circle" /></div>
                     <div class="featurebox-text text-center ">
                         <h5>Samsung</h5>
                     </div>
                 </a>
             </div>
-            <div class="featurebox col-lg-3 col-md-5 col-sm-10 center">
+            <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
                 <a href="#">
                     <div class="featurebox-img">
-                        <img src="image/fitbit.jpg" class="rounded-circle" /></div>
+                        <img src="image/brand/fitbit.jpg" class="rounded-circle" /></div>
                     <div class="featurebox-text text-center ">
                         <h5>Fitbit</h5>
                     </div>
                 </a>
             </div>
-            <div class="featurebox col-lg-3 col-md-5 col-sm-10 center">
+            <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
                 <a href="#">
                     <div class="featurebox-img">
-                        <img src="image/garmin.jpg" class="rounded-circle" /></div>
+                        <img src="image/brand/garmin.jpg" class="rounded-circle" /></div>
                     <div class="featurebox-text text-center ">
                         <h5>Garmin</h5>
                     </div>
                 </a>
             </div>
-            <div class="featurebox col-lg-3 col-md-5 col-sm-10 center">
+            <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
                 <a href="#">
                     <div class="featurebox-img">
-                        <img src="image/verizon.png" class="rounded-circle" /></div>
+                        <img src="image/brand/verizon.png" class="rounded-circle" /></div>
                     <div class="featurebox-text text-center ">
                         <h5>Verizon</h5>
                     </div>
                 </a>
             </div>
-            <div class="featurebox col-lg-3 col-md-5 col-sm-10 center">
+            <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
                 <a href="#">
                     <div class="featurebox-img">
-                        <img src="image/fossil.png" class="rounded-circle" /></div>
+                        <img src="image/brand/fossil.png" class="rounded-circle" /></div>
                     <div class="featurebox-text text-center ">
                         <h5>Fossil</h5>
                     </div>
                 </a>
             </div>
-            <div class="featurebox col-lg-3 col-md-5 col-sm-10 center">
+            <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
                 <a href="#">
                     <div class="featurebox-img">
-                        <img src="image/techcomm.png" class="rounded-circle" /></div>
+                        <img src="image/brand/techcomm.png" class="rounded-circle" /></div>
                     <div class="featurebox-text text-center ">
                         <h5>Techcomm</h5>
                     </div>
                 </a>
             </div>
-            <div class="featurebox col-lg-3 col-md-5 col-sm-10 center">
+            <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
                 <a href="#">
                     <div class="featurebox-img">
-                        <img src="image/agptek.png" class="rounded-circle" /></div>
+                        <img src="image/brand/agptek.png" class="rounded-circle" /></div>
                     <div class="featurebox-text text-center ">
                         <h5>APGtek</h5>
                     </div>

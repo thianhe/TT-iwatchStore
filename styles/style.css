@@ -1,19 +1,40 @@
+/* RWD */
+@media (min-width: 576px) {
+    html {
+        width: 95%;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        width: 95%;
+    }
+}
+
+@media (min-width: 992px) {
+    html {
+        width: 95%;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        width: 95%;
+    }
+}
+
 /* Global styles */
 html {
-    height: auto;
-    width: auto;
     margin: 0 auto;
-
 }
 
 * {
     box-sizing: border-box;
-
 }
 
 body {
-    padding: 4%;
-    background-image: url("../image/background.jpg");
+    padding: 5% 10%;
+    background-image: url('../image/background.jpg');
 }
 
 .container-fluid {
@@ -94,15 +115,15 @@ search bar
     color: #999;
 }
 
-.search-bar input:focus+.search-icon,
-.search-bar input:valid+.search-icon {
+.search-bar input:focus + .search-icon,
+.search-bar input:valid + .search-icon {
     z-index: 0;
     border-color: #ccc;
     right: 20px;
 }
 
-.search-bar input:focus+.search-icon:after,
-.search-bar input:valid+.search-icon:after {
+.search-bar input:focus + .search-icon:after,
+.search-bar input:valid + .search-icon:after {
     background-color: #ccc;
 }
 
@@ -141,12 +162,11 @@ search bar
 }
 
 .carousel-indicators .active {
-
     background-color: #000000;
 }
 
 .card-deck h1 {
-    text-shadow: 0 4px 18px rgba(0, 0, 0, .6);
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
     color: #eee !important;
 }
 
@@ -168,13 +188,15 @@ search bar
 
 .featurebox {
     margin-top: 3%;
+    width: 100%;
 }
 
 .featurebox-img {
     height: 90%;
-
 }
-
+.featurebox-img img {
+    object-fit: fill;
+}
 .featurebox-text {
     height: 10%;
 }
@@ -187,7 +209,6 @@ search bar
 .rounded-circle {
     width: 100%;
     height: 90%;
-
 }
 
 /*footer*/
@@ -205,6 +226,5 @@ search bar
 }
 
 .page-footer a:hover {
-
     color: rgb(161, 161, 161);
 }
