@@ -1,0 +1,61 @@
+#carouselExampleIndicators {
+    margin: 0 auto;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-indicators .active {
+    background-color: #000000;
+}
+
+.card-deck h1 {
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+    color: #eee !important;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.card-deck img {
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease;
+}
+
+.card-deck :hover img {
+    transform: scale(1.4);
+}
+
+.featurebox {
+    margin-top: 3%;
+    width: 100%;
+}
+
+.featurebox-img {
+    height: auto;
+}
+.featurebox-img img {
+    object-fit: fill;
+}
+.featurebox-text {
+    height: auto;
+}
+
+.featurebox a {
+    text-decoration: none;
+    color: black;
+}
+
+.rounded-circle {
+    width: 100%;
+    height: auto;
+}

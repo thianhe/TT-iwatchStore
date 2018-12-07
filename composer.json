@@ -1,0 +1,19 @@
+{
+    "name": "ngs/tt-iwatch-store",
+    "authors": [
+        {
+            "name": "ngSgn",
+            "email": "t105590049@ntut.org.tw"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^1.24"
+    },
+    "autoload": {
+        "classmap": [
+            "libraries",
+            "config",
+            "validators"
+        ]
+    }
+}

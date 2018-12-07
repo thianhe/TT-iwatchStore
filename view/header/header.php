@@ -10,14 +10,14 @@
         <ul class="navbar-nav ">
          
             <li class="nav-item ">
-                <a class="nav-link" href="#">LOG IN</a>
+                <a class="nav-link" href="login">LOG IN</a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
             </li>
             <li class="nav-item ">
                 <div class="search-bar">
-                    <input type="text" placeholder="..." required></input>
+                    <input type="text" placeholder="..." required/>
                     <div class="search-icon"></div>
                 </div>
             </li>
@@ -32,10 +32,10 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav ">
             <li class="nav-item ">
-                <a class="nav-link " href="#">Home<span class="sr-only active">(current)</span></a>
+                <a class="nav-link " href="index">Home<span class="sr-only active">(current)</span></a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="#">Products</a>
+                <a class="nav-link" href="products">Products</a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link" href="#">Promotions</a>

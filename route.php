@@ -1,5 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+$route = new Router(Request::uri());
+$routeFile = $route->getParameter(1);
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -13,24 +15,15 @@
     <!--Include-->
     <script src="js/script.js" charset="utf-8"></script>
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
-
-    <title>
-        <?php echo $title; ?>
-    </title>
-
+    <link rel="stylesheet" type="text/css" href="styles/<?php echo $routeFile; ?>.css" />
+    <title></title>
 </head>
+<?php
 
-<body>
-    <div class="header">
-        <?php include 'header.php';?>
-    </div>
-    <div class="body">
-        <?php include 'body.php';?>
-    </div>
-    <footer>
-        <?php include 'footer.php';?>
-    </footer>
-</body>
+include('view/header/header.php');
+include( 'view/body/'.$routeFile.'.php' );
+include('view/footer/footer.php');
+?>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -38,5 +31,4 @@
     crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-
 </html>
