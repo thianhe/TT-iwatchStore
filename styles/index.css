@@ -1,5 +1,5 @@
 #carouselExampleIndicators {
-    margin: 0 auto;
+    margin-bottom: 3% !important;
 }
 
 .carousel-control-prev-icon {
@@ -21,6 +21,7 @@
 
 .card {
     overflow: hidden;
+    margin-bottom: 3% !important;
 }
 
 .card-deck img {
@@ -43,9 +44,11 @@
 .featurebox-img {
     height: auto;
 }
+
 .featurebox-img img {
     object-fit: fill;
 }
+
 .featurebox-text {
     height: auto;
 }

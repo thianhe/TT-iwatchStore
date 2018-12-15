@@ -27,7 +27,7 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <div class="hr"></div>
+        <div class="space"></div>
 
         <div class="card-deck">
             <div class="card">
@@ -49,7 +49,7 @@
                 </div>
             </div>
         </div>
-        <div class="hr"></div>
+        
 
         <h1 class="text-center">Featured Brands</h1>
         <div class="row">
