@@ -165,21 +165,22 @@ class DatabaseAccessObject {
     }
 
     /**
-     * @return int
-     * 主要功能是把新增的 ID 傳到物件外面
-     */
-    public function getLastId($id,$table) {
-        setLastId($id,$table);
-        return $this->last_id;
-    }
-
-    /**
      * @param int $last_id
      * 把這個 $last_id 存到物件內的變數
      */
     private function setLastId($id,$table) {
-        $sql = "SELECT MAX({$id}) FROM {$table}";
-        $this->last_id = this.execute($sql);
+        $sql = "SELECT MAX({$id}) as LastId FROM {$table}";
+        $result = $this->execute($sql);
+        $this->last_id = $result[0]["LastId"];
+    }
+
+    /**
+     * @return int
+     * 主要功能是把新增的 ID 傳到物件外面
+     */
+    public function getLastId($id,$table) {
+        $this->setLastId($id,$table);
+        return $this->last_id;
     }
 
     /**

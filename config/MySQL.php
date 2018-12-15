@@ -1,7 +1,7 @@
 <?php
 class MySQL {
   const ADDRESS = "localhost";
-  const USERNAME = "root";
-  const PASSWORD = "root";
+  const USERNAME = "newuser";
+  const PASSWORD = "newpassword";
   const DATABASE = "TTiWatchStore";
 }

@@ -27,8 +27,8 @@ if(isset($_POST['submit']))
     }
     $userVeridator = new UserVeridator();
     $userVeridator->isPasswordMatch($password, $passwordConfirm);
-    $userVeridator->isUsernameDuplicate($username);
     $userVeridator->isEmailDuplicate($email);
+    $userVeridator->isUsernameDuplicate($username);
     $error = $userVeridator->getErrorArray();
   } 
   //if no errors have been created carry on
@@ -42,40 +42,40 @@ if(isset($_POST['submit']))
     try {
       // 新增到資料庫
       $id = Database::get()->getLastId("member_id","MEMBER");
-      $table = 'members';
+      $table = 'MEMBER';
       $data_array = array(
-        'memberid'=>$id,
-        "fname" => "tom",
-        "lname" => "Potter",
-        'username' => $username,
+        'member_id'=>$id+1,
+        "first_name" => "tom",
+        "last_name" => "Potter",
+        'account' => $username,
         'password' => $hashedpassword,
-        'email' => $email
+        'email' => $email,
+        "phone_number" => 123123123,
+        "birthday" => "2017-06-15",
+        "gender" => "F"
         //'active' => $activasion
       );
       Database::get()->insert($table, $data_array);
       
-      /*if(isset($id) AND !empty($id) AND is_numeric($id)){
+      if(isset($id) AND !empty($id) AND is_numeric($id)){
         // 寄出認證信
         $subject = "Registration Confirmation";
-        $body = "<p>Thank you for registering at demo site.</p>
+        /*$body = "<p>Thank you for registering at demo site.</p>
         <p>To activate your account, please click on this link: <a href='".Config::BASE_URL."activate/$id/$activasion'>".Config::BASE_URL."activate/$id/$activasion</a></p>
-        <p>Regards Site Admin</p>";
+        <p>Regards Site Admin</p>";*/
+        $body = "<p>Thank you for registering at demo site.</p>";
         $mail = new Mail(Config::MAIL_USER_NAME, Config::MAIL_USER_PASSWROD);
         $mail->setFrom(Config::MAIL_FROM, Config::MAIL_FROM_NAME);
         $mail->addAddress($email);
         $mail->subject($subject);
         $mail->body($body);
-        if($mail->send()){
-        $msg->success('Registration successful, please check your email to activate your account.');
-        }else{
-        $msg->error('Sorry, unable to send Email.');
-        }
+        $mail->send();
         //redirect to index page
-        header('Location: '.Config::BASE_URL.'register');
+        header('Location: '.Config::BASE_URL);
         exit;
       }else{
         $error[] = "Registration Error Occur on Database.";
-      }*/
+      }
     //else catch the exception and show the error.
     } catch(PDOException $e) {
         $error[] = $e->getMessage();
@@ -88,6 +88,7 @@ if(isset($_POST['submit']))
     header('Location: ' . $_SERVER['HTTP_REFERER']);
     exit;
   }
+
 }else{
   header('Location: ' . Config::BASE_URL);
   exit;

@@ -7,19 +7,9 @@
 					<h2>Please Sign Up</h2>
 					<p>Already a member? <a href='login'>Login</a></p>
 					<hr>
-					<?php
+					<?php 
 					//check for any errors
-					if(isset($error)){
-						foreach($error as $error){
-							echo '<p class="bg-danger">'.$error.'</p>';
-						}
-					}
-
-				//if action is joined show sucess
-					if(isset($_GET['action']) && $_GET['action'] == 'joined'){
-						echo "<h2 class='bg-success'>Registration successful, please check your email to activate your account.</h2>";
-					}
-					?>
+					if ($msg->hasMessages()) $msg->display();?>
 
 					<div class="form-group">
 						<input type="text" name="username" id="username" class="form-control input-lg" placeholder="User Name" value="<?php if(isset($error)){ echo htmlspecialchars($_POST['username'], ENT_QUOTES); } ?>" tabindex="1">

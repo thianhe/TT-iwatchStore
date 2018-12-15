@@ -1,8 +1,8 @@
 <?php
 $route = new Router(Request::uri());
 $routeFile = $route->getParameter(1);
-?>
 
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,12 +18,19 @@ $routeFile = $route->getParameter(1);
     <link rel="stylesheet" type="text/css" href="styles/<?php echo $routeFile; ?>.css" />
     <title></title>
 </head>
+<body>
 <?php
+$parameter = strtolower($route->getParameter(1));
+$controller_array = scandir('controller');
+$controller_array = array_change_key_case($controller_array, CASE_LOWER);
+if (in_array($parameter.'.php', $controller_array)) {
+  include( 'controller/'.$parameter.'.php' );
+}else{
+  include( 'controller/index.php' );
+}
 
-include('view/header/header.php');
-include( 'view/body/'.$routeFile.'.php' );
-include('view/footer/footer.php');
 ?>
+</body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
