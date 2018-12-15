@@ -4,17 +4,22 @@ if(isset($_POST['submit']))
   $gump = new GUMP();
   $_POST = $gump->sanitize($_POST); 
   $validation_rules_array = array(
-    'username'    => 'required|alpha_numeric|max_len,20|min_len,3',
+    'account'    => 'required|alpha_numeric|max_len,20|min_len,3',
     'email'       => 'required|valid_email',
     'password'    => 'required|max_len,20|min_len,3',
     'passwordConfirm' => 'required'
   );
   $gump->validation_rules($validation_rules_array);
   $filter_rules_array = array(
-    'username' => 'trim|sanitize_string',
+    'account' => 'trim|sanitize_string',
     'email'    => 'trim|sanitize_email',
     'password' => 'trim',
-    'passwordConfirm' => 'trim'
+    'passwordConfirm' => 'trim',
+    'firstName' => 'trim',
+    'lastName' => 'trim',
+    'phoneNumber' => 'trim',
+    'bday' => 'trim',
+    'gender'=> 'trim'
   );
   $gump->filter_rules($filter_rules_array);
   $validated_data = $gump->run($_POST);
@@ -22,13 +27,13 @@ if(isset($_POST['submit']))
     $error = $gump->get_readable_errors(false);
   } else {
     // validation successful
-    foreach($validation_rules_array as $key => $val) {
+    foreach($filter_rules_array as $key => $val) {
       ${$key} = $_POST[$key];
     }
     $userVeridator = new UserVeridator();
     $userVeridator->isPasswordMatch($password, $passwordConfirm);
     $userVeridator->isEmailDuplicate($email);
-    $userVeridator->isUsernameDuplicate($username);
+    $userVeridator->isAccountDuplicate($account);
     $error = $userVeridator->getErrorArray();
   } 
   //if no errors have been created carry on
@@ -45,14 +50,14 @@ if(isset($_POST['submit']))
       $table = 'MEMBER';
       $data_array = array(
         'member_id'=>$id+1,
-        "first_name" => "tom",
-        "last_name" => "Potter",
-        'account' => $username,
+        "first_name" => $firstName,
+        "last_name" => $lastName,
+        'account' => $account,
         'password' => $hashedpassword,
         'email' => $email,
-        "phone_number" => 123123123,
-        "birthday" => "2017-06-15",
-        "gender" => "F"
+        "phone_number" => $phoneNumber,
+        "birthday" => $bday,
+        "gender" => $gender
         //'active' => $activasion
       );
       Database::get()->insert($table, $data_array);

@@ -22,10 +22,10 @@ class UserVeridator {
     /**
      * 驗證帳號是否已存在於資料庫中
      */
-    public function isUsernameDuplicate($username){
+    public function isAccountDuplicate($username){
         $result = Database::get()->execute('SELECT account FROM member WHERE account = "'.$username.'"');
         if(isset($result[0]['account']) and !empty($result[0]['account'])){
-          $this->error[] = 'Username provided is already in use.';
+          $this->error[] = 'Account provided is already in use.';
           return false;
         }
         
