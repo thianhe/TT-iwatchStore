@@ -22,12 +22,13 @@ class UserVeridator {
     /**
      * 驗證帳號是否已存在於資料庫中
      */
-    public function isUsernameDuplicate($username){
-        $result = Database::get()->execute('SELECT username FROM members WHERE username = :username', array(':username' => $username));
-        if(isset($result[0]['username']) and !empty($result[0]['username'])){
-          $this->error[] = 'Username provided is already in use.';
+    public function isAccountDuplicate($username){
+        $result = Database::get()->execute('SELECT account FROM member WHERE account = "'.$username.'"');
+        if(isset($result[0]['account']) and !empty($result[0]['account'])){
+          $this->error[] = 'Account provided is already in use.';
           return false;
         }
+        
 		return true;
     }
 
@@ -35,8 +36,9 @@ class UserVeridator {
      * 驗證信箱是否已存在於資料庫中
      */
     public function isEmailDuplicate($email){
-        $result = Database::get()->execute('SELECT email FROM members WHERE email = :email', array(':email' => $email));
-        if(isset($result[0]['email']) AND !empty($result[0]['email'])){
+        $sql = 'SELECT email FROM member WHERE email = "'.$email.'"';
+        $result = Database::get()->execute($sql);
+        if(isset($result[0]['email']) and !empty($result[0]['email'])){
             $this->error[] = 'Email provided is already in use.';
             return false;
         }
