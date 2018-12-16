@@ -52,12 +52,13 @@ hr {
 }
 
 /* Header */
+.navbar-brand img {
+    height: 10%;
+}
 
-/*
-################
-search bar
-################
-*/
+.navbar-nav a {
+    font-family: 'Oxygen', sans-serif;
+}
 
 .search-bar {
     height: auto;
@@ -71,9 +72,9 @@ search bar
 }
 
 .search-bar input {
-    height: 44px;
-    width: 44px;
-    padding: 10px 20px;
+    height: 41px;
+    width: 41px;
+    padding: 10px 16px;
     box-sizing: border-box;
     font-size: 18px;
     border: 2px solid transparent;
@@ -99,7 +100,7 @@ search bar
 
 .search-bar input:focus,
 .search-bar input:valid {
-    width: 300px;
+    width: 200px;
     border: 2px solid rgb(12, 11, 11);
     outline: none;
     cursor: auto;
@@ -126,10 +127,10 @@ search bar
 
 .search-icon {
     display: inline-block;
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
     border-radius: 50%;
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid #7C7C7D;
     position: absolute;
     right: 12px;
     top: 8px;
@@ -140,11 +141,11 @@ search bar
     content: '';
     position: absolute;
     top: 16px;
-    left: 14px;
+    left: 12px;
     transform: rotate(45deg);
     height: 2px;
     width: 10px;
-    background-color: rgb(2, 1, 1);
+    background-color: #7C7C7D;
     border-radius: 10px;
 }
 
@@ -162,11 +163,28 @@ search bar
     background-color: rgb(0, 0, 0);
 }
 
+.footer-title {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 700;
+}
+
+.footer-content {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 300;
+}
+
 .page-footer a {
     text-decoration: none;
     color: rgb(247, 247, 247);
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 300;
 }
 
 .page-footer a:hover {
     color: rgb(161, 161, 161);
+}
+
+.footest-word {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 300;
 }

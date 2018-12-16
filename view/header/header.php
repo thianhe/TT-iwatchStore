@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light ">
     <a class="navbar-brand" href="#">
-        <h1 class="display-6">TT iWatchStore </h1>
+        <img src="./image/logo2.png" class="img-fluid" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
         aria-expanded="false" aria-label="Toggle navigation">
