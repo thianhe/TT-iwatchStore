@@ -29,7 +29,7 @@ if(isset($_POST['submit']))
       $result = Database::get()->execute('SELECT * FROM member WHERE account = "'.$username.'"');
       $_SESSION['memberID'] = $result[0]['member_id'];
       $_SESSION['name'] = $result[0]['first_name'].' '.$result[0]['last_name'];
-      header('Location: home');
+      header('Location: index');
       exit;
     }
   }
