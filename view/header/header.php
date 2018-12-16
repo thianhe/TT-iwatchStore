@@ -8,12 +8,21 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav ">
-         
+            <?php
+            if(isset($_SESSION['name'])) 
+                echo '<li class="nav-item ">
+                        <a class="nav-link" href="login"><i class="fas fa-user-cog"></i> '.$_SESSION['name'].'</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="login">LOG OUT</a>
+                    </li>';
+            else
+                echo '<li class="nav-item ">
+                        <a class="nav-link" href="login">LOG IN</a>
+                    </li>' ;
+            ?>
             <li class="nav-item ">
-                <a class="nav-link" href="login">LOG IN</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i>*<?php echo $_SESSION['shopping_cart']?></a>
             </li>
             <li class="nav-item ">
                 <div class="search-bar">

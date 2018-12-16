@@ -197,6 +197,7 @@ Class Password {
             return false;
         }
         $ret = crypt($password, $hash);
+
         if (!is_string($ret) || strlen($ret) != strlen($hash) || strlen($ret) <= 13) {
             return false;
         }

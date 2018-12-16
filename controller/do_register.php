@@ -76,7 +76,7 @@ if(isset($_POST['submit']))
         $mail->body($body);
         $mail->send();
         //redirect to index page
-        header('Location: '.Config::BASE_URL);
+        header('Location: '.Config::BASE_URL.'login');
         exit;
       }else{
         $error[] = "Registration Error Occur on Database.";
