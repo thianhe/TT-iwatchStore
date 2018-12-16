@@ -44,6 +44,21 @@ class UserVeridator {
         }
 		return true;
     }
+
+     /**
+     * 驗證帳號密碼是否正確可登入
+     */
+    public function loginVerification($username, $password){
+        $result = Database::get()->execute('SELECT * FROM member WHERE account = "'.$username.'"');
+        if(isset($result[0]['account']) and !empty($result[0]['account'])) {
+            $passwordObject = new Password();
+            if($passwordObject->password_verify($password,$result[0]['password'])){
+                return true;
+            }
+        }
+        $this->error[] = 'Wrong username or password.';
+        return false;
+    }
     
     
 }?>
