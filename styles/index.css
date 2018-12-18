@@ -1,5 +1,5 @@
 #carouselExampleIndicators {
-    margin: 0 auto;
+    margin-bottom: 3% !important;
 }
 
 .carousel-control-prev-icon {
@@ -17,13 +17,16 @@
 .card-deck h1 {
     text-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
     color: #eee !important;
+    font-family: 'Oxygen', sans-serif;
+
 }
 
 .card {
     overflow: hidden;
+    margin-bottom: 3% !important;
 }
 
-.card-deck img {
+.card img {
     height: auto;
     width: 100%;
     background-size: cover;
@@ -31,8 +34,12 @@
     transition: all 0.5s ease;
 }
 
-.card-deck :hover img {
+.card:hover img {
     transform: scale(1.4);
+}
+
+.featured-text {
+    font-family: 'Oxygen', sans-serif;
 }
 
 .featurebox {
@@ -43,9 +50,11 @@
 .featurebox-img {
     height: auto;
 }
+
 .featurebox-img img {
     object-fit: fill;
 }
+
 .featurebox-text {
     height: auto;
 }
@@ -53,6 +62,7 @@
 .featurebox a {
     text-decoration: none;
     color: black;
+    font-family: 'Oxygen', sans-serif;
 }
 
 .rounded-circle {

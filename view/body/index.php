@@ -27,31 +27,37 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <div class="hr"></div>
+        <div class="space"></div>
 
         <div class="card-deck">
             <div class="card">
-                <img class="card-img-top" src="image/index/table1.jpeg" alt="Card image cap">
-                <div class="card-img-overlay align-items-center d-flex justify-content-center">
-                    <h1>Best Sellers</h4>
-                </div>
+                <a href="#">
+                    <img class="card-img-top" src="image/index/table1.jpeg" alt="Card image cap">
+                    <div class="card-img-overlay align-items-center d-flex justify-content-center">
+                        <h1>Best Sellers</h4>
+                    </div>
+                </a>
             </div>
             <div class="card">
-                <img class="card-img-top" src="image/index/table2.jpg" alt="Card image cap">
-                <div class="card-img-overlay align-items-center d-flex justify-content-center">
-                    <h1>New Releases</h4>
-                </div>
+                <a href="#">
+                    <img class="card-img-top" src="image/index/table2.jpg" alt="Card image cap">
+                    <div class="card-img-overlay align-items-center d-flex justify-content-center">
+                        <h1>New Releases</h4>
+                    </div>
+                </a>
             </div>
             <div class="card">
-                <img class="card-img-top" src="image/index/table3.jpg" alt="Card image cap">
-                <div class="card-img-overlay align-items-center d-flex justify-content-center">
-                    <h1>Top Rated</h4>
-                </div>
+                 <a href="#">    
+                    <img class="card-img-top" src="image/index/table3.jpg" alt="Card image cap">
+                    <div class="card-img-overlay align-items-center d-flex justify-content-center">
+                        <h1>Top Rated</h4>
+                    </div>
+                </a>
             </div>
         </div>
-        <div class="hr"></div>
+        
 
-        <h1 class="text-center">Featured Brands</h1>
+        <h1 class="text-center featured-text">Featured Brands</h1>
         <div class="row">
             <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
                 <a href="#">
