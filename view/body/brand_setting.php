@@ -28,7 +28,7 @@
 
         <div class="row setting_list ">
             <div class="col-5">Brand Name</div>
-            <div class="col-3">Product Number</div>
+            <div class="col-3">Contain Product</div>
             <div class="col-2"></div>
             <div class="col-2"></div>
             </div>
