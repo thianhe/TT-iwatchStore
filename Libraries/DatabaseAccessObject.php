@@ -171,7 +171,10 @@ class DatabaseAccessObject {
     private function setLastId($id,$table) {
         $sql = "SELECT MAX({$id}) as LastId FROM {$table}";
         $result = $this->execute($sql);
-        $this->last_id = $result[0]["LastId"];
+        if(isset($result[0]["LastId"]))
+            $this->last_id = $result[0]["LastId"];
+        else
+            $this->last_id =-1;
     }
 
     /**

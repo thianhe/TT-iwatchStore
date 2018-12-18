@@ -11,10 +11,10 @@
 				//check for any errors
 					if ($msg->hasMessages()) $msg->display();?>
 				<div class="form-group">
-					<input type="text" name="username" id="username" class="form-control input-lg" placeholder="Account" value="" tabindex="1">
+					<input type="text" name="username" id="username" class="form-control input-lg" required placeholder="Account" value="" tabindex="1">
 				</div>
 				<div class="form-group">
-					<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="3">
+					<input type="password" name="password" id="password" class="form-control input-lg" required placeholder="Password" tabindex="3">
 				</div>
 				<div class="row">
 					<div class="col-xs-9 col-sm-9 col-md-9">

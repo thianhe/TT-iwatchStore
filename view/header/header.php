@@ -9,13 +9,20 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav ">
             <?php
-            if(isset($_SESSION['name'])) 
-                echo '<li class="nav-item ">
+            if(isset($_SESSION['name'])) {
+                if(isset($_SESSION['memberID']) and $_SESSION['memberID'] ==0){
+                     echo '<li class="nav-item ">
+                                <a class="nav-link" href="admin"><i class="fas fa-cogs"></i> Admin Page</a>
+                         </li>';
+                }
+                echo '
+                    <li class="nav-item ">
                         <a class="nav-link" href="#"><i class="fas fa-user-cog"></i> '.$_SESSION['name'].'</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="do_logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
                     </li>';
+            }
             else
                 echo '<li class="nav-item ">
                         <a class="nav-link" href="login"><i class="fas fa-sign-in-alt"></i>Login</a>
