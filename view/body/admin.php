@@ -3,7 +3,7 @@
     <div class="container text-center">
         <div class="row">
             <div class="col-md-4 col-sm-6">
-                <a href="users_setting">
+                <a href="user_setting">
                     <i class="fas fa-users-cog fa-5x"></i>
                     <div class="control_link">User</div>
                 </a>

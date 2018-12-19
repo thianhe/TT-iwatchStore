@@ -176,7 +176,14 @@ class DatabaseAccessObject {
         else
             $this->last_id =-1;
     }
-
+    private function setMinId($id,$table) {
+        $sql = "SELECT Min({$id}) as LastId FROM {$table}";
+        $result = $this->execute($sql);
+        if(isset($result[0]["LastId"]))
+            $this->last_id = $result[0]["LastId"];
+        else
+            $this->last_id =0;
+    }
     /**
      * @return int
      * 主要功能是把新增的 ID 傳到物件外面
@@ -185,7 +192,10 @@ class DatabaseAccessObject {
         $this->setLastId($id,$table);
         return $this->last_id;
     }
-
+    public function getMinId($id,$table) {
+        $this->setMinId($id,$table);
+        return $this->last_id;
+    }
     /**
      * @return int
      */

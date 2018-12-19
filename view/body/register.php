@@ -61,6 +61,7 @@
 							<div class="col-6"><input type="radio" name="gender" value="F"tabindex="10"> Female</div>
   						</div>
 					</div>
+					<input type="hidden" id="identity" name="identity" value="C">
 					<p>* required</p>
 					<div class="row">
 						<div class="col-xs-6 col-md-6"><input type="submit" name="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="11"></div>

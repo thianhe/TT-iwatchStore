@@ -19,7 +19,8 @@ if(isset($_POST['submit']))
     'lastName' => 'trim',
     'phoneNumber' => 'trim',
     'bday' => 'trim',
-    'gender'=> 'trim'
+    'gender'=> 'trim',
+    'identity'=> 'trim'
   );
   $gump->filter_rules($filter_rules_array);
   $validated_data = $gump->run($_POST);
@@ -46,10 +47,13 @@ if(isset($_POST['submit']))
     $activasion = md5(uniqid(rand(),true));
     try {
       // 新增到資料庫
-      $id = Database::get()->getLastId("member_id","MEMBER");
+      if($identity == 'C')
+        $id = Database::get()->getLastId("member_id","MEMBER") +1;
+      else if($identity == 'S')
+        $id = Database::get()->getMinId("member_id","MEMBER") -1;
       $table = 'MEMBER';
       $data_array = array(
-        'member_id'=>$id+1,
+        'member_id'=>$id,
         "first_name" => $firstName,
         "last_name" => $lastName,
         'account' => $account,
@@ -75,8 +79,9 @@ if(isset($_POST['submit']))
         $mail->subject($subject);
         $mail->body($body);
         $mail->send();
-        //redirect to index page
-        header('Location: '.Config::BASE_URL.'login');
+        $msg->success("Create user success");
+        //redirect to login page
+        header('Location: '. $_SERVER['HTTP_REFERER']);
         exit;
       }else{
         $error[] = "Registration Error Occur on Database.";

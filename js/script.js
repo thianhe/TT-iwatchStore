@@ -25,3 +25,22 @@ $(document).on('click', '.f_delete', function() {
         $(this).css({ 'background-color': 'red', color: '#ddd' });
     }
 });
+
+function UserFilter(select) {
+    $('#staff_list').addClass('hide');
+    $('#member_list').addClass('hide');
+    $('#all_filter').removeClass('selected');
+    $('#staff_filter').removeClass('selected');
+    $('#customer_filter').removeClass('selected');
+    if (select == 0) {
+        $('#all_filter').addClass('selected');
+        $('#staff_list').removeClass('hide');
+        $('#member_list').removeClass('hide');
+    } else if (select == 1) {
+        $('#staff_filter').addClass('selected');
+        $('#staff_list').removeClass('hide');
+    } else if (select == 2) {
+        $('#customer_filter').addClass('selected');
+        $('#member_list').removeClass('hide');
+    }
+}
