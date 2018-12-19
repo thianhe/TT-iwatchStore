@@ -1,7 +1,7 @@
 <script>document.title = 'Manage User'</script>
 <div class="jumbotron">
     <div class="container">
-        <div class="row">
+        <div class="row user_info">
             <div class="col-12">
                 User Info
             </div>
@@ -41,6 +41,28 @@
                 if($userInfo['gender'] == 'M') echo'Male'; 
                 else if($userInfo['gender'] == 'M') echo'Female';
                 else echo 'Undefined'?></div>
+        </div>
+        <div class="row">
+            <div class="col-2 edit_form">
+                <form action="<?php echo Config::BASE_URL?>user_edit" method="post">
+                    <input type="hidden" name="account" value="<?php echo $userInfo['account'];?>">
+                    <input type="submit" name="submit" value="Edit">
+                </form>
+            </div>
+            <div class="col-2 delete_form">
+                <form action="<?php echo Config::BASE_URL?>do_deletemember" method="post">
+                    <input type="hidden" name="account" value="<?php echo $userInfo['account'];?>">
+                    <input type="submit" name="submit" value="SURE">
+                </form>
+                <span class="mask"></span>
+                <a class="f_delete text-center" href="#" >Delete</a>
+            </div>
+            <div class="col-2 text-center">
+                <a href="user_setting">
+                    <i class="fas fa-users-cog"></i>
+                    All User
+                </a>
+            </div>
         </div>
         
     </div>

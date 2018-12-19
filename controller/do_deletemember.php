@@ -24,7 +24,7 @@ if(isset($_POST['submit']))
             $key_column = "account";
             Database::get()->delete($table, $key_column,$id);
             $msg->success("Delete user '".$account."' success");
-            header('Location: ' . $_SERVER['HTTP_REFERER']);
+            header('Location: user_setting');
         exit;
         } catch(PDOException $e) {
             $error[] = $e->getMessage();
@@ -35,11 +35,11 @@ if(isset($_POST['submit']))
     foreach( $error as $e) {
         $msg->error($e);
     }
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
+    header('Location: user_setting');
     exit;
   }
 }else{
-  header('Location: ' . $_SERVER['HTTP_REFERER']);
+  header('Location: user_setting');
   $msg->error("ee");
   exit;
 }
