@@ -14,6 +14,12 @@
                     <div class="control_link">Brand</div>
                 </a>
             </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="product_setting">
+                    <i class="fas fa-clock fa-5x"></i>
+                    <div class="control_link">Product</div>
+                </a>
+            </div>
         </div>
     </div>
 </div>

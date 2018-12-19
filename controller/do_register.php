@@ -7,7 +7,8 @@ if(isset($_POST['submit']))
     'account'    => 'required|alpha_numeric|max_len,20|min_len,3',
     'email'       => 'required|valid_email',
     'password'    => 'required|max_len,20|min_len,3',
-    'passwordConfirm' => 'required'
+    'passwordConfirm' => 'required',
+    'phoneNumber' => 'integer'
   );
   $gump->validation_rules($validation_rules_array);
   $filter_rules_array = array(

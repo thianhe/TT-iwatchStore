@@ -1,6 +1,7 @@
 <?php
 class Config {
     const BASE_URL = "http://localhost/TT-iwatchStore/";
+    const PRODUCT_IMG_URL = "http://localhost/TT-iwatchStore/image/product/";
     const MAIL_FROM = "ttiwatchstore@gmail.com";
     const MAIL_FROM_NAME = "TTiWatchStore";  
     const MAIL_USER_NAME = "ttiwatchstore@gmail.com"; // 用來寄信的 GMAIL 帳號

@@ -1,8 +1,13 @@
 <?php
 if(isset($_POST['submit'])) 
 {
+  $_SESSION['updateKey'] = $_POST['account'];
   $gump = new GUMP();
   $_POST = $gump->sanitize($_POST); 
+  $validation_rules_array = array(
+    'phoneNumber' => 'integer'
+  );
+  $gump->validation_rules($validation_rules_array);
   $filter_rules_array = array(
       'account' =>'trim',
     'firstName' => 'trim',
@@ -20,7 +25,7 @@ if(isset($_POST['submit']))
     foreach($filter_rules_array as $key => $val) {
       ${$key} = $_POST[$key];
     }
-  } 
+  }
   //if no errors have been created carry on
   if(count($error) == 0)
   {
@@ -35,11 +40,10 @@ if(isset($_POST['submit']))
         "gender" => $gender
       );
       Database::get()->Update($table,$data_array,"account",$account);
-      
-        $msg->success("Update user information success");
-        //redirect to login page
-        header('Location: user_setting');
-        exit;
+      $msg->success("Update user information success");
+      //redirect to login page
+      header('Location: manage_user');
+      exit;
 
     //else catch the exception and show the error.
     } catch(PDOException $e) {

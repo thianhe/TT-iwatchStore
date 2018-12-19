@@ -1,4 +1,4 @@
-<script>document.title = 'Register'</script>
+<script>document.title = 'Update User'</script>
 <div class="jumbotron">
 	<div class="container">
 		<div class="row">
