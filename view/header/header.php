@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="index">
         <img src="./image/logo2.png" class="img-fluid" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
@@ -54,7 +54,7 @@
                 <a class="nav-link" href="products">Products</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="#">Promotions</a>
+                <a class="nav-link" href="promotions">Promotions</a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link" href="#">Profile</a>

@@ -51,6 +51,10 @@ hr {
     margin: 3% 0;
 }
 
+.hr_black {
+    border: 1px solid rgb(102, 98, 98);
+}
+
 /* Header */
 .navbar-brand img {
     height: 10%;
@@ -113,15 +117,15 @@ hr {
     color: #999;
 }
 
-.search-bar input:focus + .search-icon,
-.search-bar input:valid + .search-icon {
+.search-bar input:focus+.search-icon,
+.search-bar input:valid+.search-icon {
     z-index: 0;
     border-color: #ccc;
     right: 20px;
 }
 
-.search-bar input:focus + .search-icon:after,
-.search-bar input:valid + .search-icon:after {
+.search-bar input:focus+.search-icon:after,
+.search-bar input:valid+.search-icon:after {
     background-color: #ccc;
 }
 
@@ -173,6 +177,11 @@ hr {
     font-weight: 300;
 }
 
+.footest-word {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 300;
+}
+
 .page-footer a {
     text-decoration: none;
     color: rgb(247, 247, 247);
@@ -191,14 +200,17 @@ hr {
     color: rgb(82, 82, 82);
     text-decoration: none;
 }
+
 .setting_button:hover {
     background-color: rgb(110, 110, 110);
     color: #eee;
     text-decoration: none;
 }
+
 .setting_button_row {
     margin-bottom: 50px;
 }
+
 #hidden_form {
     -webkit-transition: 1s ease-out;
     -moz-transition: 1s ease-out;
@@ -220,6 +232,7 @@ hr {
     padding: 0;
     border: 0;
 }
+
 .delete_form.hide {
     opacity: 0;
     height: 0;
@@ -227,6 +240,7 @@ hr {
     padding: 0;
     border: 0;
 }
+
 #hidden_form .cancel_button {
     background: rgb(219, 219, 219);
     height: 25px;
@@ -249,6 +263,7 @@ hr {
     font-size: 20px;
     padding: 10px 0;
 }
+
 .delete_form input {
     -webkit-transition: 1s ease-out;
     -moz-transition: 1s ease-out;
@@ -273,6 +288,7 @@ hr {
     right: 0;
     background-color: #999;
 }
+
 .delete_form .f_delete {
     background-color: red;
     position: absolute;
@@ -289,13 +305,11 @@ hr {
     text-decoration: none;
     color: #ddd;
 }
+
 .delete_form .f_delete:hover {
     text-decoration: none;
 }
+
 .delete_form.active .mask {
     right: 100%;
-}
-.footest-word {
-    font-family: 'Oxygen', sans-serif;
-    font-weight: 300;
 }

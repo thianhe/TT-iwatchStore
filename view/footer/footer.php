@@ -11,8 +11,8 @@
                 <hr>
                 <p class="text-justify footer-content">We are a student team from National Taipei University of Technology(NTUT),
                     building this e-commerce website is just for education purpose.
-                    「TT iWatch Store」is developed by PHP as front-end developing and mySQL as database system. We are also
-                    using encryption algorithm to proctect wesbsite's information.</p>
+                    「TT iWatch Store」is developed by PHP as front-end developing and mySQL as database system. Futhermore, We are also
+                    using encryption algorithm in order to encrypt client's information.</p>
 
             </div>
 

@@ -1,7 +1,7 @@
 <script>document.title = 'Admin Page'</script>
 <div class="jumbotron">
     <div class="container text-center">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             <div class="col-md-4 col-sm-6">
                 <a href="user_setting">
                     <i class="fas fa-users-cog fa-5x"></i>
