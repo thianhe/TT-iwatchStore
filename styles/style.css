@@ -117,15 +117,15 @@ hr {
     color: #999;
 }
 
-.search-bar input:focus+.search-icon,
-.search-bar input:valid+.search-icon {
+.search-bar input:focus + .search-icon,
+.search-bar input:valid + .search-icon {
     z-index: 0;
     border-color: #ccc;
     right: 20px;
 }
 
-.search-bar input:focus+.search-icon:after,
-.search-bar input:valid+.search-icon:after {
+.search-bar input:focus + .search-icon:after,
+.search-bar input:valid + .search-icon:after {
     background-color: #ccc;
 }
 
@@ -283,6 +283,7 @@ hr {
 .delete_form .mask {
     position: absolute;
     transition: all 1s linear;
+    height: 35px;
     left: 0;
     top: 0;
     bottom: 0;
@@ -299,6 +300,7 @@ hr {
     bottom: 0;
     right: 0;
     width: 45px;
+    height: 35px;
     border: none;
     border-radius: 5px;
     font-size: 10px;
@@ -313,30 +315,27 @@ hr {
 
 .delete_form.active .mask {
     right: 100%;
-
 }
-
 
 #searchBarForm input.hidden {
     display: none;
 }
 
-.table-striped>tbody>tr:nth-child(odd)>td,
-.table-striped>tbody>tr:nth-child(odd)>th {
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
     background-color: #afc9e3;
     border: 2px solid;
 }
 
-.table-striped>tbody>tr:nth-child(even)>td,
-.table-striped>tbody>tr:nth-child(even)>th {
+.table-striped > tbody > tr:nth-child(even) > td,
+.table-striped > tbody > tr:nth-child(even) > th {
     border: 2px solid;
     background-color: rgb(255, 255, 255);
 }
 
 .table td,
 .table th {
-    width: .1rem;
-
+    width: 0.1rem;
 }
 
 .edit-user-btn {

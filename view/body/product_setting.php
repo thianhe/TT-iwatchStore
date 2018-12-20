@@ -116,7 +116,7 @@
                             <div class="col-2">'.$p['price'].'</div>
                             <div class="col-2">'.$p['quantity'].'</div>
                             <div class="col-2 user_detail_button">
-                                <form action="'.Config::BASE_URL.'manage_watch" method="post">
+                                <form action="'.Config::BASE_URL.'manage_product" method="post">
                                     <input type="hidden" name="watch_id" value="'.$p['watch_id'].'">
                                     <button type="submit" class="btn btn-success">
                                         <i class="fas fa-cog"></i>
