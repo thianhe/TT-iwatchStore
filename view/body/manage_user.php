@@ -84,8 +84,8 @@
 
             </tbody>
         </table>
-        <div class="">
-            <a href="user_setting" class="btn">
+        <div class="nodeco-btn">
+            <a href="user_setting" class="">
                 <i class="fas fa-arrow-left"></i>
                 Go Back To Edit User
             </a>
