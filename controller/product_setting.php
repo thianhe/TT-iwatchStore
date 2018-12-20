@@ -2,8 +2,11 @@
 $_PageBeforeLoginOut = 'index';
 
 if(isset($_SESSION['memberID']) and $_SESSION['memberID'] ==0){
-    $product =  Database::get()->execute('select *from WATCH,company where company_id = brand_id;');
-
+    $product =  Database::get()->execute('select * from WATCH,company where company_id = brand_id;');
+    $brandList =  Database::get()->execute('select * from company;');
+    $opList = Database::get()->execute('select * from OPERATING_SYSTEM');
+    $othersOP = Database::get()->execute('select * from OPERATING_SYSTEM where op_id == 0;');
+    $opList[] = array_shift($opList);
     if(isset($_POST['key']))
         {
             $key = $_POST['key'];
