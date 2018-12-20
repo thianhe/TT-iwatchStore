@@ -14,12 +14,13 @@
                      echo '<li class="nav-item ">
                                 <a class="nav-link" href="admin"><i class="fas fa-cogs"></i> Admin Page</a>
                          </li>';
-                }
+                }else{
                 echo '
                     <li class="nav-item ">
                         <a class="nav-link" href="#"><i class="fas fa-user-cog"></i> '.$_SESSION['name'].'</a>
-                    </li>
-                    <li class="nav-item ">
+                    </li>';
+                }
+                echo '<li class="nav-item ">
                         <a class="nav-link" href="do_logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
                     </li>';
             }

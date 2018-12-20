@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 if (isset($_POST['submit'])) {
     $gump = new GUMP();
     $_POST = $gump->sanitize($_POST);
@@ -35,6 +36,40 @@ if (isset($_POST['submit'])) {
         $userVeridator->isEmailDuplicate($email);
         $userVeridator->isAccountDuplicate($account);
         $error = $userVeridator->getErrorArray();
+=======
+if(isset($_POST['submit'])) 
+{
+  $gump = new GUMP();
+  $_POST = $gump->sanitize($_POST); 
+  $validation_rules_array = array(
+    'account'    => 'required|alpha_numeric|max_len,20|min_len,3',
+    'email'       => 'required|valid_email',
+    'password'    => 'required|max_len,20|min_len,3',
+    'passwordConfirm' => 'required',
+    'phoneNumber' => 'integer'
+  );
+  $gump->validation_rules($validation_rules_array);
+  $filter_rules_array = array(
+    'account' => 'trim|sanitize_string',
+    'email'    => 'trim|sanitize_email',
+    'password' => 'trim',
+    'passwordConfirm' => 'trim',
+    'firstName' => 'trim',
+    'lastName' => 'trim',
+    'phoneNumber' => 'trim',
+    'bday' => 'trim',
+    'gender'=> 'trim',
+    'identity'=> 'trim'
+  );
+  $gump->filter_rules($filter_rules_array);
+  $validated_data = $gump->run($_POST);
+  if($validated_data === false) {
+    $error = $gump->get_readable_errors(false);
+  } else {
+    // validation successful
+    foreach($filter_rules_array as $key => $val) {
+      ${$key} = $_POST[$key];
+>>>>>>> 2c0d1fa1789426ad246be2c2184bf3e81792beb1
     }
     //if no errors have been created carry on
     if (empty($userVeridator->getErrorArray())) {
