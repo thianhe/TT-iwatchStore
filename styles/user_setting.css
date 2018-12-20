@@ -1,6 +1,7 @@
 .hide {
     display: none;
 }
+
 #staff_list .setting_list {
     background-color: yellow;
 }
@@ -13,13 +14,20 @@
     color: black;
     text-decoration: none;
 }
+
 .user_detail_button i:hover {
     color: rgb(0, 85, 0);
     text-decoration: none;
 }
+
 .filter {
     padding: 8px 0;
     background-color: gray;
+    border: 1px solid black;
+}
+
+.filter_search {
+
     border: 1px solid black;
 }
 

@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
         }
     }
     //if no errors have been created carry on
-    if (count($error) == 0) {
+    if (empty($gump->get_readable_errors())) {
         try {
             // 新增到資料庫
             $table = 'MEMBER';
