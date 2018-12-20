@@ -101,7 +101,7 @@
         </div>
     </div>
 
-    <div class="container row">
+    <div class="container row ">
         <div id="all_filter" class="text-center col-2 filter selected" onclick="UserFilter(0)">ALL</div>
         <div id="staff_filter" class="text-center col-2 filter" onclick="UserFilter(1)">STAFF</div>
         <div id="customer_filter" class="text-center col-2 filter" onclick="UserFilter(2)">CUSTOMER</div>
@@ -121,10 +121,14 @@
     </div>
     <?php
         if(isset($_POST['submit'])){
-            echo'<div class="row">
-                    <div class="col-10"><h3>Searched: '.$key.'</h3></div>
-                    <div class="col-2"><a href="'.Config::BASE_URL.'user_setting">Show all</a></div>
-                </div>';
+            
+            echo' <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+                <h2>Your search result for "'.$key.'"</h2>
+            </div>
+            <a href="'.Config::BASE_URL.'user_setting"><i class="fas fa-times-circle fa-2x text-danger"></i></a>
+        </div>';
+            
         }
         ?>
 

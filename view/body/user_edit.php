@@ -34,7 +34,7 @@
 					</div>
 					<div class="form-group">
 						<label for="bday">Birthday</label>
-						<input type="text" name="bday" id="bday" placeholder="YYYY-MM-DD" class="form-control input-lg" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])" title="Enter a date in this format YYYY-MM-DD"value="<?php if($userInfo['birthday'] != '0000-00-00') echo $userInfo['last_name'];?>"tabindex="7"/>
+						<input type="text" name="bday" id="bday" placeholder="YYYY-MM-DD" class="form-control input-lg" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])" title="Enter a date in this format YYYY-MM-DD"value="<?php if($userInfo['birthday'] != '0000-00-00') echo $userInfo['birthday'];?>"tabindex="7"/>
 					</div>
 					<div class="form-group">
 						<label for="phoneNumber">Phone Number</label>

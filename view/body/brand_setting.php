@@ -1,14 +1,18 @@
 <script>document.title = 'Brand Setting'</script>
 <div class="jumbotron">
     <div class="container">
-        <div class="row setting_button_row">
-            <div class="col-12">
-            <?php if ($msg->hasMessages()) $msg->display();?>
-                <a class="noTextDec setting_button" href="#hidden_form" onclick="ShowAddForm()">
-                    Add New Brand
-                </a>
+        <div class="row container">
+            <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <div class="display-4">Edit Brands</div>
+                    <?php if ($msg->hasMessages()) $msg->display();?>
+                </div>
+                <button type="button" class=" btn btn-info btn-edit-user " href="#hidden_form" onclick="ShowAddForm()">
+                <i class="fas fa-plus"></i>&nbsp;Add brand
+                </button>
             </div>
         </div>
+       
         <div id="hidden_form"class="row hide">
         <a href="#hidden_form" class="cancel_button" onclick="HideAddForm()">X</a>
             <div class="col-xs-11 col-sm-10 col-md-8">

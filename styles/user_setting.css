@@ -47,3 +47,12 @@
 .setting_list input {
     font-family: 'FontAwesome';
 }
+
+.fa-times-circle {
+    margin-top: 5px;
+}
+
+.fa-times-circle:hover {
+
+    color: rgb(243, 0, 0) !important;
+}
