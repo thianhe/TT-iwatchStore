@@ -5,14 +5,64 @@
             <div class="col-12">
             <?php if ($msg->hasMessages()) $msg->display();?>
                 <a class="noTextDec setting_button" href="#hidden_form" onclick="ShowAddForm()">
-                    Create User
+                    Add new watch
                 </a>
             </div>
         </div>
         <div id="hidden_form"class="row hide">
         <a href="#hidden_form" class="cancel_button" onclick="HideAddForm()">X</a>
             <div class="col-xs-11 col-sm-10 col-md-8">
-                <form role="form" method="post" action="<?=Config::BASE_URL?>do_register" autocomplete="off">
+                <form id="newWatchForm" role="form" method="post" action="<?=Config::BASE_URL?>do_add_new_watch" autocomplete="off"enctype="multipart/form-data">
+                    <div class="form-group">
+						<label for="watch_name">Watch Name*</label>
+						<input type="text" name="watch_name" id="watch_name" class="form-control input-lg" required placeholder="Watch Name" value="" tabindex="1">
+                    </div>
+                    <div class="form-group">
+					    <label for="brand">Brand*</label>
+						<div class="row">
+                            <?php
+                                foreach($brandList as $b){
+                                    echo '<div class="col-4"><input type="radio" name="brand_id" value="'.$b['company_id'].'"tabindex="2" required>'.$b['brand'].'</div>';
+                                }
+                            ?>
+  						</div>
+                    </div>
+                    <div class="form-group">
+					    <label for="op">Operating System*</label>
+						<div class="row">
+                            <?php
+                                foreach($opList as $o){
+                                    echo '<div class="col-4"><input type="radio" name="op_id" value="'.$o['op_id'].'"tabindex="3" required>'.$o['op_name'].'</div>';
+                                }
+                            ?>
+  						</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+						        <label for="price">Price*</label>
+						        <input type="text" name="price" id="price" class="form-control input-lg" required placeholder="Price" value="">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+					    	    <label for="quantity">Quantity*</label>
+						        <input type="text" name="quantity" id="quantity" class="form-control input-lg" required placeholder="Quantity" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label> <br>
+                        <textarea id="description"name="description" form="newWatchForm"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="images">Images</label> <br>
+                        <input type="file" name="images[]" multiple="multiple">
+                    </div>
+                    <p>* required</p>
+					<div class="row">
+						<div class="col-xs-6 col-md-6"><input type="submit" name="submit" value="Submit" class="btn btn-primary btn-block btn-lg" tabindex="11"></div>
+					</div>
 				</form>
             </div>
         </div>

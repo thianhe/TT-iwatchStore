@@ -299,3 +299,7 @@ hr {
     font-family: 'Oxygen', sans-serif;
     font-weight: 300;
 }
+
+#searchBarForm input.hidden {
+    display: none;
+}

@@ -36,10 +36,6 @@
     border: 3px solid black;
 }
 
-input.hidden {
-    display: none;
-}
-
 .setting_list input {
     font-family: 'FontAwesome';
 }
