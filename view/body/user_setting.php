@@ -102,6 +102,87 @@
                 </div>';
         }
         ?>
+        <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+            <th scope="col">Identity</th>
+            <th scope="col">Account</th>
+            <th scope="col">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                <?php
+                    foreach($staffResult as $r){
+                        echo '<tr>
+                        <td>Staff</td>
+                        <td>'.$r['account'].'</td>
+                        <td>'.$r['email'].'</td>
+                        <td>
+                        <div class="user_detail_button"> 
+                            <form action="'.Config::BASE_URL.'manage_user" method="post">
+                            <input type="hidden" name="account" value="'.$r['account'].'">
+                            <button type="submit" class="btn btn-success">
+                            <i class="fas fa-user-cog"></i>
+                            </button>
+                            </form>
+                            </div>
+                        </td>
+                        <td>
+                        <div class="delete_form"> 
+                            <form action="'.Config::BASE_URL.'do_deletemember" method="post">
+                            <input type="hidden" name="account" value="'.$r['account'].'">
+                            <input type="submit" name="submit" value="SURE">
+                            </form>
+                            <span class="mask"></span>
+                            <a class="f_delete text-center" href="#" >Delete</a>
+                        </div>
+                        </td>
+                        </div> </tr>';}
+                        
+                        foreach($customerResult as $r){
+                            echo '<tr>
+                            <td>Customer</td>
+                            <td>'.$r['account'].'</td>
+                            <td>'.$r['email'].'</td>
+                            <td>
+                            <div class="user_detail_button"> 
+                                <form action="'.Config::BASE_URL.'manage_user" method="post">
+                                <input type="hidden" name="account" value="'.$r['account'].'">
+                                <button type="submit" class="btn btn-success">
+                                <i class="fas fa-user-cog"></i>
+                                </button>
+                                </form>
+                                </div>
+                            </td>
+                            <td>
+                            <div class="delete_form"> 
+                                <form action="'.Config::BASE_URL.'do_deletemember" method="post">
+                                <input type="hidden" name="account" value="'.$r['account'].'">
+                                <input type="submit" name="submit" value="SURE">
+                                </form>
+                                <span class="mask"></span>
+                                <a class="f_delete text-center" href="#" >Delete</a>
+                            </div>
+                            </td>
+                            </div> </tr>';}
+                            ?>
+                        
+            
+            <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            </tr>
+            <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+            </tr>
+        </tbody>
+        </table>
         <div class="row setting_list ">
             <div class="col-2">Identity</div>
             <div class="col-3">Account</div>
@@ -160,6 +241,5 @@
                 }
                 echo '</div>';
             ?>
-        
     </div>
 </div>

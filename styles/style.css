@@ -283,7 +283,7 @@ hr {
     position: absolute;
     transition: all 1s linear;
     left: 0;
-    top: 0;
+
     bottom: 0;
     right: 0;
     background-color: #999;
@@ -291,12 +291,8 @@ hr {
 
 .delete_form .f_delete {
     background-color: red;
-    position: absolute;
     transition: all 1s linear;
-    left: 60%;
-    top: 0;
-    bottom: 0;
-    right: 0;
+
     width: 45px;
     border: none;
     border-radius: 5px;
@@ -312,16 +308,9 @@ hr {
 
 .delete_form.active .mask {
     right: 100%;
-<<<<<<< HEAD
-}
-=======
-}
-.footest-word {
-    font-family: 'Oxygen', sans-serif;
-    font-weight: 300;
+
 }
 
 #searchBarForm input.hidden {
     display: none;
 }
->>>>>>> 9b2936a98d920ddcce3621e3e2427476c0b2fffb
