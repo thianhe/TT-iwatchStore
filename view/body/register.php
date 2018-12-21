@@ -58,6 +58,11 @@ if ($msg->hasMessages()) {
 						<input type="tel" name="phoneNumber" id="phoneNumber" class="form-control input-lg" placeholder="Phone Number" value="<?php if (isset($error)) {echo htmlspecialchars($_POST['phoneNumber'], ENT_QUOTES);}?>"tabindex="8">
 					</div>
 					<div class="form-group">
+					<div class="form-group">
+						<label for="address">Address</label>
+						<input type="text" name="address" id="address" class="form-control input-lg" placeholder="Address" value="<?php if (isset($error)) {echo htmlspecialchars($_POST['address'], ENT_QUOTES);}?>"tabindex="8">
+					</div>
+					<div class="form-group">
 					<label for="gender">Gender</label>
 						<div class="row">
 							<div class="col-6"><input type="radio" name="gender" value="M"tabindex="9"> Male</div>

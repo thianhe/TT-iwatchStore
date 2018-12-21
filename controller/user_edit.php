@@ -1,7 +1,7 @@
 <?php
 $_PageBeforeLoginOut = 'index';
 
-if(isset($_SESSION['memberID']) and $_SESSION['memberID'] ==0){
+if(isset($_SESSION['memberID'])){
     if(isset($_POST['account']) or isset($_SESSION['updateKey']))
     {
         if(isset($_POST['account'])) $account = $_POST['account'];

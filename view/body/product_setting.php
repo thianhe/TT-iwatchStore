@@ -124,7 +124,7 @@
                                 </form>
                             </div>
                             <div class="col-2 delete_form">
-                                <form action="'.Config::BASE_URL.'do_delete_watch" method="post">
+                                <form action="'.Config::BASE_URL.'do_delete_product" method="post">
                                     <input type="hidden" name="watch_id" value="'.$p['watch_id'].'">
                                     <input type="submit" name="submit" value="SURE">
                                 </form>

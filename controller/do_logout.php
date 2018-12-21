@@ -4,6 +4,7 @@
  */
 unset($_SESSION['memberID']);
 unset($_SESSION['name']);
+unset($_SESSION['account']);
 /**
  * 導向登入頁
  */

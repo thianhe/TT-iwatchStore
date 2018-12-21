@@ -41,6 +41,10 @@
 						<input type="tel" name="phoneNumber" id="phoneNumber" class="form-control input-lg" placeholder="Phone Number" value="<?php if($userInfo['phone_number'] != '0'){ echo $userInfo['phone_number']; }?>"tabindex="8">
 					</div>
 					<div class="form-group">
+						<label for="address">Address</label>
+						<input type="text" name="address" id="address" class="form-control input-lg" placeholder="Address" value="<?php echo $userInfo['address'];?>"tabindex="8">
+					</div>
+					<div class="form-group">
 					<label for="gender">Gender</label>
 						<div class="row">
 							<div class="col-6"><input type="radio" name="gender" value="M"tabindex="9"<?php if($userInfo['gender'] == 'M') echo'Checked'?>> Male</div> 

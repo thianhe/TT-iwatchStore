@@ -14,6 +14,7 @@ if (isset($_POST['submit'])) {
         'phoneNumber' => 'trim',
         'bday' => 'trim',
         'gender' => 'trim',
+        'address' => 'trim',
     );
     $gump->filter_rules($filter_rules_array);
     $validated_data = $gump->run($_POST);
@@ -36,6 +37,7 @@ if (isset($_POST['submit'])) {
                 "phone_number" => $phoneNumber,
                 "birthday" => $bday,
                 "gender" => $gender,
+                "address" => $address,
             );
             Database::get()->Update($table, $data_array, "account", $account);
             $msg->success("Update user information success");

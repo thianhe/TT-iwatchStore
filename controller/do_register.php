@@ -21,6 +21,7 @@ if (isset($_POST['submit'])) {
         'bday' => 'trim',
         'gender' => 'trim',
         'identity' => 'trim',
+        'address' => 'trim',
     );
     $gump->filter_rules($filter_rules_array);
     $validated_data = $gump->run($_POST);
@@ -63,6 +64,7 @@ if (isset($_POST['submit'])) {
                 "phone_number" => $phoneNumber,
                 "birthday" => $bday,
                 "gender" => $gender,
+                "address" => $address,
                 //'active' => $activasion
             );
             Database::get()->insert($table, $data_array);

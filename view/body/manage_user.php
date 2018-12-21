@@ -67,6 +67,14 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>Address</td>
+                    <td>
+                        <?php
+                        echo $userInfo['address'];
+                    ?>
+                    </td>
+                </tr>
+                <tr>
                     <td>Birthday</td>
                     <td>
                         <?php 
@@ -88,21 +96,29 @@
 
             </tbody>
         </table>
+        <?php 
+        if(isset($_SESSION['memberID']) and $_SESSION['memberID'] ==0)
+        echo '
         <div class="row">
         <div class="col-10">
             <a href="user_setting " class="btn">
                 <i class="fas fa-arrow-left"></i>
                 Go Back To Edit User
-            </a></div>
+            </a>
+        </div>
             <div class="col-2 delete_form">
-            <form action="<?php echo Config::BASE_URL?>do_deletemember" method="post">
-                <input type="hidden" name="account" value="<?php echo $userInfo['account'];?>">
+            <form action="'.Config::BASE_URL.'do_deletemember" method="post">
+                <input type="hidden" name="account" value="'.$userInfo['account'].'">
                 <input type="submit" name="submit" value="SURE">
             </form>
             <span class="mask"></span>
             <a class="f_delete text-center" href="#">Delete</a>
         </div>
         </div>
+        ';
+        
+        ?>
+        
         
 
     </div>

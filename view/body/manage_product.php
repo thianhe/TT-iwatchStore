@@ -73,8 +73,9 @@
                 </form>
             </div>
             <div class="col-2 delete_form">
-                <form action="<?php echo Config::BASE_URL?>do_delete_watch" method="post">
+                <form action="<?php echo Config::BASE_URL?>do_delete_product" method="post">
                     <input type="hidden" name="watch_id" value="<?php echo $watchInfo['watch_id'];?>">
+                    <input type="hidden" name="img_dir" value="<?php echo $dir;?>">
                     <input type="submit" name="submit" value="SURE">
                 </form>
                 <span class="mask"></span>

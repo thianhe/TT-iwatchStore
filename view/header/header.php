@@ -9,6 +9,10 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav ">
             <?php
+            $profilePage = 'manage_user';
+            if(isset($_SESSION['memberID']))
+                if($_SESSION['memberID'] == 0)
+                    $profilePage = 'admin';
             if(isset($_SESSION['name'])) {
                 if(isset($_SESSION['memberID']) and $_SESSION['memberID'] ==0){
                      echo '<li class="nav-item ">
@@ -17,7 +21,7 @@
                 }else{
                 echo '
                     <li class="nav-item ">
-                        <a class="nav-link" href="#"><i class="fas fa-user-cog"></i> '.$_SESSION['name'].'</a>
+                        <a class="nav-link" href="manage_user"><i class="fas fa-user-cog"></i> '.$_SESSION['name'].'</a>
                     </li>';
                 }
                 echo '<li class="nav-item ">
@@ -58,7 +62,7 @@
                 <a class="nav-link" href="promotions">Promotions</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="#">Profile</a>
+                <a class="nav-link" href="<?php echo $profilePage;?>">Profile</a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link" href="#">About Us</a>
