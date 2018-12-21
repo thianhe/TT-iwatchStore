@@ -21,7 +21,7 @@
                 }else{
                 echo '
                     <li class="nav-item ">
-                        <a class="nav-link" href="manage_user"><i class="fas fa-user-cog"></i> '.$_SESSION['name'].'</a>
+                        <a class="nav-link" href="manage_user"><i class="fas fa-user-cog"></i> Hi,'.$_SESSION['name'].'</a>
                     </li>';
                 }
                 echo '<li class="nav-item ">

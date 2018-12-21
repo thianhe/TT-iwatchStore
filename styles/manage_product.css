@@ -20,11 +20,6 @@
 
 .image_list button {
     position: absolute;
-    top: 5%;
-    right: 7%;
-    border-radius: 100px;
-}
-
-.upload-button {
-    border: 2px solid red;
+    top: 4%;
+    right: 9%;
 }
