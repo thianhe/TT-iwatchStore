@@ -20,7 +20,7 @@ $(document).on('click', '.f_delete', function () {
         $(this).text('Cancel');
         $(this).css({
             'background-color': 'green',
-            color: 'black'
+            color: 'white'
         });
     } else {
         console.log('Delete');

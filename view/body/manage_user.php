@@ -99,28 +99,22 @@
         <?php 
         if(isset($_SESSION['memberID']) and $_SESSION['memberID'] ==0)
         echo '
-        <div class="row">
-        <div class="col-10">
-            <a href="user_setting " class="btn">
-                <i class="fas fa-arrow-left"></i>
-                Go Back To Edit User
-            </a>
-        </div>
-            <div class="col-2 delete_form">
-            <form action="'.Config::BASE_URL.'do_deletemember" method="post">
-                <input type="hidden" name="account" value="'.$userInfo['account'].'">
-                <input type="submit" name="submit" value="SURE">
-            </form>
-            <span class="mask"></span>
-            <a class="f_delete text-center" href="#">Delete</a>
-        </div>
-        </div>
-        ';
-        
+        <div class=" row">
+            <div class="col-10">
+                <a href="user_setting " class="btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Go Back To Edit User
+                </a>
+            </div>
+                <div class="col-2 delete_form">
+                <form action="'.Config::BASE_URL.'do_deletemember" method="post">
+                    <input type="hidden" name="account" value="'.$userInfo['account'].'">
+                    <input type="submit" name="submit" value="SURE">
+                </form>
+                <span class="mask"></span>
+                <button class="f_delete text-center">Delete</button>
+            </div>
+        </div>';
         ?>
-        
-        
-
     </div>
-
 </div>

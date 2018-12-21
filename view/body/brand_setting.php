@@ -5,11 +5,12 @@
             <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
                 <div class="btn-group mr-2" role="group" aria-label="First group">
                     <div class="display-4">Edit Brands</div>
-                    <?php if ($msg->hasMessages()) $msg->display();?>
+                    
                 </div>
                 <button type="button" class=" btn btn-info btn-edit-user " href="#hidden_form" onclick="ShowAddForm()">
                 <i class="fas fa-plus"></i>&nbsp;Add brand
                 </button>
+                <?php if ($msg->hasMessages()) $msg->display();?>
             </div>
         </div>
        
@@ -49,7 +50,7 @@
                                 <input type="submit" name="submit" value="SURE">
                             </form>
                             <span class="mask"></span>
-                            <a class="f_delete text-center" href="#" >Delete</a>
+                            <button class="f_delete text-center">Delete</button>
                         </div>
                         </div>';
                 }

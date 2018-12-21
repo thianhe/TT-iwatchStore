@@ -1,3 +1,30 @@
 .image_list img {
     width: 100%;
+    border: 1px black solid;
+
+}
+
+.delete_form .mask {
+    background-color: #E9ECEF;
+}
+
+.border {
+    border-radius: 2ex;
+    padding: 21px;
+}
+
+.border-pic {
+    margin-bottom: 2%;
+    position: relative;
+}
+
+.image_list button {
+    position: absolute;
+    top: 5%;
+    right: 7%;
+    border-radius: 100px;
+}
+
+.upload-button {
+    border: 2px solid red;
 }

@@ -117,15 +117,15 @@ hr {
     color: #999;
 }
 
-.search-bar input:focus + .search-icon,
-.search-bar input:valid + .search-icon {
+.search-bar input:focus+.search-icon,
+.search-bar input:valid+.search-icon {
     z-index: 0;
     border-color: #ccc;
     right: 20px;
 }
 
-.search-bar input:focus + .search-icon:after,
-.search-bar input:valid + .search-icon:after {
+.search-bar input:focus+.search-icon:after,
+.search-bar input:valid+.search-icon:after {
     background-color: #ccc;
 }
 
@@ -275,20 +275,21 @@ hr {
     padding: 8px 2px;
     border: none;
     border-radius: 5px;
-    font-size: 10px;
+    font-size: 13px;
     color: #ddd;
     cursor: pointer;
 }
 
 .delete_form .mask {
     position: absolute;
-    transition: all 1s linear;
-    height: 35px;
+    transition: all .75s linear;
+    height: 36px;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
     background-color: #999;
+
 }
 
 .delete_form .f_delete {
@@ -303,8 +304,8 @@ hr {
     height: 35px;
     border: none;
     border-radius: 5px;
-    font-size: 10px;
-    padding-top: 8px;
+    font-size: 13px;
+    padding: 8px 2px;
     text-decoration: none;
     color: #ddd;
 }
@@ -321,21 +322,21 @@ hr {
     display: none;
 }
 
-.table-striped > tbody > tr:nth-child(odd) > td,
-.table-striped > tbody > tr:nth-child(odd) > th {
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
     background-color: #afc9e3;
     border: 2px solid;
 }
 
-.table-striped > tbody > tr:nth-child(even) > td,
-.table-striped > tbody > tr:nth-child(even) > th {
+.table-striped>tbody>tr:nth-child(even)>td,
+.table-striped>tbody>tr:nth-child(even)>th {
     border: 2px solid;
     background-color: rgb(255, 255, 255);
 }
 
 .table td,
 .table th {
-    width: 0.1rem;
+    width: .1rem;
 }
 
 .edit-user-btn {

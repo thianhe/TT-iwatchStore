@@ -7,12 +7,12 @@
 				<h2>Please Login</h2>
 				<p><a href='register'>Register a New Account</a></p>
 				<hr class="hr_black">
-<?php
-//check for any errors
-if ($msg->hasMessages()) {
-    $msg->display();
-}
-?>
+				<?php
+					//check for any errors
+					if ($msg->hasMessages()) {
+						$msg->display();
+					}
+				?>
 				<div class="form-group">
 					<input type="text" name="username" id="username" class="form-control input-lg" required placeholder="Account" value="" tabindex="1">
 				</div>

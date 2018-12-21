@@ -129,7 +129,7 @@
                                     <input type="submit" name="submit" value="SURE">
                                 </form>
                                 <span class="mask"></span>
-                                <a class="f_delete text-center" href="#" >Delete</a>
+                                <button class="f_delete text-center">Delete</button>
                             </div>
                         </div>';
                 }
