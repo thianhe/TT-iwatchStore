@@ -1,6 +1,6 @@
 <?php
     $watch_id=$_GET['id'];
-    $watchInfo =  Database::get()->execute('select * from watch,company,operating_system where watch_id = "'.$watch_id.'";');
+    $watchInfo =  Database::get()->execute('select * from WATCH w,company,operating_system o where watch_id = "'.$watch_id.'" and brand_id = company_id and w.op_id = o.op_id;');
     $watchInfo = $watchInfo[0];
     
     $dir = './image/product/'.$watch_id.'/';

@@ -6,7 +6,7 @@ if(isset($_SESSION['memberID']) and $_SESSION['memberID'] ==0){
     {
         if(isset($_POST['watch_id']))  $watch_id = $_POST['watch_id'];
         if(isset($_SESSION['updateKey'])) $watch_id = $_SESSION['updateKey'];
-        $watchInfo =  Database::get()->execute('select * from watch,company,operating_system where watch_id = "'.$watch_id.'";');
+        $watchInfo =  Database::get()->execute('select * from WATCH w,company,operating_system o where watch_id = "'.$watch_id.'" and brand_id = company_id and w.op_id = o.op_id;');
         
         $dir = './image/product/'.$watch_id.'/';
         if (file_exists('./image/product/'.$watch_id)) $images= scandir($dir); 

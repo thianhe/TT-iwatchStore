@@ -22,7 +22,7 @@
             <div class="col-4"><?php echo $watchInfo['brand'];?></div>
 
             <div class="col-2">OS</div>
-            <div class="col-4"><?php echo $watchInfo['op_id'];?></div>
+            <div class="col-4"><?php echo $watchInfo['op_name'];?></div>
 
             <div class="col-2">Price</div>
             <div class="col-4"><?php echo $watchInfo['price'];?></div>
