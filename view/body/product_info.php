@@ -2,10 +2,8 @@
 <div class="jumbotron">
     <div class="container">
     <div class="row">
-        <div class="col-3" style='background-color : green'>
-        
-        </div>
-        <div class="col-9">
+        <?php include('view/body/product_filter.php')?>
+        <div class="col-lg-9">
         <div class="row">
             <?php 
             echo '<div class="row image_list">';
