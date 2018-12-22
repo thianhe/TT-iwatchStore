@@ -5,6 +5,7 @@
 unset($_SESSION['memberID']);
 unset($_SESSION['name']);
 unset($_SESSION['account']);
+unset($_SESSION['shopping_cart']);
 /**
  * 導向登入頁
  */
