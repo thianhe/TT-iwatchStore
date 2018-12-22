@@ -5,7 +5,7 @@
             <div class="row" id="go_back">
                 <a href="<?php echo $profilePage;?>" class="btn">
                     <i class="fas fa-arrow-left"></i>
-                    Go Back To Profile
+                    Profile
                 </a>
             </div>
             <div class="row">

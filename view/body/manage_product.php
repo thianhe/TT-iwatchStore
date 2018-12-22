@@ -5,7 +5,7 @@
             <div class="row" id="go_back">
                 <a href="product_setting" class="btn">
                     <i class="fas fa-arrow-left"></i>
-                    Go Back To All Product
+                    All Product
                 </a>
             </div>
             <div class="row">
@@ -46,8 +46,8 @@
                     </div>
                     <div class="form-group">
                         <label for="cost">Cost*</label>
-                        <input type="text" name="cost" id="cost" class="form-control input-lg" required
-                            placeholder="Cost" value="" tabindex="1">
+                        <input type="text" name="cost" id="cost" class="form-control input-lg" required placeholder="Cost"
+                            value="" tabindex="1">
                     </div>
                     <input type="hidden" name="watch_id" value="<?php echo $watchInfo['watch_id'];?>">
                     <p>* required</p>
@@ -116,7 +116,7 @@
                             </form>
                         </div>
                         <div class="border border-dark">
-                        <?php 
+                            <?php 
                             echo '<div class="row image_list">';
                                 foreach($images as $image){
                                     echo'<div class="col-4 border-pic">                                 
@@ -136,7 +136,7 @@
                 </tr>
             </tbody>
         </table>
-        <div class="row d-flex justify-content-end">           
+        <div class="row d-flex justify-content-end">
             <div class="col-2 delete_form">
                 <form action="<?php echo Config::BASE_URL?>do_delete_product" method="post">
                     <input type="hidden" name="watch_id" value="<?php echo $watchInfo['watch_id'];?>">

@@ -7,7 +7,7 @@
             <div class="row" id="go_back">
                 <a href="products" class="btn">
                     <i class="fas fa-arrow-left"></i>
-                    Go Back To All Product
+                    All Product
                 </a>
             </div>
         </div>
@@ -96,7 +96,7 @@
                             if($inCart){
                                 echo '<form action="'.Config::BASE_URL.'do_delete_cart" method="post">
                                     <input type="hidden" name="watch_id" value="'.$watchInfo['watch_id'].'">
-                                    <button type="submit" name="submit" class="btn btn_la btn-warning btn-lg btn-block">Remove from Cart</button>
+                                    <button type="submit" name="submit" class="btn btn_la btn-lg btn-block">Remove from Cart</button>
                                 </form>';
                             }
                             else{
