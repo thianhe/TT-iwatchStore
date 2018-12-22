@@ -26,7 +26,7 @@
                                     </div>
                                 </div>
                                 <div class="card_body ">
-                                    <h5 class="card_title">'.$p['brand'].' - '.$p['watch_name'].'</h5>
+                                    <h5 class="card_title font-weight-bold">'.$p['brand'].' - '.$p['watch_name'].'</h5>
                                     <div class="card_price d-flex ">Price<br>NT$'.$p['price'].'</div>
                                     
                                 </div>
