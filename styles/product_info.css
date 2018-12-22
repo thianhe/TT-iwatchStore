@@ -1,3 +1,80 @@
+br {
+    display: block;
+    content: "";
+}
+
+#go_back>a {
+    padding: 0 !important;
+    text-decoration: none !important;
+    margin-bottom: 2%;
+}
+
+#product_info hr {
+    border: .5px solid black;
+
+}
+
+#carouselExampleIndicators {
+    margin-bottom: 3% !important;
+
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-indicators .active {
+    background-color: #000000;
+}
+
 .image_list img {
     width: 100%;
+}
+
+#product_jumbotron {
+    background-color: white;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.jumbotron_title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.title_font {
+    font-size: 13px;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 300;
+}
+
+.content_font {
+    font-size: 20px;
+    line-height: 1;
+    font-family: 'Oxygen', sans-serif;
+
+
+}
+
+.btn_la {
+    margin-top: 10%;
+    background-color: #FFF200;
+
+}
+
+.btn_la:hover {
+    filter: brightness(1.25) !important;
+    transition: 2.55s ease-out 0s;
+
+}
+
+#review_jumbotron {
+    background-color: white;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 5%;
 }
