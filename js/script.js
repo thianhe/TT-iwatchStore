@@ -7,14 +7,14 @@ function HideAddForm() {
     $('#hidden_form').addClass('hide');
 }
 
-$(document).on('click', '.f_delete', function () {
+$(document).on('click', '.f_delete', function() {
     $(this)
         .parent()
         .toggleClass('active');
     if (
         $(this)
-        .parent()
-        .hasClass('active')
+            .parent()
+            .hasClass('active')
     ) {
         console.log('test');
         $(this).text('Cancel');
@@ -49,4 +49,13 @@ function UserFilter(select) {
         $('#customer_filter').addClass('selected');
         $('#member_list').removeClass('hide');
     }
+}
+
+function CountChildHeigh() {
+    var childNumber = $('.item1_child').length;
+    childNumber = childNumber * 27;
+    $('head').append('<style>.list li:hover .item1 { height: ' + childNumber + ';}</style>');
+    childNumber = $('.item3_child').length;
+    childNumber = childNumber * 27;
+    $('head').append('<style>.list li:hover .item3 { height: ' + childNumber + ';}</style>');
 }

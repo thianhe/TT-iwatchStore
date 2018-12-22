@@ -9,7 +9,9 @@
     array_shift($images);
     }
     $watchInfo = $watchInfo[0];
-
+    $brandList = Database::get()->execute('select * from company');
+    $opList = Database::get()->execute('select * from operating_system');
+    $opList[] = array_shift($opList);
     include('view/header/header.php');
     include('view/body/product_info.php');
     include('view/footer/footer.php');

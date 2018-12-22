@@ -396,16 +396,8 @@ hr {
     background: #e7e3e3;
 }
 
-.list li:hover .item1 {
-    height: 190px;
-}
-
 .list li:hover .item2 {
-    height: 82px;
-}
-
-.list li:hover .item3 {
-    height: 260px;
+    height: 81px;
 }
 
 .active {
