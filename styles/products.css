@@ -1,11 +1,14 @@
 /*card*/
 .product_view img {
-    width: 100%;
+    margin: 2% 0;
+    width: 150px;
+    height: 261px;
 }
 
 .card {
     width: 490px;
     display: none;
+    font-family: 'Oxygen', sans-serif;
 }
 
 .card_body {
@@ -18,6 +21,11 @@
 }
 
 .card:hover {
-    filter: brightness(90%);
+    filter: brightness(95%);
     background: lighten(#1d1d1d, 5%);
+}
+
+.card_price {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
 }

@@ -1,4 +1,4 @@
-<script>document.title = 'Update User'</script>
+<script>document.title = 'Update Product'</script>
 <div class="jumbotron">
 	<div class="container">
 		<div class="row">
