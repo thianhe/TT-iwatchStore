@@ -1,21 +1,28 @@
 <script>document.title = 'Manage User'</script>
 <div class="jumbotron">
     <div class="container">
-        <div class="row container">
-            <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group mr-2" role="group" aria-label="First group">
-                    <div class="display-4">User Info</div>
-                    <div class="edit-user-btn">
-                        <form action="<?php echo Config::BASE_URL?>user_edit" method="post">
-                            <input type="hidden" name="account" value="<?php echo $userInfo['account'];?>">
-                            <button type="submit" name="submit" class="btn btn-info btn-edit-user btn-lg"><i class="fas fa-pen"></i>&nbsp;Edit</button>
-                        </form>
-                    </div>
-                    <?php 
+        <div class="container">
+            <div class="row" id="go_back">
+                <a href="<?php echo $profilePage;?>" class="btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Go Back To Profile
+                </a>
+            </div>
+            <div class="row">
+                <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <div class="display-4">User Info</div>
+                        <div class="edit-user-btn">
+                            <form action="<?php echo Config::BASE_URL?>user_edit" method="post">
+                                <input type="hidden" name="account" value="<?php echo $userInfo['account'];?>">
+                                <button type="submit" name="submit" class="btn btn-info btn-edit-user btn-lg"><i class="fas fa-pen"></i>&nbsp;Edit</button>
+                            </form>
+                        </div>
+                        <?php 
 					//check for any errors
 					if ($msg->hasMessages()) $msg->display();?>
+                    </div>
                 </div>
-
             </div>
         </div>
 
@@ -98,14 +105,8 @@
         <?php 
         if(isset($_SESSION['memberID']) and $_SESSION['memberID'] ==0)
         echo '
-        <div class=" row">
-            <div class="col-10">
-                <a href="user_setting " class="btn">
-                    <i class="fas fa-arrow-left"></i>
-                    Go Back To Edit User
-                </a>
-            </div>
-                <div class="col-2 delete_form">
+        <div class="row d-flex justify-content-end">
+            <div class="col-2 delete_form ">
                 <form action="'.Config::BASE_URL.'do_deletemember" method="post">
                     <input type="hidden" name="account" value="'.$userInfo['account'].'">
                     <input type="submit" name="submit" value="SURE">

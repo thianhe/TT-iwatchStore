@@ -21,10 +21,10 @@
                 <!-- Content -->
                 <h5 class="text-uppercase footer-title ft-site">Site Map</h5>
                 <hr>
-                <div class="col"></div><a href="#">Home</a>
-                <div class="col"></div><a href="#">Products</a>
-                <div class="col"></div><a href="#">Promotions</a>
-                <div class="col"></div><a href="#">Profile</a>
+                <div class="col"></div><a href="index">Home</a>
+                <div class="col"></div><a href="products">Products</a>
+                <div class="col"></div><a href="promotions">Promotions</a>
+                <div class="col"></div><a href="<?php echo $profilePage;?>">Profile</a>
                 <div class="col"></div><a href="#">About Us</a>
                 <div class="col"></div><a href="#">Contacts</a>
             </div>

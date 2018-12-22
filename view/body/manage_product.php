@@ -1,21 +1,28 @@
 <script>document.title = 'Manage Product'</script>
 <div class="jumbotron">
     <div class="container">
-        <div class="row container">
-            <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group mr-2" role="group" aria-label="First group">
-                    <div class="display-4">Watch Info</div>
-                    <div class="edit-user-btn">
-                        <form action="<?php echo Config::BASE_URL?>product_edit" method="post">
-                            <input type="hidden" name="watch_id" value="<?php echo $watchInfo['watch_id'];?>">
-                            <button type="submit" name="submit" class="btn btn-info btn-edit-user btn-lg"><i class="fas fa-pen"></i>&nbsp;Edit</button>
-                        </form>
+        <div class="container">
+            <div class="row" id="go_back">
+                <a href="product_setting" class="btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Go Back To All Product
+                </a>
+            </div>
+            <div class="row">
+                <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <div class="display-4">Watch Info</div>
+                        <div class="edit-user-btn">
+                            <form action="<?php echo Config::BASE_URL?>product_edit" method="post">
+                                <input type="hidden" name="watch_id" value="<?php echo $watchInfo['watch_id'];?>">
+                                <button type="submit" name="submit" class="btn btn-info btn-edit-user btn-lg"><i class="fas fa-pen"></i>&nbsp;Edit</button>
+                            </form>
+                        </div>
+                        <?php 
+                        //check for any errors
+                        if ($msg->hasMessages()) $msg->display();?>
                     </div>
-                    <?php 
-					//check for any errors
-					if ($msg->hasMessages()) $msg->display();?>
                 </div>
-
             </div>
         </div>
         <table class="table table-striped">
@@ -96,13 +103,7 @@
                 </tr>
             </tbody>
         </table>
-        <div class="row">
-            <div class="col-10">
-                <a href="product_setting" class="btn">
-                    <i class="fas fa-arrow-left"></i>
-                    Go Back To All Product
-                </a>
-            </div>
+        <div class="row d-flex justify-content-end">           
             <div class="col-2 delete_form">
                 <form action="<?php echo Config::BASE_URL?>do_delete_product" method="post">
                     <input type="hidden" name="watch_id" value="<?php echo $watchInfo['watch_id'];?>">
@@ -110,7 +111,7 @@
                     <input type="submit" name="submit" value="SURE">
                 </form>
                 <span class="mask"></span>
-                <button class="f_delete text-center" href="#">Delete</button>
+                <button class="f_delete text-center " href="#">Delete</button>
             </div>
         </div>
     </div>
