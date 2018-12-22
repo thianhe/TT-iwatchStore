@@ -22,7 +22,40 @@
                         //check for any errors
                         if ($msg->hasMessages()) $msg->display();?>
                     </div>
+                    <div class="edit-user-btn">
+                        <button type="button" class="btn btn-info btn-edit-user btn-lg" href="#hidden_form" onclick="ShowAddForm()">
+                            <i class="fas fa-plus"></i>&nbsp;Add Storage
+                        </button>
+                    </div>
+
+                    <?php 
+					//check for any errors
+					if ($msg->hasMessages()) $msg->display();?>
                 </div>
+            </div>
+        </div>
+        <div id="hidden_form" class="row hide">
+            <a href="#hidden_form" class="cancel_button" onclick="HideAddForm()">X</a>
+            <div class="col-xs-11 col-sm-10 col-md-8">
+                <form id="newWatchForm" role="form" method="post" action="<?=Config::BASE_URL?>do_add_storage"
+                    autocomplete="off">
+                    <div class="form-group">
+                        <label for="quantity">Quantity*</label>
+                        <input type="text" name="quantity" id="quantity" class="form-control input-lg" required
+                            placeholder="Quantity" value="" tabindex="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="cost">Cost*</label>
+                        <input type="text" name="cost" id="cost" class="form-control input-lg" required
+                            placeholder="Cost" value="" tabindex="1">
+                    </div>
+                    <input type="hidden" name="watch_id" value="<?php echo $watchInfo['watch_id'];?>">
+                    <p>* required</p>
+                    <div class="row">
+                        <div class="col-xs-6 col-md-6"><input type="submit" name="submit" value="Submit" class="btn btn-primary btn-block btn-lg"
+                                tabindex="11"></div>
+                    </div>
+                </form>
             </div>
         </div>
         <table class="table table-striped">

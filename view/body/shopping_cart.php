@@ -50,8 +50,7 @@
             <div class="col-3">
                 <h3>Total Price:'.$totalPrice.'</h3>
             </div>
-            <div class="col-3">
-                ';
+            <div class="col-3">';
             if(isset($_SESSION['memberID'])) echo '<a href="#">Order Item</a>';
             else echo '<a href="login">Login to order</a>';
             echo'</div>
