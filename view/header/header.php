@@ -34,7 +34,7 @@
                     </li>' ;
             ?>
             <li class="nav-item ">
-                <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i>*<?php echo $_SESSION['shopping_cart']?></a>
+                <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i>*<?php echo count($_SESSION['shopping_cart'])?></a>
             </li>
             <li class="nav-item ">
                 <div class="search-bar">

@@ -1,17 +1,24 @@
 <?php
     $watch_id=$_GET['id'];
     $watchInfo =  Database::get()->execute('select * from watch,company,operating_system where watch_id = "'.$watch_id.'";');
+    $watchInfo = $watchInfo[0];
+    
     $dir = './image/product/'.$watch_id.'/';
     $images = [];
     if (file_exists('./image/product/'.$watch_id)) {
     $images= scandir($dir); 
-    array_shift($images);
-    array_shift($images);
+        array_shift($images);
+        array_shift($images);
     }
-    $watchInfo = $watchInfo[0];
+    
     $brandList = Database::get()->execute('select * from company');
     $opList = Database::get()->execute('select * from operating_system');
     $opList[] = array_shift($opList);
+    
+    $inCart = false;
+    foreach($_SESSION['shopping_cart'] as $cart){
+        if($cart->product_id == $watchInfo['watch_id']) $inCart = true;
+    }
     include('view/header/header.php');
     include('view/body/product_info.php');
     include('view/footer/footer.php');

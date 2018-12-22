@@ -2,6 +2,8 @@ Product
 
 tracelist
 
+Storage
+
 comment rate
 
 shooping cart
