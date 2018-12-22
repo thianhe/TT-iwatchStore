@@ -29,6 +29,31 @@ if (isset($_POST['submit'])) {
             $_SESSION['memberID'] = $result[0]['member_id'];
             $_SESSION['name'] = $result[0]['first_name'] . ' ' . $result[0]['last_name'];
             $_SESSION['account'] = $result[0]['account'];
+
+            //Reset and update shopping cart
+            foreach($_SESSION['shopping_cart'] as $cart){
+                $shopping_cart_exist = Database::get()->execute('SELECT * FROM shopping_cart WHERE member_id = "'. $result[0]['member_id'] .'" and product_id = "'.$cart->product_id.'"');
+                if(isset($shopping_cart_exist[0])){
+                    $data_array = array("quantity" => $cart->quantity);
+                    Database::get()->Update("shopping_cart", $data_array);
+                }else{
+                    $data_array = array(
+                        'member_id'=> $result[0]['member_id'],
+                        "watch_id" => $cart->product_id,
+                        "quantity" => $cart->quantity
+                      );
+                    Database::get()->insert("shopping_cart", $data_array);
+                }
+            }
+
+            $_SESSION['shopping_cart'] = [];
+            $shopping_cart = Database::get()->execute('SELECT * FROM shopping_cart WHERE member_id = "'. $result[0]['member_id'] .'"');
+            foreach($shopping_cart as $cart){
+                $product = new ProductOrder($cart['member_id'],$cart['product_id'],$cart['quantity']);
+                $_SESSION['shopping_cart'][] = $product;
+            }
+
+
             header('Location: index');
             exit;
         }
