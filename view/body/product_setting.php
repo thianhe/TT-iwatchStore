@@ -1,15 +1,23 @@
 <script>document.title = 'Product Setting'</script>
 <div class="jumbotron">
     <div class="container">
-        <div class="row container">
-            <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group mr-2" role="group" aria-label="First group">
-                    <div class="display-4">Edit Products</div>
+        <div class="container">
+            <div class="row" id="go_back">
+                <a href="<?php echo $profilePage;?>" class="btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Go Back To Profile
+                </a>
+            </div>
+            <div class="row">
+                <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <div class="display-4">Edit Products</div>
+                    </div>
+                    <button type="button" class=" btn btn-info btn-edit-user " href="#hidden_form" onclick="ShowAddForm()">
+                        <i class="fas fa-plus"></i>&nbsp;Add Watch
+                    </button>
                     <?php if ($msg->hasMessages()) $msg->display();?>
                 </div>
-                <button type="button" class=" btn btn-info btn-edit-user " href="#hidden_form" onclick="ShowAddForm()">
-                    <i class="fas fa-plus"></i>&nbsp;Add Watch
-                </button>
             </div>
         </div>
         <div id="hidden_form" class="row hide">
@@ -74,24 +82,24 @@
                 </form>
             </div>
         </div>
-
-        <div class="row justify-content-end">
-            <div class>
-                <form id="searchBarForm" role="form" method="POST" action="<?=Config::BASE_URL?>product_setting"
-                    autocomplete="off">
-                    <div class="input-group stylish-input-group mb-1 ">
-                        <input type="text" name="key" class="form-control" placeholder="Search product" required>
-                        <span class="input-group-addon">
-                            <input type="submit" name="submit" value="search" class="hidden" />
-                        </span>
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="submit" name="submit" value="search" id="button-addon2">Search</button>
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class>
+                    <form id="searchBarForm" role="form" method="POST" action="<?=Config::BASE_URL?>product_setting"
+                        autocomplete="off">
+                        <div class="input-group stylish-input-group mb-1 ">
+                            <input type="text" name="key" class="form-control" placeholder="Search product" required>
+                            <span class="input-group-addon">
+                                <input type="submit" name="submit" value="search" class="hidden" />
+                            </span>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="submit" name="submit" value="search" id="button-addon2">Search</button>
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>
-        <?php
+            <?php
         if(isset($_POST['submit'])){
             echo' <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group mr-2" role="group" aria-label="First group">
@@ -101,16 +109,16 @@
         </div>';
         }
         ?>
-        <div class="row setting_list ">
-            <div class="col-2">Watches</div>
-            <div class="col-2">Brand</div>
-            <div class="col-2">Price</div>
-            <div class="col-2">Quantity</div>
-        </div>
-        <?php
-                echo'<div id="product_list">';
+            <div class="row setting_list ">
+                <div class="col-2">Watches</div>
+                <div class="col-2">Brand</div>
+                <div class="col-2">Price</div>
+                <div class="col-2">Quantity</div>
+            </div>
+            <?php
+                echo'<div id="product_list ">';
                 foreach($product as $p){
-                    echo '<div class="row setting_list">
+                    echo '<div class="row setting_list ">
                             <div class="col-2">'.$p['watch_name'].'</div>
                             <div class="col-2">'.$p['brand'].'</div>
                             <div class="col-2">'.$p['price'].'</div>
@@ -135,6 +143,6 @@
                 }
                 echo '</div>';
             ?>
-
+        </div>
     </div>
 </div>

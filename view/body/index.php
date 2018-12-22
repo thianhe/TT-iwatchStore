@@ -98,9 +98,9 @@
             <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
                 <a href="#">
                     <div class="featurebox-img">
-                        <img src="image/brand/verizon.png" class="rounded-circle" /></div>
+                        <img src="image/brand/mykronoz.jpg" class="rounded-circle" /></div>
                     <div class="featurebox-text text-center ">
-                        <h5>Verizon</h5>
+                        <h5>MyKronoz</h5>
                     </div>
                 </a>
             </div>
@@ -125,9 +125,9 @@
             <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
                 <a href="#">
                     <div class="featurebox-img">
-                        <img src="image/brand/agptek.png" class="rounded-circle" /></div>
+                        <img src="image/brand/skagen.png" class="rounded-circle" /></div>
                     <div class="featurebox-text text-center ">
-                        <h5>APGtek</h5>
+                        <h5>Skagen</h5>
                     </div>
                 </a>
             </div>

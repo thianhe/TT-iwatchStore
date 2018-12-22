@@ -1,7 +1,7 @@
 <div class="col-lg-3 col-md-12 col-sm-12">
     <div class="wrap">
         <ul class="list">
-            <li> <a href="#">All</a>
+            <li> <a href="products">All</a>
             </li>
             <li> <a href="#" class="dropdown">Brand</a>
                 <ul class="item item1">

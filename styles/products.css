@@ -1,8 +1,8 @@
 /*card*/
 .product_view img {
     margin: 2% 0;
-    width: 150px;
-    height: 261px;
+    width: 155px;
+    height: 250px;
 }
 
 .card {
@@ -12,7 +12,8 @@
 }
 
 .card_body {
-    height: 146px;
+    height: 160px;
+    position: relative;
 }
 
 .card a {
@@ -32,4 +33,7 @@
 .card_price {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
+    bottom: 0;
+    position: absolute;
+
 }
