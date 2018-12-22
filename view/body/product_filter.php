@@ -24,7 +24,7 @@
                 <ul class="item item3">
                 <?php
                     foreach($opList as $op){
-                        echo '<li> <a class="filter item3_child" href="product?op='.$op['op_id'].'">'.$op['op_name'].'</a></li>';
+                        echo '<li> <a class="filter item3_child" href="products?op='.$op['op_id'].'">'.$op['op_name'].'</a></li>';
                     }
                         
                     ?>
@@ -33,6 +33,4 @@
         </ul>
     </div>
 </div>
-
-
 <script>CountChildHeigh()</script>

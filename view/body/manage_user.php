@@ -4,7 +4,6 @@
         <div class="row container">
             <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
                 <div class="btn-group mr-2" role="group" aria-label="First group">
-                    
                     <div class="display-4">User Info</div>
                     <div class="edit-user-btn">
                         <form action="<?php echo Config::BASE_URL?>user_edit" method="post">
