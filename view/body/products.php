@@ -25,10 +25,10 @@
                                         <img src="'.$imgPath.'" />
                                     </div>
                                 </div>
-                                <div class="card_body text-center">
-                                    <h5 class="card_title">'.$p['brand'].'-'.$p['watch_name'].'</h5>
-                                    <div class="box">$'.$p['price'].'</div>
-                                    <div class="box">'.$p['op_name'].'</div>
+                                <div class="card_body ">
+                                    <h5 class="card_title">'.$p['brand'].' - '.$p['watch_name'].'</h5>
+                                    <div class="card_price d-flex ">Price<br>NT$'.$p['price'].'</div>
+                                    
                                 </div>
                             </a>
                         </div>';
