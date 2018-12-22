@@ -38,7 +38,7 @@
             <div class="row">
                 <?php
                 if($inCart){
-                    echo '<form action="'.Config::BASE_URL.'do_remove_cart" method="post">
+                    echo '<form action="'.Config::BASE_URL.'do_delete_cart" method="post">
                         <input type="hidden" name="watch_id" value="'.$watchInfo['watch_id'].'">
                         <button type="submit" name="submit" class="btn btn-info btn-edit-user btn-lg">Remove from Cart</button>
                     </form>';

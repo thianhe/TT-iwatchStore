@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
 
             //Reset and update shopping cart
             foreach($_SESSION['shopping_cart'] as $cart){
-                $shopping_cart_exist = Database::get()->execute('SELECT * FROM shopping_cart WHERE member_id = "'. $result[0]['member_id'] .'" and product_id = "'.$cart->product_id.'"');
+                $shopping_cart_exist = Database::get()->execute('SELECT * FROM shopping_cart WHERE member_id = "'. $result[0]['member_id'] .'" and watch_id = "'.$cart->product_id.'"');
                 if(isset($shopping_cart_exist[0])){
                     $data_array = array("quantity" => $cart->quantity);
                     Database::get()->Update("shopping_cart", $data_array);
@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
             $_SESSION['shopping_cart'] = [];
             $shopping_cart = Database::get()->execute('SELECT * FROM shopping_cart WHERE member_id = "'. $result[0]['member_id'] .'"');
             foreach($shopping_cart as $cart){
-                $product = new ProductOrder($cart['member_id'],$cart['product_id'],$cart['quantity']);
+                $product = new ProductOrder($cart['member_id'],$cart['watch_id'],$cart['quantity']);
                 $_SESSION['shopping_cart'][] = $product;
             }
 
