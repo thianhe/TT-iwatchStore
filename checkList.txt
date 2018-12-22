@@ -6,7 +6,7 @@ Storage
 
 comment rate
 
-shooping cart
+shooping cart --
 
 discount
 
