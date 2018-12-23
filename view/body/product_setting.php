@@ -3,7 +3,7 @@
     <div class="container">
         <div class="container">
             <div class="row" id="go_back">
-                <a href="<?php echo $profilePage;?>" class="btn">
+                <a href="<?php echo $profilePage; ?>" class="btn">
                     <i class="fas fa-arrow-left"></i>
                     Profile
                 </a>
@@ -16,7 +16,10 @@
                     <button type="button" class=" btn btn-info btn-edit-user " href="#hidden_form" onclick="ShowAddForm()">
                         <i class="fas fa-plus"></i>&nbsp;Add Watch
                     </button>
-                    <?php if ($msg->hasMessages()) $msg->display();?>
+                    <?php if ($msg->hasMessages()) {
+    $msg->display();
+}
+?>
                 </div>
             </div>
         </div>
@@ -34,20 +37,20 @@
                         <label for="brand">Brand*</label>
                         <div class="row">
                             <?php
-                                foreach($brandList as $b){
-                                    echo '<div class="col-4"><input type="radio" name="brand_id" value="'.$b['company_id'].'"tabindex="2" required>'.$b['brand'].'</div>';
-                                }
-                            ?>
+foreach ($brandList as $b) {
+    echo '<div class="col-4"><input type="radio" name="brand_id" value="' . $b['company_id'] . '"tabindex="2" required>' . $b['brand'] . '</div>';
+}
+?>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="op">Operating System*</label>
                         <div class="row">
                             <?php
-                                foreach($opList as $o){
-                                    echo '<div class="col-4"><input type="radio" name="op_id" value="'.$o['op_id'].'"tabindex="3" required>'.$o['op_name'].'</div>';
-                                }
-                            ?>
+foreach ($opList as $o) {
+    echo '<div class="col-4"><input type="radio" name="op_id" value="' . $o['op_id'] . '"tabindex="3" required>' . $o['op_name'] . '</div>';
+}
+?>
                         </div>
                     </div>
                     <div class="row">
@@ -100,15 +103,15 @@
                 </div>
             </div>
             <?php
-        if(isset($_POST['submit'])){
-            echo' <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+if (isset($_POST['submit'])) {
+    echo ' <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group mr-2" role="group" aria-label="First group">
-                <h2>Your search result for "'.$key.'"</h2>
+                <h2>Your search result for "' . $key . '"</h2>
             </div>
-            <a href="'.Config::BASE_URL.'product_setting"><i class="fas fa-times-circle fa-2x text-danger"></i></a>
+            <a href="' . Config::BASE_URL . 'product_setting"><i class="fas fa-times-circle fa-2x text-danger"></i></a>
         </div>';
-        }
-        ?>
+}
+?>
             <div class="row setting_list ">
                 <div class="col-2">Watches</div>
                 <div class="col-2">Brand</div>
@@ -116,33 +119,33 @@
                 <div class="col-2">Quantity</div>
             </div>
             <?php
-                echo'<div id="product_list ">';
-                foreach($product as $p){
-                    echo '<div class="row setting_list ">
-                            <div class="col-2">'.$p['watch_name'].'</div>
-                            <div class="col-2">'.$p['brand'].'</div>
-                            <div class="col-2">'.$p['price'].'</div>
-                            <div class="col-2">'.$p['quantity'].'</div>
+echo '<div id="product_list ">';
+foreach ($product as $p) {
+    echo '<div class="row setting_list ">
+                            <div class="col-2">' . $p['watch_name'] . '</div>
+                            <div class="col-2">' . $p['brand'] . '</div>
+                            <div class="col-2">' . $p['price'] . '</div>
+                            <div class="col-2">' . $p['quantity'] . '</div>
                             <div class="col-2 user_detail_button">
-                                <form action="'.Config::BASE_URL.'manage_product" method="post">
-                                    <input type="hidden" name="watch_id" value="'.$p['watch_id'].'">
+                                <form action="' . Config::BASE_URL . 'manage_product" method="post">
+                                    <input type="hidden" name="watch_id" value="' . $p['watch_id'] . '">
                                     <button type="submit" class="btn btn-success">
                                         <i class="fas fa-cog"></i>
                                     </button>
                                 </form>
                             </div>
                             <div class="col-2 delete_form">
-                                <form action="'.Config::BASE_URL.'do_delete_product" method="post">
-                                    <input type="hidden" name="watch_id" value="'.$p['watch_id'].'">
+                                <form action="' . Config::BASE_URL . 'do_delete_product" method="post">
+                                    <input type="hidden" name="watch_id" value="' . $p['watch_id'] . '">
                                     <input type="submit" name="submit" value="SURE">
                                 </form>
                                 <span class="mask"></span>
                                 <button class="f_delete text-center">Delete</button>
                             </div>
                         </div>';
-                }
-                echo '</div>';
-            ?>
+}
+echo '</div>';
+?>
         </div>
     </div>
 </div>
