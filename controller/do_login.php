@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
         }
         $userVeridator = new UserVeridator();
         $userVeridator->loginVerification($username, $password);
-        //$error = $userVeridator->getErrorArray();
+        $error = $userVeridator->getErrorArray();
         if (empty($userVeridator->getErrorArray())) {
             $result = Database::get()->execute('SELECT * FROM member WHERE account = "' . $username . '"');
             $_SESSION['memberID'] = $result[0]['member_id'];

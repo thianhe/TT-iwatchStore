@@ -143,13 +143,21 @@ create table TRACE_LIST(
 	foreign key(member_id) references MEMBER(member_id),
     foreign key(watch_id) references WATCH(watch_id)
 );
-                            
+
+
+drop table ORDER_ITEM;
+drop table ORDER_LIST;
+
 create table ORDER_LIST(
 	orderList_id int not null,
 	member_id int not null,
 	cost int not null,
     date_time datetime not null,
     state char(1) not null,
+    r_name char(255) not null,
+    r_address char(255) not null,
+    r_phone int not null,
+    r_email char(255) not null,
     primary key(orderList_id),
     foreign key(member_id) references MEMBER(member_id)
 );
