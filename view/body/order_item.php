@@ -1,5 +1,4 @@
-<script>document.title = 'Shopping Cart'</script>
-
+<script>document.title = 'Place Order'</script>
 <div class="jumbotron">
     <div class="container">
         <?php
@@ -10,9 +9,7 @@
             '<div class="row col-12">
                 <h1>Place Order</h1>
             </div>
-            <div class="row">
-                <div class="container">
-                    <table class="table" id="cart_table">
+                      <table class="table" id="cart_table">
                         <thead class="table-primary">
                             <tr>
                                 <th scope="col">Product</th>
@@ -38,8 +35,7 @@
                                     <h3>Total Price:'.$totalPrice.'</h3>
                                 </div>
                          </div>';
-                echo '</container>';
-            echo '</row>';
+        
         ?>
         <div class="jumbotron" id="receiver">
             <?php

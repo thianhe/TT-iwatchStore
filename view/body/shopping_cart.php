@@ -1,6 +1,4 @@
-<script>
-    document.title = 'Shopping Cart'
-</script>
+<script> document.title = 'Shopping Cart'</script>
 <div class="jumbotron">
     <div class="container">
         <?php
@@ -16,9 +14,7 @@
         echo 
             '<div class="row col-12">
                 <h1>Shopping Cart</h1>
-            </div>
-            <div class="row">
-                <div class="container" >
+            </div>       
                     <table class="table" id="cart_table">
                         <thead class="table-primary">
                             <tr>
@@ -49,7 +45,7 @@
                                 </tr>
                                 </tbody>                       
                         ';}
-        echo '</table></container></row>
+        echo '</table>
         <div class="row">
             <div class="container" >  
                 <table class="table " id ="borderless">

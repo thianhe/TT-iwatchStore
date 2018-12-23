@@ -31,6 +31,15 @@ br {
     background-color: #000000;
 }
 
+.slide {
+    background-color: white;
+    padding: 2%;
+}
+
+.carousel-item img {
+    height: 90%;
+}
+
 .image_list img {
     width: 100%;
 }
