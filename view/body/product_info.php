@@ -78,7 +78,7 @@
                     </span>
                     <hr>
                     <span class="title_font">Price<br></span>
-                    <span class="content_font">
+                    <span class="content_font">NT$
                         <?php echo $watchInfo['price'];?>
                     </span>
                     <hr>

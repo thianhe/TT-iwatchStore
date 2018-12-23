@@ -54,10 +54,8 @@ br {
 
 .content_font {
     font-size: 20px;
-    line-height: 1;
+    line-height: 1.2;
     font-family: 'Oxygen', sans-serif;
-
-
 }
 
 .btn_la {
