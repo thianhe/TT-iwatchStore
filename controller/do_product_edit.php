@@ -13,7 +13,6 @@ if (isset($_POST['submit'])) {
         'price' => 'trim',
         'quantity' => 'trim',
         'description' => 'trim',
-        'op_id' => 'trim',
     );
     $gump->filter_rules($filter_rules_array);
     $validated_data = $gump->run($_POST);
@@ -34,7 +33,6 @@ if (isset($_POST['submit'])) {
                 "price" => $price,
                 "quantity" => $quantity,
                 "description" => $description,
-                "op_id" => $op_id,
             );
             Database::get()->Update($table, $data_array, "watch_id", $watch_id);
             $msg->success("Update product information success");

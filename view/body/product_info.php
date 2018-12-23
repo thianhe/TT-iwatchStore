@@ -13,40 +13,17 @@
         </div>
         <div class="row">
             <div class="col-lg-7 col-md-12 col-sm-12">
-                <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
-                    <div id="home_watch_carousel" class="carousel-inner">
-                        <!--I CANT FIX<?php 
-                        echo '<div class="row image_list">';
+
+                    <div class="flexslider" style="width:350px; margin-left:100px;">
+                        <ul class="slides">
+                            <?php
                             foreach($images as $image){
-                                echo'<div class="col-2 ">
-                                    <img src='.$dir.$image.'>
-                                </div>';
+                                echo'<li><img src='.$dir.$image.' alt="" width="350" height="250"></li>';
                             }
-                        echo '</div>';
-                        ?>-->
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="./image/index/home_watch1.jpg" alt="First slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="./image/index/home_watch2.png" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="./image/index/home_watch3.jpg" alt="Third slide">
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
+                            ?>
+                        </ul>
                     </div>
+                    
 
                     <div id="review_jumbotron" class="jumbotron">
 
@@ -59,7 +36,6 @@
                         <hr>
 
                     </div>
-                </div>
             </div>
             <div class="col-lg-5 col-md-12 col-sm-12">
                 <div id="product_jumbotron" class="jumbotron">
