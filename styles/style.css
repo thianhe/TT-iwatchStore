@@ -117,15 +117,15 @@ hr {
     color: #999;
 }
 
-.search-bar input:focus+.search-icon,
-.search-bar input:valid+.search-icon {
+.search-bar input:focus + .search-icon,
+.search-bar input:valid + .search-icon {
     z-index: 0;
     border-color: #ccc;
     right: 20px;
 }
 
-.search-bar input:focus+.search-icon:after,
-.search-bar input:valid+.search-icon:after {
+.search-bar input:focus + .search-icon:after,
+.search-bar input:valid + .search-icon:after {
     background-color: #ccc;
 }
 
@@ -321,14 +321,14 @@ hr {
     display: none;
 }
 
-.table-striped>tbody>tr:nth-child(odd)>td,
-.table-striped>tbody>tr:nth-child(odd)>th {
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
     background-color: #afc9e3;
     border: 2px solid;
 }
 
-.table-striped>tbody>tr:nth-child(even)>td,
-.table-striped>tbody>tr:nth-child(even)>th {
+.table-striped > tbody > tr:nth-child(even) > td,
+.table-striped > tbody > tr:nth-child(even) > th {
     border: 2px solid;
     background-color: rgb(255, 255, 255);
 }
@@ -373,7 +373,7 @@ hr {
     border-radius: 1px;
 }
 
-.item {
+.f_item {
     margin: 0;
     padding: 0;
     height: 0;
@@ -382,7 +382,7 @@ hr {
     transition: 0.7s;
 }
 
-.item li a {
+.f_item li a {
     background: white;
     font-size: 14px;
     font-size: 0.875rem;
@@ -392,7 +392,7 @@ hr {
     filter: dropshadow(color=#000, offx=1, offy=0);
 }
 
-.item li a:hover {
+.f_item li a:hover {
     background: #e7e3e3;
 }
 
@@ -415,4 +415,14 @@ hr {
 
 .dropdown2 {
     margin: 3% 0;
+}
+.carousel-inner {
+    margin: 0 auto;
+}
+.carousel-inner img {
+    width: auto;
+    height: 600px;
+}
+.carousel-inner > .carousel-item > img {
+    margin: 0 auto;
 }
