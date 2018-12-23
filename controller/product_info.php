@@ -5,10 +5,10 @@
     
     $dir = './image/product/'.$watch_id.'/';
     $images = [];
-    if (file_exists('./image/product/'.$watch_id)) {
-    $images= scandir($dir); 
-        array_shift($images);
-        array_shift($images);
+    if (file_exists($dir)) {
+        $files= scandir($dir); 
+        //array_shift($images);
+        //array_shift($images);
     }
     
     $brandList = Database::get()->execute('select * from company');

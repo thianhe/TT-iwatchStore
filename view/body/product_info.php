@@ -7,72 +7,60 @@
 ?>
 <div class="jumbotron" id="product_info">
     <div class="container">
-        <div class="container">
-            <div class="row" id="go_back">
-                <a href="products" class="btn">
-                    <i class="fas fa-arrow-left"></i>
-                    All Product
-                </a>
-            </div>
+        <div class="row" id="go_back">
+            <a href="products" class="btn">
+                <i class="fas fa-arrow-left"></i>
+                All Product
+            </a>
         </div>
         <div class="row">
             <div class="col-lg-7 col-md-12 col-sm-12">
-
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                    <?php 
-                        $i = 0;
-                        for( $a=2; $a < count($files); $a++):
-                    ?>
-                        <li data-target="#myCarousel" data-slide-to="<?php echo $i; ?>" class="<?php echo $i == 0 ? 'active': ''; ?>"></li>
-                        <?php 
-                        $i++;
-                        endfor;
-                    ?>
-                    </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                    <?php 
-                        $i = 0;
-                        for( $a=2; $a < count($files); $a++):
-                    ?>
-                    
-                        <div class="item <?php echo $i == 0 ? 'active':'';?>">
-                            <img src="image/product/1/<?php echo $files[$a];?>" alt="">
-                        </div>
-                    <?php 
-                        $i++;
-                        endfor;
-                    ?>
-
-                    </div>
-
-                    <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+            <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+            <ol class="carousel-indicators">
+                <?php 
+                $i = 0;
+                for( $a=2; $a < count($files); $a++):
+                ?>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $i; ?>" class="<?php echo $i == 0 ? 'active': ''; ?>"></li>
+                <?php 
+                $i++;
+                endfor;
+                ?>
+            </ol>
+            <div id="home_watch_carousel"class="carousel-inner">
+                <?php 
+                $i = 0;
+                for( $a=2; $a < count($files); $a++):
+                ?>
+                <div class="carousel-item text-center <?php echo $i == 0 ? 'active':'' ;?>">
+                    <img src="<?php echo $dir.$files[$a];?>" alt="">
                 </div>
-
-
-                <div id="review_jumbotron" class="jumbotron">
-
-                    <h3>Review</h3>
-                    <hr>
-                    <span class="title_font">TONY<br></span>
-                    <span class="content_font">
-                        FUCKING TRASH
-                    </span>
-                    <hr>
-
-                </div>
+                <?php 
+                $i++;
+                endfor;
+                ?>
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+            <div id="review_jumbotron" class="jumbotron">
+
+                <h3>Review</h3>
+                <hr>
+                <span class="title_font">TONY<br></span>
+                <span class="content_font">
+                    FUCKING TRASH
+                </span>
+                <hr>
+
+            </div>
+        </div>
             <div class="col-lg-5 col-md-12 col-sm-12">
                 <div id="product_jumbotron" class="jumbotron">
                     <h3 class="jumbotron_title">
