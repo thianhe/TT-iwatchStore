@@ -144,10 +144,6 @@ create table TRACE_LIST(
     foreign key(watch_id) references WATCH(watch_id)
 );
 
-
-drop table ORDER_ITEM;
-drop table ORDER_LIST;
-
 create table ORDER_LIST(
 	orderList_id int not null,
 	member_id int not null,
