@@ -1,13 +1,15 @@
-Product
+Product (50% finish)
 
 tracelist
 
-Storage
+Storage (50% finish)
 
 comment rate
 
-shooping cart --
+shooping cart (finish)
 
 discount
 
 reports or statistics
+
+buy product
