@@ -12,6 +12,9 @@
                 <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
                     <div class="btn-group mr-2" role="group" aria-label="First group">
                         <div class="display-4">Order Info</div>
+                        <?php
+                        if($_SESSION['memberID'] <= 0):
+                        ?>
                         <div class="edit-user-btn">
                             <form action="<?php echo Config::BASE_URL?>order_edit" method="post">
                                 <input type="hidden" name="orderList_id" value="<?php echo $orderInfo['orderList_id'];?>">
@@ -19,6 +22,7 @@
                             </form>
                         </div>
                         <?php 
+                        endif;
 					//check for any errors
 					if ($msg->hasMessages()) $msg->display();?>
                     </div>
@@ -116,6 +120,7 @@
             </tbody>
         </table> 
         <?php 
+        if($_SESSION['memberID'] <= 0)
         echo '
         <div class="row d-flex justify-content-end">
             <div class="col-2 delete_form ">

@@ -120,5 +120,49 @@
             </div>
         </div>';
         ?>
+        <div class="row">
+            <div id="trace_filter" class="text-center col-2 filter" onclick="UserInfoFilter(1)">Trace list</div>
+            <div id="order_filter" class="text-center col-2 filter" onclick="UserInfoFilter(2)">Order history</div>
+        </div>
+        <div id="trace_list" class="hide">
+            
+        </div>
+        <div id="order_history" class="hide">
+            <div class="row display-4">Order History</div>
+            <div class="row setting_list ">
+                <div class="col-2">State</div>
+                <div class="col-2">DateTime</div>
+                <div class="col-2">OrderId</div>
+                <div class="col-2">receiver name</div>
+                <div class="col-3">receiver email</div>
+            </div>
+            <?php
+            echo'<div id="order_list">';
+            foreach($OrderList as $po){
+                echo '
+                <div class="row setting_list">
+                    <div class="col-2">';
+                        if($po['state'] == 'p')  echo "Processing"; 
+                    else if($po['state'] == 'c') echo "Confirmed";
+                    else if($po['state'] == 'f') echo "Finished";
+                    echo'</div>
+                    <div class="col-2">'.$po['date_time'].'</div>
+                    <div class="col-2">'.$po['orderList_id'].'</div>
+                    <div class="col-2">'.$po['r_name'].'</div>
+                    <div class="col-3">'.$po['r_email'].'</div>
+                    <div class="col-1 user_detail_button">
+                    <form action="'.Config::BASE_URL.'manage_order" method="post">
+                        <input type="hidden" name="orderList_id" value="'.$po['orderList_id'].'">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fas fa-info"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+             ';
+            }
+            echo '</div>';
+            ?>
+        </div>
     </div>
 </div>
