@@ -361,3 +361,6 @@ hr {
 .order_item img {
     height: 100px;
 }
+.active_center {
+    margin: 0 auto;
+}

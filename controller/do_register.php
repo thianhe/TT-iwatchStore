@@ -99,10 +99,7 @@ if (isset($_POST['submit'])) {
             if (isset($id) and !empty($id) and is_numeric($id)) {
                 // 寄出認證信
                 $subject = "Registration Confirmation";
-                /*$body = "<p>Thank you for registering at demo site.</p>
-                <p>To activate your account, please click on this link: <a href='".Config::BASE_URL."activate/$id/$activasion'>".Config::BASE_URL."activate/$id/$activasion</a></p>
-                <p>Regards Site Admin</p>";*/
-                $body = "<p>Thank you for registering at demo site.</p>";
+                $body = "<p>Thank you for registering at demo site.<br> Your activation code is '".$activasion."'<br>.Or you can click on <a href='".Config::BASE_URL."do_active?id=".$id."&activation=".$activasion."'>this link</p>";
                 $mail = new Mail(Config::MAIL_USER_NAME, Config::MAIL_USER_PASSWROD);
                 $mail->setFrom(Config::MAIL_FROM, Config::MAIL_FROM_NAME);
                 $mail->addAddress($email);
@@ -110,7 +107,6 @@ if (isset($_POST['submit'])) {
                 $mail->body($body);
                 $mail->send();
                 $msg->success("Create user success");
-                //redirect to login page
                 header('Location: ' . $_SERVER['HTTP_REFERER']);
                 exit;
             } else {

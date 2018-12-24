@@ -101,7 +101,7 @@
                     <div class="form-group">
                         <label for="active">Active</label>
                         <div class="row">
-                            <div class="col-6"><input type="radio" name="active" value="active" tabindex="9"> Active</div>
+                            <div class="col-6"><input type="radio" name="active" value="active" tabindex="9" checked> Active</div>
                             <div class="col-6"><input type="radio" name="active" value="0" tabindex="10"> Not active</div>
                         </div>
                     </div>
@@ -115,6 +115,7 @@
                     </div>
                     <p>* required</p>
                     <div class="row">
+                    <div class="g-recaptcha" data-sitekey="6LdlbIQUAAAAAAYd6pVHptc1AtYO4SKrURPeO_qF"></div>
                         <div class="col-xs-6 col-md-6"><input type="submit" name="submit" value="Register" class="btn btn-primary btn-block btn-lg"
                                 tabindex="11"></div>
                     </div>

@@ -18,7 +18,7 @@ create table MEMBER(
     primary key(member_id),
     unique(Account)
 );
-insert into MEMBER VALUES (0,"Admin"," ","admin","admin","test@gmail.com",123123123,"2017-06-15","M","taiwan");
+insert into MEMBER VALUES (0,"Admin"," ","admin","admin","test@gmail.com",123123123,"2017-06-15","M","taiwan","active");
 create table COMPANY(	
 	company_id int not null,
 	brand varchar(255) not null,
@@ -146,8 +146,8 @@ create table TRACE_LIST(
     foreign key(watch_id) references WATCH(watch_id)
 );
 
-drop table order_item;
-drop table order_list;
+drop table if exists order_item;
+drop table if exists order_list;
 
 create table ORDER_LIST(
 	orderList_id int not null,

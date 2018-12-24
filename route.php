@@ -29,7 +29,13 @@
         $parameter = strtolower($route->getParameter(1));
         $controller_array = scandir('controller');
         $controller_array = array_change_key_case($controller_array, CASE_LOWER);
-        if (in_array($parameter . '.php', $controller_array)) {
+        if(isset($_SESSION['memberID'])){
+            $result = Database::get()->execute('select active from member where member_id = "'.$_SESSION['memberID'].'"');
+        }
+        if(isset($_SESSION['memberID'])&& $result[0]['active'] != 'active' && $parameter!='do_send_active' && $parameter!='do_active'&& $parameter!='do_logout'){
+            include 'controller/'.'active_account'.'.php';
+        }
+        else if (in_array($parameter . '.php', $controller_array)) {
             include 'controller/'.$parameter.'.php';
         } else {
             include 'controller/index.php';
