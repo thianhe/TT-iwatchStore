@@ -12,4 +12,4 @@ discount
 
 reports or statistics
 
-buy product
+buy product (finish)
