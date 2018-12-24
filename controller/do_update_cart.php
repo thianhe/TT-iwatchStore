@@ -7,8 +7,8 @@ foreach($_SESSION['shopping_cart'] as $cart){
         $error = true;
         break;
     }
-    if( $_POST[$cart->product_id]<1){
-        $msg->error("Quantity cannot smaller the 1");
+    if( $_POST[$cart->product_id]<0){
+        $msg->error("Quantity cannot smaller the 0");
         $error = true;
         break;
     }

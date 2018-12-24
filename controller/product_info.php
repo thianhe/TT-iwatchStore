@@ -19,6 +19,13 @@
     foreach($_SESSION['shopping_cart'] as $cart){
         if($cart->product_id == $watchInfo['watch_id']) $inCart = true;
     }
+
+    $inTrace =false;
+    if(isset($_SESSION['memberID'])){
+        $traceList = Database::get()->execute('SELECT * from trace_list where watch_id ='.$watch_id.' and member_id = '.$_SESSION['memberID'].'');
+        $inTrace = isset($traceList[0]);
+    }
+
     include('view/header/header.php');
     include('view/body/product_info.php');
     include('view/footer/footer.php');

@@ -126,7 +126,33 @@
                 <div id="order_filter" class="text-center col-2 filter" onclick="UserInfoFilter(2)">Order history</div>
             </div>
             <div id="trace_list" class="hide">
-
+                <div class="row display-4">Trace List</div>
+                <div class="row setting_list ">
+                    <div class="col-8">Name</div>
+                    <div class="col-2">quantity</div>
+                </div>
+                <div id="tracing_list">
+                    <?php
+                    foreach($traceList as $tl){
+                    echo '
+                    <div class="row setting_list">
+                        <div class="col-8"><a href="product_info?id='.$tl['watch_id'].'">'.$tl['watch_name'].'</a></div>
+                        <div class="col-2">'.$tl['quantity'].'</div>
+                        <div class="col-2 delete_form">
+                            <form action="'.Config::BASE_URL.'do_delete_trace" method="post">
+                                <input type="hidden" name="watch_id" value="'.$tl['watch_id'].'">
+                                <input type="hidden" name="member_id" value="'.$userInfo['member_id'].'">
+                                <input type="hidden" name="account" value="'.$userInfo['account'].'">
+                                <input type="submit" name="submit" value="SURE">
+                            </form>
+                            <span class="mask"></span>
+                            <button class="f_delete text-center">Delete</button>
+                        </div>
+                    </div>
+                    ';
+                    }
+                    ?>
+                </div>
             </div>
             <div id="order_history" class="hide">
                 <div class="row display-4">Order History</div>
@@ -137,9 +163,9 @@
                     <div class="col-2">receiver name</div>
                     <div class="col-3">receiver email</div>
                 </div>
+                <div id="order_list">
                 <?php
-            echo'<div id="order_list">';
-            foreach($OrderList as $po){
+                foreach($OrderList as $po){
                 echo '
                 <div class="row setting_list">
                     <div class="col-2">';

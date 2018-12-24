@@ -102,6 +102,20 @@
                                     <button type="submit" name="submit" class="btn btn_la btn-lg btn-block"><i class="fas fa-cart-plus"></i>&nbsp;Add to Cart</button>
                                 </form>';
                             }
+                            if($inTrace){
+                                echo '<form action="'.Config::BASE_URL.'do_delete_trace" method="post">
+                                    <input type="hidden" name="watch_id" value="'.$watchInfo['watch_id'].'">
+                                    <input type="hidden" name="member_id" value="'.$_SESSION['memberID'].'">
+                                    <input type="hidden" name="account" value="'.$_SESSION['account'].'">
+                                    <button type="submit" name="submit" class="btn btn_la btn-lg btn-block">Remove from Trace List</button>
+                                </form>';
+                            }
+                            else{
+                                echo '<form action="'.Config::BASE_URL.'do_add_trace" method="post">
+                                    <input type="hidden" name="watch_id" value="'.$watchInfo['watch_id'].'">
+                                    <button type="submit" name="submit" class="btn btn_la btn-lg btn-block"><i class="fas fa-calendar-plus"></i>&nbsp;Add to Trace List</button>
+                                </form>';
+                            }
                             ?>
                     </div>
                 </div>
