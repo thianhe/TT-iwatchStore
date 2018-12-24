@@ -6,16 +6,17 @@
 .border {
     padding-top: 1%;
     padding-bottom: 1%;
+    margin: 0 auto !important;
+
+}
+
+.border img {
+    width: 80%;
+    border-radius: 50%;
 }
 
 .content_border {
     padding: 4% 4%;
-}
-
-.border img {
-    height: 200px;
-    border-radius: 50%;
-
 }
 
 #profile hr {
