@@ -31,7 +31,7 @@
                             $deleteFormName = 'delete_' . $product['watch_id'];
                             echo '<tbody>
                                 <tr>
-                                    <td>' . $product['brand'] . '-' . $product['watch_name'] . '</td>
+                                    <td><a href="product_info?id='.$product['watch_id'].'">' . $product['brand'] . '-' . $product['watch_name'] . '</a></td>
                                     <td>' . $product['quantity'] . '</td>
                                     <td>' . $product['price'] . '</td>
                                     <td><input class="quantity_input" type="text" name="' . $product['watch_id'] . '" value="' . $product['SCquantity'] . '" form="updateForm""></td>
