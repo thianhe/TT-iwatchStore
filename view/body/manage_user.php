@@ -116,9 +116,14 @@
             </div>
         </div>';
         ?>
-
-        
-        <div id="order_history">
+        <div class="row">
+            <div id="trace_filter" class="text-center col-2 filter" onclick="UserInfoFilter(1)">Trace list</div>
+            <div id="order_filter" class="text-center col-2 filter" onclick="UserInfoFilter(2)">Order history</div>
+        </div>
+        <div id="trace_list" class="hide">
+            
+        </div>
+        <div id="order_history" class="hide">
             <div class="row display-4">Order History</div>
             <div class="row setting_list ">
                 <div class="col-2">State</div>

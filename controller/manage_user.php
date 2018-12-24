@@ -10,6 +10,7 @@ if(isset($_SESSION['memberID'])){
         unset($_SESSION['updateKey']);
     }
     $userInfo =  Database::get()->execute('select * from MEMBER where account = "'.$account.'";');
+    $OrderList =  Database::get()->execute('select m.account as account, orderList_id,o.member_id as member_id ,cost,date_time,state,r_name,r_address,r_phone,r_email from member m,order_list o where m.member_id = o.member_id and o.member_id ="'.$_SESSION['memberID'].'" order by date_time DESC;');
     $userInfo = $userInfo[0];
     include('view/header/header.php');
     include('view/body/manage_user.php');

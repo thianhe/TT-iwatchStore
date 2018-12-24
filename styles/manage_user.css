@@ -1,4 +1,4 @@
-#go_back>a {
+#go_back > a {
     padding: 0 !important;
     text-decoration: none !important;
     margin-bottom: 2%;
@@ -6,4 +6,30 @@
 
 .delete_form .mask {
     background-color: #e9ecef;
+}
+
+.filter {
+    padding: 8px 0;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.filter_search {
+    border: 1px solid black;
+}
+
+.filter:hover {
+    background-color: rgb(196, 196, 196);
+}
+
+.filter.selected:hover {
+    background-color: rgb(219, 255, 118);
+}
+
+.selected {
+    background-color: rgb(219, 255, 118);
+    border: 3px solid black;
+}
+.hide {
+    display: none;
 }

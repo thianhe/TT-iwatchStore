@@ -36,8 +36,8 @@
 
         <div class="container">
             <div class="row setting_list ">
-                <div class="col-1">State</div>
-                <div class="col-2">Account</div>
+                <div class="col-2">State</div>
+                <div class="col-1">Account</div>
                 <div class="col-1">OrderId</div>
                 <div class="col-2">receiver name</div>
                 <div class="col-2">receiver email</div>
@@ -47,7 +47,7 @@
                 foreach($processingOrder as $po){
                     echo '
                     <div class="row setting_list">
-                    <div class="col-1">';
+                    <div class="col-2">';
                     if($po['state'] == 'p') 
                         echo "Processing"; 
                     else if($po['state'] == 'c') 
@@ -55,7 +55,7 @@
                     else if($po['state'] == 'f') 
                         echo "Finished";
                     echo'</div>
-                        <div class="col-2">'.$po['account'].'</div>
+                        <div class="col-1">'.$po['account'].'</div>
                         <div class="col-1">'.$po['orderList_id'].'</div>
                         <div class="col-2">'.$po['r_name'].'</div>
                         <div class="col-2">'.$po['r_email'].'</div>
@@ -83,7 +83,7 @@
                 foreach($confirmedOrder as $co){
                     echo '
                     <div class="row setting_list">
-                        <div class="col-1">';
+                        <div class="col-2">';
                             if($co['state'] == 'p') 
                                 echo "Processing"; 
                             else if($co['state'] == 'c') 
@@ -91,7 +91,7 @@
                             else if($co['state'] == 'f') 
                                 echo "Finished";
                             echo'</div>
-                        <div class="col-2">'.$co['account'].'</div>
+                        <div class="col-1">'.$co['account'].'</div>
                         <div class="col-1">'.$co['orderList_id'].'</div>
                         <div class="col-2">'.$co['r_name'].'</div>
                         <div class="col-2">'.$co['r_email'].'</div>
@@ -119,7 +119,7 @@
                 foreach($finishedOrder as $fo){
                     echo '
                     <div class="row setting_list">
-                    <div class="col-1">';
+                    <div class="col-2">';
                     if($fo['state'] == 'p') 
                         echo "Processing"; 
                     else if($fo['state'] == 'c') 
@@ -127,7 +127,7 @@
                     else if($fo['state'] == 'f') 
                         echo "Finished";
                     echo'</div>
-                        <div class="col-2">'.$fo['account'].'</div>
+                        <div class="col-1">'.$fo['account'].'</div>
                         <div class="col-1">'.$fo['orderList_id'].'</div>
                         <div class="col-2">'.$fo['r_name'].'</div>
                         <div class="col-2">'.$fo['r_email'].'</div>

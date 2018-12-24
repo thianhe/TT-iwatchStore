@@ -78,6 +78,23 @@ function OrderFilter(select) {
     }
 }
 
+function UserInfoFilter(select) {
+    $('#trace_list').addClass('hide');
+    $('#order_history').addClass('hide');
+
+    $('#trace_filter').removeClass('selected');
+    $('#order_filter').removeClass('selected');
+
+    if (select == 1) {
+        $('#trace_filter').addClass('selected');
+        $('#trace_list').removeClass('hide');
+        console.log('test');
+    } else if (select == 2) {
+        $('#order_filter').addClass('selected');
+        $('#order_history').removeClass('hide');
+    }
+}
+
 function CountChildHeigh() {
     var childNumber = $('.item1_child').length;
     childNumber = childNumber * 27;
