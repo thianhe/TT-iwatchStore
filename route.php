@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" type="text/css" href="styles/<?php echo $routeFile; ?>.css" />
     <link rel="shortcut icon" type="image/x-icon" href="./image/icon/favicon.ico">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>

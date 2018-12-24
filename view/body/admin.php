@@ -20,6 +20,18 @@
                     <div class="control_link">Product</div>
                 </a>
             </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="order_setting">
+                    <i class="fas fa-money-check-alt fa-5x"></i>
+                    <div class="control_link">Order</div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+
+            </div>
+            <div class="col-md-4 col-sm-6">
+ 
+            </div>
         </div>
     </div>
 </div>

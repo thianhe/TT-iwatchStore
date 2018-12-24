@@ -1,7 +1,7 @@
 <?php
 $_PageBeforeLoginOut = 'index';
 
-if(isset($_SESSION['memberID']) and $_SESSION['memberID'] ==0){
+if(isset($_SESSION['memberID']) and $_SESSION['memberID'] <=0){
     $product =  Database::get()->execute('select * from WATCH,company where company_id = brand_id;');
     $brandList =  Database::get()->execute('select * from company;');
     $opList = Database::get()->execute('select * from OPERATING_SYSTEM');

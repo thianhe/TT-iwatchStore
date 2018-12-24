@@ -3,7 +3,7 @@
 <div class="container">
 	<div class="row d-flex justify-content-center">
 	    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3 ">
-			<form role="form" method="post" action="<?=Config::BASE_URL?>do_login" autocomplete="off">
+			<form form="login_form" role="form" method="post" action="<?=Config::BASE_URL?>do_login" autocomplete="off">
 				<h2>Please Login</h2>
 				<p><a href='register'>Register a New Account</a></p>
 				<hr class="hr_black">
@@ -26,7 +26,9 @@
 				</div>
 				<hr class="hr_black">
 				<div class="row ">
-					<div class="col-xs-6 col-md-6"><input type="submit" name="submit" value="Login" class="btn btn-primary btn-block btn-lg" tabindex="5"></div>
+					<div class="col-xs-6 col-md-6">
+					<div class="g-recaptcha" data-sitekey="6LdlbIQUAAAAAAYd6pVHptc1AtYO4SKrURPeO_qF"></div>
+					<input type="submit" name="submit" value="Login" class=" btn btn-primary btn-block btn-lg" tabindex="5"></div>
 				</div>
 			</form>
 		</div>
