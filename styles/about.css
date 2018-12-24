@@ -1,0 +1,36 @@
+#big_jumbotron {
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.border {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.content_border {
+    padding: 4% 4%;
+}
+
+.border img {
+    height: 200px;
+    border-radius: 50%;
+
+}
+
+#profile hr {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+hr {
+    border: 1px solid black;
+}
+
+.fab {
+    color: rgb(105, 104, 104)
+}
+
+.fab:hover {
+    color: black;
+}

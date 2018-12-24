@@ -10,6 +10,7 @@
         <ul class="navbar-nav ">
             <?php
             $profilePage = 'manage_user';
+            $loginPage = 'login';
             if(isset($_SESSION['memberID']))
                 if($_SESSION['memberID'] == 0)
                     $profilePage = 'admin';
@@ -51,24 +52,28 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav ">
+        <ul class="navbar-nav" id="navbar">
             <li class="nav-item ">
                 <a class="nav-link " href="index">Home<span class="sr-only active">(current)</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="
+                <?php if(isset($_SESSION['memberID'])){
+                            echo $profilePage;}
+                      else{
+                            echo $loginPage;
+                        }                      
+                ?>">
+                Profile</a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link" href="products">Products</a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link" href="promotions">Promotions</a>
-            </li>
+            </li>  
             <li class="nav-item ">
-                <a class="nav-link" href="<?php echo $profilePage;?>">Profile</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="#">About Us</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="#">Contacts</a>
+                <a class="nav-link" href="about">About Us</a>
             </li>
         </ul>
     </div>
