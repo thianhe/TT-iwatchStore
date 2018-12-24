@@ -365,4 +365,11 @@ hr {
 
 .order_item img {
     height: 100px;
+<<<<<<< HEAD
 }
+=======
+}
+.active_center {
+    margin: 0 auto;
+}
+>>>>>>> eeae88ea66ed5dce7f391b24135d4727c7ef704e

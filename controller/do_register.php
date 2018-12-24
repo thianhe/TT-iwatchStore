@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
     $gump = new GUMP();
     $_POST = $gump->sanitize($_POST);
     $validation_rules_array = array(
-        'account'    => 'required|alpha_numeric|max_len,20|min_len,3',
+    'account'    => 'required|alpha_numeric|max_len,20|min_len,3',
     'email'       => 'required|valid_email',
     'password'    => 'required|max_len,20|min_len,3',
     'passwordConfirm' => 'required',
@@ -46,6 +46,10 @@ if (isset($_POST['submit'])) {
         'identity' => 'trim',
         'address' => 'trim',
     );
+    if($_POST['active'] != "active")
+        $activasion = md5(uniqid(rand(), true));
+    else 
+        $activasion = $_POST['active'];
     $gump->filter_rules($filter_rules_array);
     $validated_data = $gump->run($_POST);
     if ($validated_data === false) {
@@ -67,7 +71,7 @@ if (isset($_POST['submit'])) {
         $passwordObject = new Password();
         $hashedpassword = $passwordObject->password_hash($password, PASSWORD_BCRYPT);
         //create the random activasion code
-        $activasion = md5(uniqid(rand(), true));
+        
         try {
             // 新增到資料庫
             if ($identity == 'C') {
@@ -88,17 +92,14 @@ if (isset($_POST['submit'])) {
                 "birthday" => $bday,
                 "gender" => $gender,
                 "address" => $address,
-                //'active' => $activasion
+                'active' => $activasion
             );
             Database::get()->insert($table, $data_array);
 
             if (isset($id) and !empty($id) and is_numeric($id)) {
                 // 寄出認證信
                 $subject = "Registration Confirmation";
-                /*$body = "<p>Thank you for registering at demo site.</p>
-                <p>To activate your account, please click on this link: <a href='".Config::BASE_URL."activate/$id/$activasion'>".Config::BASE_URL."activate/$id/$activasion</a></p>
-                <p>Regards Site Admin</p>";*/
-                $body = "<p>Thank you for registering at demo site.</p>";
+                $body = "<p>Thank you for registering at demo site.<br> Your activation code is '".$activasion."'<br>.Or you can click on <a href='".Config::BASE_URL."do_active?id=".$id."&activation=".$activasion."'>this link</p>";
                 $mail = new Mail(Config::MAIL_USER_NAME, Config::MAIL_USER_PASSWROD);
                 $mail->setFrom(Config::MAIL_FROM, Config::MAIL_FROM_NAME);
                 $mail->addAddress($email);
@@ -106,7 +107,6 @@ if (isset($_POST['submit'])) {
                 $mail->body($body);
                 $mail->send();
                 $msg->success("Create user success");
-                //redirect to login page
                 header('Location: ' . $_SERVER['HTTP_REFERER']);
                 exit;
             } else {
