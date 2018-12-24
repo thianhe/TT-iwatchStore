@@ -1,0 +1,14 @@
+#cart_table .table,
+#cart_table tr,
+#cart_table td,
+#cart_table th {
+    border: 1px solid black !important
+}
+
+#receiver {
+    background-color: white;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 5%;
+
+}

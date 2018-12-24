@@ -1,9 +1,10 @@
 <script>
     document.title = 'Product Info'
 </script>
+
 <div class="jumbotron" id="product_info">
     <div class="container">
-        <div class="row" id="go_back">
+        <div class="container row" id="go_back">
             <a href="products" class="btn">
                 <i class="fas fa-arrow-left"></i>
                 All Product
@@ -12,7 +13,7 @@
         <div class="row">
             <div class="col-lg-7 col-md-12 col-sm-12">
             <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
-            <ol class="carousel-indicators">
+            <ol class="carousel-indicators" >
                 <?php 
                 $i = 0;
                 for( $a=2; $a < count($files); $a++):
