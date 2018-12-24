@@ -117,15 +117,15 @@ hr {
     color: #999;
 }
 
-.search-bar input:focus+.search-icon,
-.search-bar input:valid+.search-icon {
+.search-bar input:focus + .search-icon,
+.search-bar input:valid + .search-icon {
     z-index: 0;
     border-color: #ccc;
     right: 20px;
 }
 
-.search-bar input:focus+.search-icon:after,
-.search-bar input:valid+.search-icon:after {
+.search-bar input:focus + .search-icon:after,
+.search-bar input:valid + .search-icon:after {
     background-color: #ccc;
 }
 
@@ -321,21 +321,16 @@ hr {
     display: none;
 }
 
-.table-striped>tbody>tr:nth-child(odd)>td,
-.table-striped>tbody>tr:nth-child(odd)>th {
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
     background-color: #afc9e3;
     border: 2px solid;
 }
 
-.table-striped>tbody>tr:nth-child(even)>td,
-.table-striped>tbody>tr:nth-child(even)>th {
+.table-striped > tbody > tr:nth-child(even) > td,
+.table-striped > tbody > tr:nth-child(even) > th {
     border: 2px solid;
     background-color: rgb(255, 255, 255);
-}
-
-.table td,
-.table th {
-    width: 0.1rem;
 }
 
 .edit-user-btn {
@@ -356,6 +351,13 @@ hr {
     height: 600px;
 }
 
-.carousel-inner>.carousel-item>img {
+.carousel-inner > .carousel-item > img {
     margin: 0 auto;
+}
+
+.image_td {
+    width: 200px;
+}
+.order_item img {
+    height: 100px;
 }

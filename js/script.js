@@ -7,14 +7,14 @@ function HideAddForm() {
     $('#hidden_form').addClass('hide');
 }
 
-$(document).on('click', '.f_delete', function () {
+$(document).on('click', '.f_delete', function() {
     $(this)
         .parent()
         .toggleClass('active');
     if (
         $(this)
-        .parent()
-        .hasClass('active')
+            .parent()
+            .hasClass('active')
     ) {
         console.log('test');
         $(this).text('Cancel');
@@ -48,6 +48,33 @@ function UserFilter(select) {
     } else if (select == 2) {
         $('#customer_filter').addClass('selected');
         $('#member_list').removeClass('hide');
+    }
+}
+
+function OrderFilter(select) {
+    $('#process_list').addClass('hide');
+    $('#confirm_list').addClass('hide');
+    $('#finish_list').addClass('hide');
+
+    $('#all_filter').removeClass('selected');
+    $('#process_filter').removeClass('selected');
+    $('#confirm_filter').removeClass('selected');
+    $('#finish_filter').removeClass('selected');
+
+    if (select == 0) {
+        $('#all_filter').addClass('selected');
+        $('#process_list').removeClass('hide');
+        $('#confirm_list').removeClass('hide');
+        $('#finish_list').removeClass('hide');
+    } else if (select == 1) {
+        $('#process_filter').addClass('selected');
+        $('#process_list').removeClass('hide');
+    } else if (select == 2) {
+        $('#confirm_filter').addClass('selected');
+        $('#confirm_list').removeClass('hide');
+    } else if (select == 3) {
+        $('#finish_filter').addClass('selected');
+        $('#finish_list').removeClass('hide');
     }
 }
 
