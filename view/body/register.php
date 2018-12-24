@@ -7,12 +7,12 @@
 					<h2>Please Sign Up</h2>
 					<p>Already a member? <a href='login'>Login</a></p>
 					<hr class="hr_black">
-<?php
-//check for any errors
-if ($msg->hasMessages()) {
-    $msg->display();
-}
-?>
+					<?php
+					//check for any errors
+					if ($msg->hasMessages()) {
+    					$msg->display();
+					}
+					?>
 					<div class="form-group">
 						<label for="account">Account*</label>
 						<input type="text" name="account" id="account" class="form-control input-lg" required placeholder="Account" value="<?php if (isset($error)) {echo htmlspecialchars($_POST['account'], ENT_QUOTES);}?>" tabindex="1">
@@ -71,7 +71,9 @@ if ($msg->hasMessages()) {
 					</div>
 					<input type="hidden" id="identity" name="identity" value="C">
 					<p>* required</p>
+					
 					<div class="row justify-content-center">
+					<div class="g-recaptcha" data-sitekey="6LdlbIQUAAAAAAYd6pVHptc1AtYO4SKrURPeO_qF"></div>
 						<div class="col-xs-6 col-md-6"><input type="submit" name="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="11"></div>
 					</div>
 				</form>

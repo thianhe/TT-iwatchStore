@@ -164,7 +164,7 @@ create table ORDER_ITEM(
     quantity int not null,
     cost int not null,
     primary key(orderList_id, watch_id),
-    foreign key(orderList_id) references ORDER_LIST(orderList_id),
+    foreign key(orderList_id) references ORDER_LIST(orderList_id) on delete cascade,
     foreign key(watch_id) references WATCH(watch_id)
 );
 

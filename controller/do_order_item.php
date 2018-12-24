@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
             'member_id' => $_SESSION['memberID'],
             'cost' => $totalPrice,
             'date_time' => date('Y-m-d H:i:s'),
-            'state' => 'N',
+            'state' => 'p',
             'r_name' => $Rname,
             "r_email" => $Remail,
             "r_phone" => $Rphone,
