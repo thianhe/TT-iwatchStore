@@ -1,6 +1,7 @@
 drop database if exists TTiWatchStore;
 create database TTiWatchStore;
 use TTiWatchStore;
+CREATE USER if not exists 'newuser'@'localhost' IDENTIFIED BY 'newpassword';
 GRANT ALL PRIVILEGES ON *.* TO 'newuser'@'localhost';
 create table MEMBER(	
 	member_id int not null,
@@ -13,6 +14,7 @@ create table MEMBER(
     birthday date,
     gender char(1),
     address varchar(255),
+    active varchar(255),
     primary key(member_id),
     unique(Account)
 );

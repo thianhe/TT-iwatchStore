@@ -61,6 +61,7 @@
 					<div class="form-group">
 						<label for="address">Address</label>
 						<input type="text" name="address" id="address" class="form-control input-lg" placeholder="Address" value="<?php if (isset($error)) {echo htmlspecialchars($_POST['address'], ENT_QUOTES);}?>"tabindex="8">
+						<input type="hidden" name="active" id="active" class="form-control input-lg" placeholder="Address" value="0"tabindex="8">
 					</div>
 					<div class="form-group">
 					<label for="gender">Gender</label>

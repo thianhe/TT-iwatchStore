@@ -99,6 +99,13 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="active">Active</label>
+                        <div class="row">
+                            <div class="col-6"><input type="radio" name="active" value="active" tabindex="9"> Active</div>
+                            <div class="col-6"><input type="radio" name="active" value="0" tabindex="10"> Not active</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label for="identity">Identity*</label>
                         <div class="row">
                             <div class="col-6"><input type="radio" name="identity" value="C" tabindex="9" checked>
