@@ -73,9 +73,10 @@
 					<input type="hidden" id="identity" name="identity" value="C">
 					<p>* required</p>
 					
-					<div class="row justify-content-center">
-					<div class="g-recaptcha" data-sitekey="6LdlbIQUAAAAAAYd6pVHptc1AtYO4SKrURPeO_qF"></div>
-						<div class="col-xs-6 col-md-6"><input type="submit" name="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="11"></div>
+					<div class="row">
+					<div class="col-xs-6 col-md-6">
+						<div class="g-recaptcha" data-sitekey="6LdlbIQUAAAAAAYd6pVHptc1AtYO4SKrURPeO_qF"></div>
+						<input type="submit" name="submit" value="Register" class="btn btn-primary btn-block btn-lg btn_la" tabindex="11">
 					</div>
 				</form>
 			</div>

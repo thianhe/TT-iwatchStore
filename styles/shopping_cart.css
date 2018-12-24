@@ -2,7 +2,7 @@
 #cart_table tr,
 #cart_table td,
 #cart_table th {
-    border: 1px solid black !important
+    border: 1px solid black !important;
 }
 
 h3 {
@@ -18,27 +18,21 @@ h3 {
     width: 100%;
 }
 
-#borderless td,
-#borderless th {
-    border: none;
-
-}
-
-#borderless .btn {
-    margin-right: 3%;
-}
-
 .btn_la {
     background-color: #FFF200;
     color: black;
-
 }
 
+
 .la {
-    margin-left: 11% !important
+    margin-right: 2% !important
 }
 
 .btn_la:hover {
     filter: brightness(1.25) !important;
     transition: 2.55s ease-out 0s;
+}
+
+.space {
+    margin-bottom: 2%;
 }

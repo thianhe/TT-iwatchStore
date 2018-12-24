@@ -28,7 +28,7 @@
 				<div class="row ">
 					<div class="col-xs-6 col-md-6">
 					<div class="g-recaptcha" data-sitekey="6LdlbIQUAAAAAAYd6pVHptc1AtYO4SKrURPeO_qF"></div>
-					<input type="submit" name="submit" value="Login" class=" btn btn-primary btn-block btn-lg" tabindex="5"></div>
+					<input type="submit" name="submit" value="Login" class=" btn btn-primary btn_la btn-lg" tabindex="5"></div>
 				</div>
 			</form>
 		</div>

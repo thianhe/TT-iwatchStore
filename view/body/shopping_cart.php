@@ -15,7 +15,7 @@
             '<div class="row col-12">
                 <h1>Shopping Cart</h1>
             </div>       
-                    <table class="table" id="cart_table">
+                <table class="table" id="cart_table">
                         <thead class="table-primary">
                             <tr>
                                 <th scope="col">Product</th>
@@ -46,38 +46,21 @@
                                 </tbody>                       
                         ';}
         echo '</table>
-        <div class="row">
-            <div class="container" >  
-                <table class="table " id ="borderless">
-                    <thead>
-                        <tr>
-                        <th scope="col"></th>
-                            <th scope="col">
-                                <div class="d-flex justify-content-end">
-                                    <button type="submit" name="submit" class="btn btn-info btn-edit-user btn-lg" form="updateForm">Update Cart</button>
-                                    <h3>Total Price:<br>NT$' . $totalPrice . '</h3>
-                            </th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                </table>                 
-        <div class="col-8 d-flex justify-content-end la">';
-        
-        if (isset($_SESSION['memberID'])) {
-            echo '<a href="order_item" class="btn btn-lg btn_la"><i class="fas fa-hand-holding-usd"></i>Order Item</a>';
-        } else {
-            echo '<a href="login" class="btn btn-lg btn_la"><i class="fas fa-sign-in-alt"></i>Login to Order</a>';
-        }
-        
-        echo '</div>
-            </div>';
-    }
-?>
-</div>
-</div>
-</div>
-</div>
+        <div class="row">                                   
+            <div class="col d-flex justify-content-end space">
+                <button type="submit" name="submit" class="btn btn-info btn-edit-user btn-lg la" form="updateForm">Update Cart</button>
+                    <h3>Total Price:<br>NT$' . $totalPrice . '</h3>
+            </div>
+        </div>
+        <div class="row">                            
+                <div class="col d-flex justify-content-end order_btn">';
+                if (isset($_SESSION['memberID'])) {
+                    echo '<a href="order_item" class="btn btn-lg btn_la"><i class="fas fa-hand-holding-usd"></i>Order Item</a>';
+                } else {
+                    echo '<a href="login" class="btn btn-lg btn_la"><i class="fas fa-sign-in-alt"></i>Login to Order</a>';
+                }
+                  
+        echo '</div></div>';}
+        ?>
+    </div>
 </div>

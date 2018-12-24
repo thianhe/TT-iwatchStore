@@ -2,12 +2,16 @@
 <div class="jumbotron">
     <div class="container">
         <div class="container">
-            <div class="row" id="go_back">
-                <a href="<?php echo $profilePage;?>" class="btn">
-                    <i class="fas fa-arrow-left"></i>
-                    Profile
-                </a>
-            </div>
+            <?php
+                 if(isset($_SESSION['memberID']) and $_SESSION['memberID'] ==0){
+                     echo' <div class="row" id="go_back">
+                     <a href="user_setting" class="btn">
+                         <i class="fas fa-arrow-left"></i>
+                         Edit Users
+                     </a>
+                 </div>';
+                 } 
+           ?>
             <div class="row">
                 <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
                     <div class="btn-group mr-2" role="group" aria-label="First group">
@@ -116,23 +120,24 @@
             </div>
         </div>';
         ?>
-        <div class="row">
-            <div id="trace_filter" class="text-center col-2 filter" onclick="UserInfoFilter(1)">Trace list</div>
-            <div id="order_filter" class="text-center col-2 filter" onclick="UserInfoFilter(2)">Order history</div>
-        </div>
-        <div id="trace_list" class="hide">
-            
-        </div>
-        <div id="order_history" class="hide">
-            <div class="row display-4">Order History</div>
-            <div class="row setting_list ">
-                <div class="col-2">State</div>
-                <div class="col-2">DateTime</div>
-                <div class="col-2">OrderId</div>
-                <div class="col-2">receiver name</div>
-                <div class="col-3">receiver email</div>
+        <div class="container">
+            <div class="row">
+                <div id="trace_filter" class="text-center col-2 filter" onclick="UserInfoFilter(1)">Trace list</div>
+                <div id="order_filter" class="text-center col-2 filter" onclick="UserInfoFilter(2)">Order history</div>
             </div>
-            <?php
+            <div id="trace_list" class="hide">
+
+            </div>
+            <div id="order_history" class="hide">
+                <div class="row display-4">Order History</div>
+                <div class="row setting_list ">
+                    <div class="col-2">State</div>
+                    <div class="col-2">DateTime</div>
+                    <div class="col-2">OrderId</div>
+                    <div class="col-2">receiver name</div>
+                    <div class="col-3">receiver email</div>
+                </div>
+                <?php
             echo'<div id="order_list">';
             foreach($OrderList as $po){
                 echo '
@@ -159,6 +164,7 @@
             }
             echo '</div>';
             ?>
+            </div>
         </div>
     </div>
 </div>
