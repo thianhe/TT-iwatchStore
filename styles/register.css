@@ -1,5 +1,14 @@
+#big_jumbotron {
+    background-color: white;
+    margin-bottom: 10px;
+}
+
 a {
     text-decoration: none !important;
+}
+
+.form-control {
+    width: 100% !important;
 }
 
 .btn_la {

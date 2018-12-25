@@ -1,9 +1,17 @@
+#big_jumbotron {
+    background-color: white;
+
+}
+
 a {
     text-decoration: none !important;
 }
 
 .btn_la {
     margin-top: 3%;
-    padding-left: 24%;
-    padding-right: 24%;
+
+}
+
+.form-control {
+    width: 100% !important;
 }
