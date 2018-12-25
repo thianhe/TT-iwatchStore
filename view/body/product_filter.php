@@ -15,9 +15,9 @@
             </li>
             <li> <a href="#" class="dropdown">Price</a>
                 <ul class="f_item item2">
-                    <li> <a class="price" min="0" max="1500" href="#"><1500NT$</a> </li> 
-                    <li> <a class="price" min="1500" max="3000" href="#"> 1500 -3000NT$ </a></li>
-                    <li> <a class="price" min="3000" max="99999" href="#"> >3000NT$ </a></li>
+                    <li> <a class="price" min="0" max="1500" href="products?min=0&max=1500"><1500NT$</a> </li> 
+                    <li> <a class="price" min="1500" max="3000" href="products?min=1500&max=3001"> 1500 -3000NT$ </a></li>
+                    <li> <a class="price" min="3000" max="99999" href="products?min=3001&max=9999999"> >3000NT$ </a></li>
                 </ul>
             </li>
             <li><a href="#" class="dropdown">Operating System</a>
