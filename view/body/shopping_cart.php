@@ -49,7 +49,7 @@
         <div class="row">                                   
             <div class="col d-flex justify-content-end space">
                 <button type="submit" name="submit" class="btn btn-info btn-edit-user btn-lg la" form="updateForm">Update Cart</button>
-                    <h3>Total Price:<br>NT$' . $totalPrice . '</h3>
+                    <h3>Total Price: NT$' . $oTotalPrice . '<br>Discounted Price: NT$' . $totalPrice . '<br>(Incude Shipping:NT$ '.$shipping.')</h3>
             </div>
         </div>
         <div class="row">                            

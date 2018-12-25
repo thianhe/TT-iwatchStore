@@ -174,5 +174,21 @@ create table ORDER_ITEM(
 );
 
 
+drop table if exists discount;
+create table discount(
+	discount_id int not null,
+    discount_name varchar(255) not null,
+    discount_type tinyint not null,/* 1.Shipping 2.Seasonings 3.Special Event */
+    watches_content text,
+    startDate date not null,
+    endDate date not null,
+    description text,
+    get_free int,
+    price_needed int,
+    discount_percent int,
+    discount_price int,
+    primary key(discount_id)
+);
+
 
 

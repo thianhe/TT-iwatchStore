@@ -32,7 +32,7 @@
                     echo '</table>';
                     echo'<div class="row">
                                 <div class="col d-flex justify-content-end">
-                                    <h3>Total Price:'.$totalPrice.'</h3>
+                                    <h3>Total Price: NT$' . $oTotalPrice . '<br>Discounted Price: NT$' . $totalPrice . '<br>(Incude Shipping:NT$ '.$shipping.')</h3>
                                 </div>
                          </div>';
         

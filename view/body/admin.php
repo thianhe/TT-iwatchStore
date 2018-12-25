@@ -27,7 +27,10 @@
                 </a>
             </div>
             <div class="col-md-4 col-sm-6">
-
+                <a href="discount_setting">
+                    <i class="fas fa-hand-holding-usd fa-5x"></i>
+                    <div class="control_link">Discount</div>
+                </a>
             </div>
             <div class="col-md-4 col-sm-6">
  
