@@ -10,7 +10,7 @@ if(isset($_SESSION['memberID']) and $_SESSION['memberID'] <=0){
     if(isset($_POST['key']))
         {
             $key = $_POST['key'];
-            $product =  Database::get()->execute('select *from WATCH,company where company_id = brand_id and (watch_name LIKE "'.$key.'" or brand LIKE "'.$key.'");');
+            $product =  Database::get()->execute('select *from WATCH,company where company_id = brand_id and (watch_name LIKE "%'.$key.'%" or brand LIKE "%'.$key.'%");');
         }
 
     include('view/header/header.php');

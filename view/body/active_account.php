@@ -3,14 +3,14 @@
     <div class="container">
         <div id="no_product" class=" text-center">
         <?php
-					//check for any errors
-					if ($msg->hasMessages()) {
-    					$msg->display();
-					}
-					?>
-                <h3>Please check you email to active your account.</h3>
-            <div class="row">
-                <form role="form" class="active_center"method="post" action="<?=Config::BASE_URL?>do_send_active" autocomplete="off">
+	    //check for any errors
+		if ($msg->hasMessages()) {
+    	$msg->display();
+		}
+		?>
+        <h3>Please check you email to active your account.</h3>
+        <div class="row">
+            <form role="form" class="active_center"method="post" action="<?=Config::BASE_URL?>do_send_active" autocomplete="off">
                     <div class="form-group">
 					    <label for="email">Email</label>
                         <input type="email" name="email" id="email" class="form-control input-lg" required placeholder="Email Address" value="<?php echo $userData['email'];?>" tabindex="2">

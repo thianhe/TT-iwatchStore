@@ -39,8 +39,10 @@
             </li>
             <li class="nav-item ">
                 <div class="search-bar">
-                    <input type="text" placeholder="..." required/>
+                <form role="form" method="post" action="<?=Config::BASE_URL?>products" autocomplete="off" class="text-center">
+                    <input type="text" placeholder="..." name="searchValue" required/>
                     <div class="search-icon"></div>
+                </form>
                 </div>
             </li>
         </ul>
