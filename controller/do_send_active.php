@@ -1,4 +1,24 @@
 <?php
+$response = $_POST["g-recaptcha-response"];
+$data = array(
+    'secret' => '6LdlbIQUAAAAAKp_CyJ7yjAhIQweRpYleJz81aS8',
+    'response' => $_POST["g-recaptcha-response"]
+);
+$options = array(
+    'http' => array (
+        'method' => 'POST',
+        'content' => http_build_query($data)
+    )
+);
+$url = 'https://www.google.com/recaptcha/api/siteverify';
+$context  = stream_context_create($options);
+$verify = file_get_contents($url, false, $context);
+$captcha_success=json_decode($verify);
+if ($captcha_success->success==false) {
+    $msg->error('You are a bot! Go away!');
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+    exit;
+}
 $gump = new GUMP();
 $_POST = $gump->sanitize($_POST);
 $validation_rules_array = array(
