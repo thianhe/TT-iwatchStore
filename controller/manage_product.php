@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL ^ E_WARNING);
 $_PageBeforeLoginOut = 'user_setting';
-if(isset($_SESSION['memberID']) and $_SESSION['memberID'] ==0){
+if(isset($_SESSION['memberID']) and $_SESSION['memberID'] <=0){
     if(isset($_POST['watch_id']) or isset($_SESSION['updateKey']))
     {
         if(isset($_POST['watch_id']))  $watch_id = $_POST['watch_id'];

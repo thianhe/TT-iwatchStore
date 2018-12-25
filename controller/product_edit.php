@@ -1,7 +1,7 @@
 <?php
 $_PageBeforeLoginOut = 'index';
 
-if(isset($_SESSION['memberID']) and $_SESSION['memberID'] ==0){
+if(isset($_SESSION['memberID']) and $_SESSION['memberID'] <=0){
     if(isset($_POST['watch_id']) or isset($_SESSION['updateKey']))
     {
         if(isset($_POST['watch_id'])) $watch_id = $_POST['watch_id'];

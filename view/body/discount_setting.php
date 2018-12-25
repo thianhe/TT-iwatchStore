@@ -113,21 +113,30 @@
             </div>
 
             <div class="row setting_list ">
-                <div class="col-5">Brand Name</div>
-                <div class="col-3">Contain Product</div>
-                <div class="col-2"></div>
-                <div class="col-2"></div>
+                <div class="col-3">Name</div>
+                <div class="col-2">Type</div>
+                <div class="col-2">Start</div>
+                <div class="col-2">End</div>
             </div>
             <?php
                 foreach($result as $r){
                     
                     echo '<div class="row setting_list ">
-                        <div class="col-5">'.$r['brandName'].'</div>
-                        <div class="col-3">'.$r['productsNumber'].'</div>
-                        <div class="col-2"></div>
-                        <div class="col-2 delete_form">
-                            <form action="'.Config::BASE_URL.'do_deletebrand" method="post">
-                                <input type="hidden" id="brandName" name="brandName" value="'.$r['brandName'].'">
+                            <div class="col-3">'.$r['discount_name'].'</div>
+                            <div class="col-2">'.$r['discount_type'].'</div>
+                            <div class="col-2">'.$r['startDate'].'</div>
+                            <div class="col-2">'.$r['endDate'].'</div>
+                            <div class="col-1 user_detail_button">
+                                <form action="' . Config::BASE_URL . 'manage_discount" method="post">
+                                    <input type="hidden" name="discount_id" value="' . $r['discount_id'] . '">
+                                    <button type="submit" class="btn btn-success">
+                                        <i class="fas fa-cog"></i>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="col-2 delete_form">
+                            <form action="'.Config::BASE_URL.'do_delete_discount" method="post">
+                                <input type="hidden" id="discount_id" name="discount_id" value="'.$r['discount_id'].'">
                                 <input type="submit" name="submit" value="SURE">
                             </form>
                             <span class="mask"></span>
