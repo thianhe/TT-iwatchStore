@@ -74,7 +74,7 @@
                             <img src="image/profile/img_avatar.png" class="">
                         </div>
                         <div class="border content_border col-lg-8 col-md-8 col-sm-12">
-                            <div class="row col">姓名/學號: 吳浩廷/105590050</div>
+                            <div class="row col">姓名/學號: 吳浩廷/105590049</div>
                             <hr>
                             <div class="row col">分工: </div>
                             <hr>
