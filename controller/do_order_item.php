@@ -71,6 +71,22 @@ if (isset($_POST['submit'])) {
             Database::get()->execute('UPDATE WATCH SET quantity= '.$newStock.' where watch_id = '.$product['watch_id'].';');
             Database::get()->execute('DELETE FROM SHOPPING_CART where watch_id = '.$product['watch_id'].' and member_id = '.$_SESSION['memberID'].'');
         }
+
+        $subject = "Order Information";
+        $body = "<p>Thank you for order at demo site. Please check in your account<br> 
+        Reciver Name :'".$_SESSION['account']."'.<br>
+        Total cost :'".$totalPrice."'.<br>
+        Reciver Name :'".$Rname."'.<br>
+        Reciver phone :'".$Rphone."'.<br>
+        Reciver Address :'".$Raddress."'.<br>
+        </p>";
+        $mail = new Mail(Config::MAIL_USER_NAME, Config::MAIL_USER_PASSWROD);
+        $mail->setFrom(Config::MAIL_FROM, Config::MAIL_FROM_NAME);
+        $mail->addAddress($Remail);
+        $mail->subject($subject);
+        $mail->body($body);
+        $mail->send();
+
         $_SESSION['shopping_cart'] = [];
         header('Location: '. Config::BASE_URL.'manage_user');
         exit;
