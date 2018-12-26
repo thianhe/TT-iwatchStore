@@ -12,14 +12,19 @@
             $profilePage = 'manage_user';
             $loginPage = 'login';
             if(isset($_SESSION['memberID']))
-                if($_SESSION['memberID'] == 0)
+                if($_SESSION['memberID'] <= 0)
                     $profilePage = 'admin';
             if(isset($_SESSION['name'])) {
                 if(isset($_SESSION['memberID']) and $_SESSION['memberID'] ==0){
                      echo '<li class="nav-item ">
                                 <a class="nav-link" href="admin"><i class="fas fa-cogs"></i> Admin Page</a>
                          </li>';
-                }else{
+                }else if(isset($_SESSION['memberID']) and $_SESSION['memberID'] <0){
+                    echo '<li class="nav-item ">
+                               <a class="nav-link" href="admin"><i class="fas fa-cogs"></i> Staff Page</a>
+                        </li>';
+               }
+                else{
                 echo '
                     <li class="nav-item ">
                         <a class="nav-link" href="manage_user"><i class="fas fa-user-cog"></i> Hi,'.$_SESSION['name'].'</a>

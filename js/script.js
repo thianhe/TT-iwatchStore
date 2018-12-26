@@ -51,6 +51,27 @@ function UserFilter(select) {
     }
 }
 
+function OrderReport(select) {
+    console.log('test');
+    $('#daily_report').addClass('hide');
+    $('#monthly_report').addClass('hide');
+    $('#yearly_report').addClass('hide');
+
+    $('#day_filter').removeClass('selected');
+    $('#month_filter').removeClass('selected');
+    $('#year_filter').removeClass('selected');
+    if (select == 0) {
+        $('#day_filter').addClass('selected');
+        $('#daily_report').removeClass('hide');
+    } else if (select == 1) {
+        $('#month_filter').addClass('selected');
+        $('#monthly_report').removeClass('hide');
+    } else if (select == 2) {
+        $('#year_filter').addClass('selected');
+        $('#yearly_report').removeClass('hide');
+    }
+}
+
 function OrderFilter(select) {
     $('#process_list').addClass('hide');
     $('#confirm_list').addClass('hide');
