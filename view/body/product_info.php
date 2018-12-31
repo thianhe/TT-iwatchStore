@@ -50,7 +50,12 @@
                 <h3>Review</h3>
                 <hr>
                 <div id="comment_list">
-                <?php foreach($commentList as $c):?>
+                <?php if(count($commentList) == 0):?>
+                <span class="content_font">
+                   No Review
+                </span><br>
+                <?php endif;
+                foreach($commentList as $c):?>
                 <span class="title_font"><?php echo $c['first_name'].' '.$c['last_name'];?></span><br>
                 <span class="title_font">Rate:<?php echo $c['rate'];?>/5 </span><br>
                 <span class="content_font">
