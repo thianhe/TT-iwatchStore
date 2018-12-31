@@ -15,6 +15,8 @@
     $opList = Database::get()->execute('select * from operating_system');
     $opList[] = array_shift($opList);
     
+    $commentList = Database::get()->execute('select * from member m, commentRate_list c where c.member_id = m.member_id and c.watch_id = '.$watch_id.' order by comment_datetime desc');
+
     $inCart = false;
     foreach($_SESSION['shopping_cart'] as $cart){
         if($cart->product_id == $watchInfo['watch_id']) $inCart = true;

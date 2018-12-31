@@ -36,7 +36,7 @@
             </div>
             <div class="col-md-4 col-sm-6">
             <a href="reprot">
-                    <i class="fas fa-hand-holding-usd fa-5x"></i>
+                    <i class="fas fa-clipboard-list fa-5x"></i>
                     <div class="control_link">Report</div>
                 </a>
             </div>

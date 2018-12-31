@@ -47,16 +47,39 @@
             </a>
         </div>
             <div id="review_jumbotron" class="jumbotron">
-
                 <h3>Review</h3>
                 <hr>
-                <span class="title_font">TONY<br></span>
+                <div id="comment_list">
+                <?php foreach($commentList as $c):?>
+                <span class="title_font"><?php echo $c['first_name'].' '.$c['last_name'];?></span><br>
+                <span class="title_font">Rate:<?php echo $c['rate'];?>/5 </span><br>
                 <span class="content_font">
-                    FUCKING TRASH
-                </span>
+                    <?php echo $c['comment'];?>
+                </span><br>
+                <span class="title_font"><?php echo $c['comment_datetime'];?> </span>
                 <hr>
-
+                <?php endforeach;?>
+                </div>
+                
             </div>
+            <?php if(isset($_SESSION['memberID'])):?>
+            <div class="jumbotron">
+                <form id="comment_form" action="do_add_comment" role="form" method="post">
+                    <h2>Rate</h2>
+                    <div class="row">
+                    <div class="col-2"><input type="radio" name='rate' value='1' required>1</div>
+                    <div class="col-2"><input type="radio" name='rate' value='2'>2</div>
+                    <div class="col-2"><input type="radio" name='rate' value='3'>3</div>
+                    <div class="col-2"><input type="radio" name='rate' value='4'>4</div>
+                    <div class="col-2"><input type="radio" name='rate' value='5'>5</div>
+                    </div>
+                    <h2>Comment</h2>
+                    <textarea name="comment" id="comment" cols="50" form='comment_form'required ></textarea>
+                    <input type="hidden" name='watch_id' value='<?php echo $watchInfo['watch_id']?>'>
+                    <input type="submit" name="submit" value="Submit" class="btn  btn-lg">
+                </form>
+            </div>
+            <?php endif;?>
         </div>
             <div class="col-lg-5 col-md-12 col-sm-12">
                 <div id="product_jumbotron" class="jumbotron">

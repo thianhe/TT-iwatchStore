@@ -1,22 +1,20 @@
 br {
     display: block;
-    content: "";
+    content: '';
 }
 
-#go_back>a {
+#go_back > a {
     padding: 0 !important;
     text-decoration: none !important;
     margin-bottom: 2%;
 }
 
 #product_info hr {
-    border: .5px solid black;
-
+    border: 0.5px solid black;
 }
 
 #carouselExampleIndicators {
     margin-bottom: 3% !important;
-
 }
 
 .carousel-control-prev-icon {
@@ -69,14 +67,12 @@ br {
 
 .btn_la {
     margin-top: 10%;
-    background-color: #FFF200;
-
+    background-color: #fff200;
 }
 
 .btn_la:hover {
     filter: brightness(1.25) !important;
     transition: 2.55s ease-out 0s;
-
 }
 
 #review_jumbotron {
@@ -84,4 +80,9 @@ br {
     padding-top: 5%;
     padding-bottom: 5%;
     margin-top: 5%;
+}
+
+#comment_list {
+    max-height: 250px;
+    overflow: auto;
 }
