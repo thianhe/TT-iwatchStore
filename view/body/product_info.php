@@ -46,7 +46,7 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-            <div id="review_jumbotron" class="jumbotron">
+            <div class="review_jumbotron jumbotron">
                 <h3>Review</h3>
                 <hr>
                 <div id="comment_list">
@@ -63,7 +63,7 @@
                 
             </div>
             <?php if(isset($_SESSION['memberID'])):?>
-            <div class="jumbotron">
+            <div class="review_jumbotron jumbotron">
                 <form id="comment_form" action="do_add_comment" role="form" method="post">
                     <h2>Rate</h2>
                     <div class="row">
