@@ -18,7 +18,7 @@ create table MEMBER(
     primary key(member_id),
     unique(Account)
 );
-insert into MEMBER VALUES (0,"Admin"," ","admin","admin","test@gmail.com",123123123,"2017-06-15","M","taiwan","active");
+
 create table COMPANY(	
 	company_id int not null,
 	brand varchar(255) not null,
@@ -30,18 +30,6 @@ create table OPERATING_SYSTEM(
     op_name varchar(255) not null,
     primary key(op_id)
 );
-
-insert into COMPANY VALUES (0,"Apple");
-insert into COMPANY VALUES (1,"Samsung");
-insert into COMPANY VALUES (2,"Fitbit");
-insert into COMPANY VALUES (3,"MyKronoz");
-insert into COMPANY VALUES (4,"Fossil");
-insert into COMPANY VALUES (5,"Techcomm");
-insert into COMPANY VALUES (6,"Skagen");
-insert into OPERATING_SYSTEM VALUES (0,"Other");
-insert into OPERATING_SYSTEM VALUES (1,"Apple IOS");
-insert into OPERATING_SYSTEM VALUES (2,"Android");
-insert into OPERATING_SYSTEM VALUES (3,"Wear OS");
 
 
 create table WATCH(		
@@ -56,6 +44,103 @@ create table WATCH(
 	foreign key(brand_id) references COMPANY(company_id),
     foreign key(op_id) references OPERATING_SYSTEM(op_id)
 );
+
+create table commentRate_List(
+	comment_datetime datetime not null,
+	watch_id int not null,
+    member_id int not null,
+    rate int not null,
+    comment text,
+    primary key(comment_datetime,watch_id,member_id),
+    foreign key(watch_id) references WATCH(watch_id),
+    foreign key(member_id) references MEMBER(member_id)
+);
+
+create table STORAGE_LIST(
+	storage_id int not null,
+	watch_id int not null,
+    staff_id int not null,
+	date_time datetime not null,
+    quantity int not null,
+    cost int not null,
+    primary key(storage_id,watch_id),
+    foreign key(watch_id) references WATCH(watch_id),
+    foreign key(staff_id) references member(member_id));
+                        
+create table SHOPPING_CART(	
+	member_id int not null,
+	watch_id int not null,
+    quantity int not null,
+    primary key(member_id, watch_id),
+    foreign key(member_id) references MEMBER(member_id),
+    foreign key(watch_id) references WATCH(watch_id)
+);
+                            
+create table TRACE_LIST(
+	member_id int not null,
+	watch_id int not null,
+    date_time datetime not null,
+    primary key(member_id, watch_id),
+	foreign key(member_id) references MEMBER(member_id),
+    foreign key(watch_id) references WATCH(watch_id)
+);
+
+drop table if exists order_item;
+drop table if exists order_list;
+drop table if exists discount;
+
+create table ORDER_LIST(
+	orderList_id int not null,
+	member_id int not null,
+	cost int not null,
+    date_time datetime not null,
+    state char(1) not null,
+    r_name char(255) not null,
+    r_address char(255) not null,
+    r_phone int not null,
+    r_email char(255) not null,
+    primary key(orderList_id),
+    foreign key(member_id) references MEMBER(member_id)
+);
+                            
+create table ORDER_ITEM(
+	orderList_id int not null,
+	watch_id int not null,
+    quantity int not null,
+    cost int not null,
+    primary key(orderList_id, watch_id),
+    foreign key(orderList_id) references ORDER_LIST(orderList_id) on delete cascade,
+    foreign key(watch_id) references WATCH(watch_id)
+);
+
+
+create table discount(
+	discount_id int not null,
+    discount_name varchar(255) not null,
+    discount_type tinyint not null,/* 1.Shipping 2.Seasonings 3.Special Event */
+    watches_content text,
+    startDate date not null,
+    endDate date not null,
+    description text,
+    get_free int,
+    price_needed int,
+    discount_percent int,
+    discount_price int,
+    primary key(discount_id)
+);
+insert into MEMBER VALUES (0,"Admin"," ","admin","admin","test@gmail.com",123123123,"2017-06-15","M","taiwan","active");
+insert into COMPANY VALUES (0,"Apple");
+insert into COMPANY VALUES (1,"Samsung");
+insert into COMPANY VALUES (2,"Fitbit");
+insert into COMPANY VALUES (3,"MyKronoz");
+insert into COMPANY VALUES (4,"Fossil");
+insert into COMPANY VALUES (5,"Techcomm");
+insert into COMPANY VALUES (6,"Skagen");
+insert into OPERATING_SYSTEM VALUES (0,"Other");
+insert into OPERATING_SYSTEM VALUES (1,"Apple IOS");
+insert into OPERATING_SYSTEM VALUES (2,"Android");
+insert into OPERATING_SYSTEM VALUES (3,"Wear OS");
+
 insert into WATCH VALUES (000,2290,100,0,"Apple Watch Series 3 (GPS) 38mm Silver Aluminum Case with White Sport Band - Silver Aluminum",1,"Low and high heart rate notifications. Emergency SOS. New Breathe watch faces. Automatic workout detection. New yoga and hiking workouts. Advanced features for runners like cadence and pace alerts. New head-to-head competitions. Activity sharing with friends. Personalized coaching. Monthly challenges and achievement awards. You can use Walkie-Talkie, make phone calls, and send messages. Listen to Apple Music¹ and Apple Podcasts. And use Siri in all-new ways. Apple Watch Series 3 lets you do it all right from your wrist.");
 insert into WATCH VALUES (001,2590,99,0,"Apple Watch Series 3 (GPS) 42mm Space Gray Aluminum Case with Black Sport Band - Space Gray Aluminum - Silver Aluminum",1,"Low and high heart rate notifications. Emergency SOS. New Breathe watch faces. Automatic workout detection. New yoga and hiking workouts. Advanced features for runners like cadence and pace alerts. New head-to-head competitions. Activity sharing with friends. Personalized coaching. Monthly challenges and achievement awards. You can use Walkie-Talkie, make phone calls, and send messages. Listen to Apple Music¹ and Apple Podcasts. And use Siri in all-new ways. Apple Watch Series 3 lets you do it all right from your wrist.");
 insert into WATCH VALUES (002,3990,87,0,"Apple Watch Series 4 (GPS) 40mm Gold Aluminum Case with Pink Sand Sport Band - Gold Aluminum",1,"Fundamentally redesigned and reengineered. The largest Apple Watch display yet. Built-in electrical heart sensor. New Digital Crown with haptic feedback. Low and high heart rate notifications. Fall detection and Emergency SOS. New Breathe watch faces. Automatic workout detection. New yoga and hiking workouts. Advanced features for runners like cadence and pace alerts. New head-to-head competitions. Activity sharing with friends. Personalized coaching. Monthly challenges and achievement awards. You can use Walkie-Talkie, make phone calls, and send messages. Listen to Apple Music¹ and Apple Podcasts. And use Siri in all-new ways. Apple Watch Series 4 lets you do it all right from your wrist.");
@@ -107,88 +192,6 @@ insert into WATCH VALUES (041,1750,85,6,"Jorn Connected Hybrid Smartwatch 41mm S
 insert into WATCH VALUES (042,1750,31,6,"Connected Hagen Smartwatch 42mm Titanium - Brushed gray titanium",3,"Take advantage of the lightweight design of this Skagen Hagen Connect watch. As you wear it about town or go to work with it, this watch looks great in almost any situation thanks to its effortless style. The sheer sophistication of the leather band and detailing ensure this Skagen Hagen Connect watch keep you looking good day after day.");
 insert into WATCH VALUES (043,1950,22,6,"Signatur Connected Hybrid Smartwatch 36mm Stainless Steel - Rose Gold",3,"Make this sleek Skagen Signatur T-Bar hybrid smartwatch a regular part of each day. Made to look like a classic timepiece, this smartwatch has an array of features, which include alert monitoring and activity tracking. Simply connect this Skagen Signatur T-Bar hybrid smartwatch to your Apple or Android smartphone to sync data and set the time automatically.");
 insert into WATCH VALUES (044,2750,10,6,"Falster 2 Smartwatch 40mm Stainless Steel - Black Silicone",3,"Receive real-time notifications with this Skagen Falster 2 smart watch. Bluetooth connectivity syncs most iOS and Android devices, and the interactive touch screen works with Wear OS by Google to support smart features such as heart rate monitoring and activity tracking. This Skagen Falster 2 smart watch has an energy-efficient dial design that offers up to 24 hours of use.");
-
-create table commentRate_List(
-	comment_datetime datetime not null,
-	watch_id int not null,
-    member_id int not null,
-    rate int not null,
-    comment text,
-    primary key(comment_datetime,watch_id,member_id),
-    foreign key(watch_id) references WATCH(watch_id),
-    foreign key(member_id) references MEMBER(member_id)
-);
-
-create table STORAGE_LIST(
-	storage_id int not null,
-	watch_id int not null,
-	date_time datetime not null,
-    quantity int not null,
-    cost int not null,
-    primary key(storage_id,watch_id),
-    foreign key(watch_id) references WATCH(watch_id));
-                        
-create table SHOPPING_CART(	
-	member_id int not null,
-	watch_id int not null,
-    quantity int not null,
-    primary key(member_id, watch_id),
-    foreign key(member_id) references MEMBER(member_id),
-    foreign key(watch_id) references WATCH(watch_id)
-);
-                            
-create table TRACE_LIST(
-	member_id int not null,
-	watch_id int not null,
-    date_time datetime not null,
-    primary key(member_id, watch_id),
-	foreign key(member_id) references MEMBER(member_id),
-    foreign key(watch_id) references WATCH(watch_id)
-);
-
-drop table if exists order_item;
-drop table if exists order_list;
-
-create table ORDER_LIST(
-	orderList_id int not null,
-	member_id int not null,
-	cost int not null,
-    date_time datetime not null,
-    state char(1) not null,
-    r_name char(255) not null,
-    r_address char(255) not null,
-    r_phone int not null,
-    r_email char(255) not null,
-    primary key(orderList_id),
-    foreign key(member_id) references MEMBER(member_id)
-);
-                            
-create table ORDER_ITEM(
-	orderList_id int not null,
-	watch_id int not null,
-    quantity int not null,
-    cost int not null,
-    primary key(orderList_id, watch_id),
-    foreign key(orderList_id) references ORDER_LIST(orderList_id) on delete cascade,
-    foreign key(watch_id) references WATCH(watch_id)
-);
-
-
-drop table if exists discount;
-create table discount(
-	discount_id int not null,
-    discount_name varchar(255) not null,
-    discount_type tinyint not null,/* 1.Shipping 2.Seasonings 3.Special Event */
-    watches_content text,
-    startDate date not null,
-    endDate date not null,
-    description text,
-    get_free int,
-    price_needed int,
-    discount_percent int,
-    discount_price int,
-    primary key(discount_id)
-);
 
 
 
