@@ -31,7 +31,7 @@
 
         <div class="card-deck">
             <div class="card">
-                <a href="#">
+                <a href="products">
                     <img class="card-img-top" src="image/index/table1.jpeg" alt="Card image cap">
                     <div class="card-img-overlay align-items-center d-flex justify-content-center">
                         <h1>Best Sellers</h4>
@@ -39,7 +39,7 @@
                 </a>
             </div>
             <div class="card">
-                <a href="#">
+                <a href="products">
                     <img class="card-img-top" src="image/index/table2.jpg" alt="Card image cap">
                     <div class="card-img-overlay align-items-center d-flex justify-content-center">
                         <h1>New Releases</h4>
@@ -47,7 +47,7 @@
                 </a>
             </div>
             <div class="card">
-                 <a href="#">    
+                 <a href="products">    
                     <img class="card-img-top" src="image/index/table3.jpg" alt="Card image cap">
                     <div class="card-img-overlay align-items-center d-flex justify-content-center">
                         <h1>Top Rated</h4>
@@ -60,7 +60,7 @@
         <h1 class="text-center featured-text">Featured Brands</h1>
         <div class="row">
             <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
-                <a href="#">
+                <a href="products">
                     <div class="featurebox-img">
                         <img src="image/brand/apple.png" class="rounded-circle" /></div>
                     <div class="featurebox-text text-center ">
@@ -69,7 +69,7 @@
                 </a>
             </div>
             <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
-                <a href="#">
+                <a href="products">
                     <div class="featurebox-img">
                         <img src="image/brand/samsung.jpeg" class="rounded-circle" /></div>
                     <div class="featurebox-text text-center ">
@@ -78,7 +78,7 @@
                 </a>
             </div>
             <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
-                <a href="#">
+                <a href="products">
                     <div class="featurebox-img">
                         <img src="image/brand/fitbit.jpg" class="rounded-circle" /></div>
                     <div class="featurebox-text text-center ">
@@ -87,7 +87,7 @@
                 </a>
             </div>
             <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
-                <a href="#">
+                <a href="products">
                     <div class="featurebox-img">
                         <img src="image/brand/garmin.jpg" class="rounded-circle" /></div>
                     <div class="featurebox-text text-center ">
@@ -96,7 +96,7 @@
                 </a>
             </div>
             <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
-                <a href="#">
+                <a href="products">
                     <div class="featurebox-img">
                         <img src="image/brand/mykronoz.jpg" class="rounded-circle" /></div>
                     <div class="featurebox-text text-center ">
@@ -105,7 +105,7 @@
                 </a>
             </div>
             <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
-                <a href="#">
+                <a href="products">
                     <div class="featurebox-img">
                         <img src="image/brand/fossil.png" class="rounded-circle" /></div>
                     <div class="featurebox-text text-center ">
@@ -114,7 +114,7 @@
                 </a>
             </div>
             <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
-                <a href="#">
+                <a href="products">
                     <div class="featurebox-img">
                         <img src="image/brand/techcomm.png" class="rounded-circle" /></div>
                     <div class="featurebox-text text-center ">
@@ -123,7 +123,7 @@
                 </a>
             </div>
             <div class="featurebox col-lg-3 col-md-6 col-sm-12 center">
-                <a href="#">
+                <a href="products">
                     <div class="featurebox-img">
                         <img src="image/brand/skagen.png" class="rounded-circle" /></div>
                     <div class="featurebox-text text-center ">
