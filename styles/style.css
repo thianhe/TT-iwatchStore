@@ -372,3 +372,8 @@ hr {
 .active_center {
     margin: 0 auto;
 }
+
+#activeacc_jumbotron {
+    background-color: white;
+
+}

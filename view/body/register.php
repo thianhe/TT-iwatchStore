@@ -2,7 +2,7 @@
 <div class="jumbotron">
 	<div class="container">
 		<div class="row d-flex justify-content-center ">
-			<div class="jumbotron" id="big_jumbotron">
+			<div class="jumbotron" id="activeacc_jumbotron">
 
 				<form role="form" method="post" action="<?=Config::BASE_URL?>do_register" autocomplete="off" class="text-center">
 					<h2>Please Sign Up</h2>

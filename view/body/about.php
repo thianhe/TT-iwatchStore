@@ -37,9 +37,7 @@
                         <div class="border content_border col-lg-8 col-md-8 col-sm-12">
                             <div class="row col">姓名/學號: 曾子庭/105830027</div>
                             <hr>
-                            <div class="row col">分工: </div>
-                            <hr>
-                            <div class="row col">感想: </div>
+                            <div class="row col">分工: 前端</div>
                             <hr>
                             <div class="row col align-items-center">聯繫: &nbsp;<a href="#"><i class="fab fa-github  fa-3x"></i></a></div>
                         </div>
@@ -50,9 +48,7 @@
                         <div class="border content_border col-lg-8 col-md-8 col-sm-12">
                             <div class="row col">姓名/學號: 杜晉宇/105590037</div>
                             <hr>
-                            <div class="row col">分工: </div>
-                            <hr>
-                            <div class="row col">感想: </div>
+                            <div class="row col">分工: 製作PPT+前端</div>
                             <hr>
                             <div class="row col align-items-center">聯繫: &nbsp;<a href="https://github.com/ss25435678"><i class="fab fa-github  fa-3x"></i></a></div>
                         </div>
@@ -63,9 +59,7 @@
                         <div class="border content_border col-lg-8 col-md-8 col-sm-12">
                             <div class="row col">姓名/學號: 江孟哲/105590039</div>
                             <hr>
-                            <div class="row col">分工: </div>
-                            <hr>
-                            <div class="row col">感想: </div>
+                            <div class="row col">分工: 前端</div>
                             <hr>
                             <div class="row col align-items-center">聯繫: &nbsp;<a href="https://github.com/mikenick456"><i class="fab fa-github  fa-3x"></i></a></div>
                         </div>
@@ -76,9 +70,7 @@
                         <div class="border content_border col-lg-8 col-md-8 col-sm-12">
                             <div class="row col">姓名/學號: 吳浩廷/105590049</div>
                             <hr>
-                            <div class="row col">分工: </div>
-                            <hr>
-                            <div class="row col">感想: </div>
+                            <div class="row col">分工: 前端+後端</div>
                             <hr>
                             <div class="row col align-items-center">聯繫: &nbsp;<a href="https://github.com/ngSgn"><i class="fab fa-github  fa-3x"></i></a></div>
                         </div>
@@ -89,9 +81,7 @@
                         <div class="border content_border col-lg-8 col-md-8 col-sm-12">
                             <div class="row col">姓名/學號: 李添熙/105590050</div>
                             <hr>
-                            <div class="row col">分工: </div>
-                            <hr>
-                            <div class="row col">感想: </div>
+                            <div class="row col">分工: 前端+後端</div>                                   
                             <hr>
                             <div class="row col align-items-center">聯繫: &nbsp;<a href="https://github.com/thianhe"><i class="fab fa-github  fa-3x"></i></a></div>
                         </div>
