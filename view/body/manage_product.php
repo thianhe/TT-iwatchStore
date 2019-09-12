@@ -147,5 +147,22 @@
                 <button class="f_delete text-center " href="#">Delete</button>
             </div>
         </div>
+
+        <h3>Storage Record</h3>
+        <div class="row setting_list ">
+            <div class="col-4">Staff</div>
+            <div class="col-4">Date & time</div>
+            <div class="col-2">Quantity</div>
+            <div class="col-2">Cost</div>
+        </div>
+        <?php
+        foreach($storageList as $s):?>
+        <div class="row setting_list ">
+            <div class="col-4"><?php echo $s['account']?></div>
+            <div class="col-4"><?php echo $s['date_time']?></div>
+            <div class="col-2"><?php echo $s['quantity']?></div>
+            <div class="col-2"><?php echo $s['cost']?></div>
+        </div>
+        <?php endforeach;?>
     </div>
 </div>

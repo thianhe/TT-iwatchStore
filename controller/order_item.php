@@ -20,7 +20,7 @@ $shipping = $shipping - $discount->shipping($totalPrice);
 $totalPrice +=$shipping;
 
 
-$memberInfo = Database::get()->execute('select * from Member where member_id = "'.$cart->member_id.'";');
+$memberInfo = Database::get()->execute('select * from Members where member_id = "'.$cart->member_id.'";');
 $memberInfo = $memberInfo[0];
 
 

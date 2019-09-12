@@ -34,6 +34,7 @@ if(isset($_POST['submit']))
         $data_array = array(
           'storage_id'=>$id,
           'watch_id'=>$watch_id,
+          'staff_id'=>$_SESSION['memberID'],
           'quantity'=>$quantity,
           'cost'=>$cost,
           'date_time'=> date('Y-m-d H:i:s')

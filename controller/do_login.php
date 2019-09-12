@@ -48,7 +48,7 @@ if (isset($_POST['username']) && isset($_POST['password']) ) {
         $userVeridator->loginVerification($username, $password);
         $error = $userVeridator->getErrorArray();
         if (empty($userVeridator->getErrorArray())) {
-            $result = Database::get()->execute('SELECT * FROM member WHERE account = "' . $username . '"');
+            $result = Database::get()->execute('SELECT * FROM members WHERE account = "' . $username . '"');
             $_SESSION['memberID'] = $result[0]['member_id'];
             $_SESSION['name'] = $result[0]['first_name'] . ' ' . $result[0]['last_name'];
             $_SESSION['account'] = $result[0]['account'];

@@ -14,6 +14,8 @@ if(isset($_SESSION['memberID']) and $_SESSION['memberID'] <=0){
         array_shift($images);
         $watchInfo = $watchInfo[0];
         unset($_SESSION['updateKey']);
+
+        $storageList = Database::get()->execute('SELECT account,date_time, quantity, cost FROM storage_list,members where staff_id = member_id and watch_id='.$watch_id.'');
     }
     include('view/header/header.php');
     include('view/body/manage_product.php');

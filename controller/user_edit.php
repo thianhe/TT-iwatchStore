@@ -6,7 +6,7 @@ if(isset($_SESSION['memberID'])){
     {
         if(isset($_POST['account'])) $account = $_POST['account'];
         if(isset($_SESSION['updateKey'])) $account = $_SESSION['updateKey'];
-        $userInfo =  Database::get()->execute('select * from MEMBER where account = "'.$account.'";');
+        $userInfo =  Database::get()->execute('select * from MEMBERS where account = "'.$account.'";');
         $userInfo = $userInfo[0];
         unset($_SESSION['updateKey']);
     }

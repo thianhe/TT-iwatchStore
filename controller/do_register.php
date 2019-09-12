@@ -75,12 +75,12 @@ if (isset($_POST['submit'])) {
         try {
             // 新增到資料庫
             if ($identity == 'C') {
-                $id = Database::get()->getLastId("member_id", "MEMBER") + 1;
+                $id = Database::get()->getLastId("member_id", "MEMBERS") + 1;
             } else if ($identity == 'S') {
-                $id = Database::get()->getMinId("member_id", "MEMBER") - 1;
+                $id = Database::get()->getMinId("member_id", "MEMBERS") - 1;
             }
 
-            $table = 'MEMBER';
+            $table = 'MEMBERS';
             $data_array = array(
                 'member_id' => $id,
                 "first_name" => $firstName,

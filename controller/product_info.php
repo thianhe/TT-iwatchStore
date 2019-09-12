@@ -15,7 +15,7 @@
     $opList = Database::get()->execute('select * from operating_system');
     $opList[] = array_shift($opList);
     
-    $commentList = Database::get()->execute('select * from member m, commentRate_list c where c.member_id = m.member_id and c.watch_id = '.$watch_id.' order by comment_datetime desc');
+    $commentList = Database::get()->execute('select * from members m, commentRate_list c where c.member_id = m.member_id and c.watch_id = '.$watch_id.' order by comment_datetime desc');
 
     $inCart = false;
     foreach($_SESSION['shopping_cart'] as $cart){
@@ -31,4 +31,4 @@
     include('view/header/header.php');
     include('view/body/product_info.php');
     include('view/footer/footer.php');
-?>  
+?>

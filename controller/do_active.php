@@ -20,19 +20,19 @@ if(isset($_POST['active'])){
         header('Location: ' . $_SERVER['HTTP_REFERER']);
         exit;
 	}
-    $userData = Database::get()->execute('SELECT * from member where member_id = '.$_SESSION['memberID'].'');
+    $userData = Database::get()->execute('SELECT * from members where member_id = '.$_SESSION['memberID'].'');
     $userData = $userData[0];
     if($userData['active'] == $_POST['active']){
-        Database::get()->execute('UPDATE member set active = "active" where member_id = '.$_SESSION['memberID'].'');
+        Database::get()->execute('UPDATE members set active = "active" where member_id = '.$_SESSION['memberID'].'');
     }else{
         $msg->error("Activation code not match.");
     }
 }
 if(isset($_GET['id']) && isset($_GET['activation'])){
-    $userData = Database::get()->execute('SELECT * from member where member_id = '.$_GET['id'].'');
+    $userData = Database::get()->execute('SELECT * from members where member_id = '.$_GET['id'].'');
     $userData = $userData[0];
     if($userData['active'] == $_GET['activation']){
-        Database::get()->execute('UPDATE member set active = "active" where member_id = '.$_GET['id'].'');
+        Database::get()->execute('UPDATE members set active = "active" where member_id = '.$_GET['id'].'');
         $msg->success("Activation success.");
         header('Location: login');
         exit;

@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
         if (count($error) == 0) {
             try {
                 // 新增到資料庫
-                $table = 'MEMBER';
+                $table = 'MEMBERS';
                 $id = $account;
                 $key_column = "account";
                 Database::get()->delete($table, $key_column, $id);

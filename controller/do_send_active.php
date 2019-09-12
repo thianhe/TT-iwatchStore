@@ -37,7 +37,7 @@ foreach ($filter_rules_array as $key => $val) {
     ${$key} = $_POST[$key];
 }
 $activasion = md5(uniqid(rand(), true));
-$table = 'MEMBER';
+$table = 'MEMBERS';
 $memberID = $_SESSION['memberID'];
 $data_array = array(
     'email' => $email,

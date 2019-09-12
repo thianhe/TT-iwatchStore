@@ -3,7 +3,7 @@ create database TTiWatchStore;
 use TTiWatchStore;
 CREATE USER if not exists 'newuser'@'localhost' IDENTIFIED BY 'newpassword';
 GRANT ALL PRIVILEGES ON *.* TO 'newuser'@'localhost';
-create table MEMBER(	
+create table MEMBERS(	
 	member_id int not null,
 	first_name varchar(35) CHARACTER SET UTF8MB4 not null,
 	last_name varchar(35) CHARACTER SET UTF8MB4 not null,
@@ -53,7 +53,7 @@ create table commentRate_List(
     comment text,
     primary key(comment_datetime,watch_id,member_id),
     foreign key(watch_id) references WATCH(watch_id),
-    foreign key(member_id) references MEMBER(member_id)
+    foreign key(member_id) references MEMBERS(member_id)
 );
 
 create table STORAGE_LIST(
@@ -65,14 +65,14 @@ create table STORAGE_LIST(
     cost int not null,
     primary key(storage_id,watch_id),
     foreign key(watch_id) references WATCH(watch_id),
-    foreign key(staff_id) references member(member_id));
+    foreign key(staff_id) references MEMBERS(member_id));
                         
 create table SHOPPING_CART(	
 	member_id int not null,
 	watch_id int not null,
     quantity int not null,
     primary key(member_id, watch_id),
-    foreign key(member_id) references MEMBER(member_id),
+    foreign key(member_id) references MEMBERS(member_id),
     foreign key(watch_id) references WATCH(watch_id)
 );
                             
@@ -81,7 +81,7 @@ create table TRACE_LIST(
 	watch_id int not null,
     date_time datetime not null,
     primary key(member_id, watch_id),
-	foreign key(member_id) references MEMBER(member_id),
+	foreign key(member_id) references MEMBERS(member_id),
     foreign key(watch_id) references WATCH(watch_id)
 );
 
@@ -100,7 +100,7 @@ create table ORDER_LIST(
     r_phone int not null,
     r_email char(255) not null,
     primary key(orderList_id),
-    foreign key(member_id) references MEMBER(member_id)
+    foreign key(member_id) references MEMBERS(member_id)
 );
                             
 create table ORDER_ITEM(
@@ -128,7 +128,13 @@ create table discount(
     discount_price int,
     primary key(discount_id)
 );
-insert into MEMBER VALUES (0,"Admin"," ","admin","admin","test@gmail.com",123123123,"2017-06-15","M","taiwan","active");
+
+create table test(
+	price int,
+    dep int
+);
+
+insert into MEMBERS VALUES (0,"Admin"," ","admin","admin","test@gmail.com",123123123,"2017-06-15","M","taiwan","active");
 insert into COMPANY VALUES (0,"Apple");
 insert into COMPANY VALUES (1,"Samsung");
 insert into COMPANY VALUES (2,"Fitbit");

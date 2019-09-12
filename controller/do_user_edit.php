@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
     if (empty($gump->get_readable_errors())) {
         try {
             // 新增到資料庫
-            $table = 'MEMBER';
+            $table = 'MEMBERS';
             $data_array = array(
                 "first_name" => $firstName,
                 "last_name" => $lastName,
