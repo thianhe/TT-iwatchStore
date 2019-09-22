@@ -1,22 +1,22 @@
 {
-    "name": "ngs/tt-iwatch-store",
-    "authors": [
-        {
-            "name": "ngSgn",
-            "email": "t105590049@ntut.org.tw"
-        }
-    ],
-    "require": {
-        "wixel/gump": "dev-master",
-        "monolog/monolog": "^1.24",
-        "plasticbrain/php-flash-messages": "^1.0",
-        "phpmailer/phpmailer": "^6.0"
-    },
-    "autoload": {
-        "classmap": [
-            "libraries",
-            "config",
-            "validators"
-        ]
-    }
+	"name": "ngs/tt-iwatch-store",
+	"authors": [
+		{
+			"name": "ngSgn",
+			"email": "t105590049@ntut.org.tw"
+		}
+	],
+	"require": {
+		"wixel/gump": "dev-master",
+		"monolog/monolog": "^1.25",
+		"plasticbrain/php-flash-messages": "^1.0",
+		"phpmailer/phpmailer": "^6.0"
+	},
+	"autoload": {
+		"classmap": [
+			"libraries",
+			"config",
+			"validators"
+		]
+	}
 }
