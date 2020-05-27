@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6d5fa91e49af7c59d745d7b910366023",
+    "content-hash": "219c010eeb381b01200ee9f80b3f73aa",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -86,16 +86,16 @@
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v6.0.7",
+            "version": "v6.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "0c41a36d4508d470e376498c1c0c527aa36a2d59"
+                "reference": "c2796cb1cb99d7717290b48c4e6f32cb6c60b7b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/0c41a36d4508d470e376498c1c0c527aa36a2d59",
-                "reference": "0c41a36d4508d470e376498c1c0c527aa36a2d59",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/c2796cb1cb99d7717290b48c4e6f32cb6c60b7b3",
+                "reference": "c2796cb1cb99d7717290b48c4e6f32cb6c60b7b3",
                 "shasum": ""
             },
             "require": {
@@ -104,13 +104,9 @@
                 "php": ">=5.5.0"
             },
             "require-dev": {
-                "doctrine/annotations": "1.2.*",
+                "doctrine/annotations": "^1.2",
                 "friendsofphp/php-cs-fixer": "^2.2",
-                "phpdocumentor/phpdocumentor": "2.*",
-                "phpunit/phpunit": "^4.8 || ^5.7",
-                "zendframework/zend-eventmanager": "3.0.*",
-                "zendframework/zend-i18n": "2.7.3",
-                "zendframework/zend-serializer": "2.7.*"
+                "phpunit/phpunit": "^4.8 || ^5.7"
             },
             "suggest": {
                 "ext-mbstring": "Needed to send email in multibyte encoding charset",
@@ -128,16 +124,16 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL-2.1"
+                "LGPL-2.1-only"
             ],
             "authors": [
                 {
-                    "name": "Jim Jagielski",
-                    "email": "jimjag@gmail.com"
-                },
-                {
                     "name": "Marcus Bointon",
                     "email": "phpmailer@synchromedia.co.uk"
+                },
+                {
+                    "name": "Jim Jagielski",
+                    "email": "jimjag@gmail.com"
                 },
                 {
                     "name": "Andy Prevost",
@@ -148,7 +144,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2019-02-01T15:04:28+00:00"
+            "time": "2020-05-27T12:24:03+00:00"
         },
         {
             "name": "plasticbrain/php-flash-messages",
@@ -253,11 +249,26 @@
                 "reference": "6f7451eddcdca596495ce6883855e9c59d35e1e6",
                 "shasum": ""
             },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "kamermans/docblock-reflection": "^1.0",
+                "maddhatter/markdown-table": "^1.0",
+                "mockery/mockery": "^1.3",
+                "php-coveralls/php-coveralls": "^2.2",
+                "phpunit/phpunit": "^6"
+            },
             "type": "library",
             "autoload": {
                 "files": [
                     "gump.class.php"
-                ]
+                ],
+                "psr-4": {
+                    "GUMP\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -273,8 +284,13 @@
                     "homepage": "https://filis.me"
                 }
             ],
-            "description": "A fast, extensible & stand-alone PHP input validation class that allows you to validate any data",
+            "description": "A fast, extensible & stand-alone PHP input validation class that allows you to validate any data.",
             "homepage": "https://wixelhq.com/",
+            "keywords": [
+                "validate",
+                "validation",
+                "validator"
+            ],
             "time": "2018-11-16T06:19:11+00:00"
         }
     ],
